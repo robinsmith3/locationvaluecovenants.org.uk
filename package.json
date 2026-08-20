@@ -1,0 +1,18 @@
+{
+  "name": "location-value-covenants-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "npm run build && wrangler dev --env staging",
+    "test": "npm run build && node --test",
+    "deploy:staging": "npm test && wrangler deploy --env staging",
+    "deploy:production": "npm test && wrangler deploy --env production",
+    "dry-run:staging": "npm run build && wrangler deploy --env staging --dry-run --outdir .wrangler-dry-run/staging",
+    "dry-run:production": "npm run build && wrangler deploy --env production --dry-run --outdir .wrangler-dry-run/production"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

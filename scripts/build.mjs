@@ -1,32 +1,85 @@
-import { mkdir, rm, writeFile } from "node:fs/promises";
-import path from "node:path";
-import site from "./site-source.mjs";
+import { copyFile, readFile, readdir, rm, mkdir, writeFile } from "node:fs/promises";
 
-const outputRoot = path.resolve("public");
-const origin = "https://location-value-covenants.invalid";
-const routes = [
-  "/",
-  "/briefing/",
-  "/applications/",
-  "/applications/location-value-mortgage/",
-  "/applications/mortgage-rescue/",
-  "/applications/homeowner-pension/",
-  "/applications/inheritance-tax/",
-  "/applications/property-tax/"
-];
+const CONTENT = new URL("../content/pages/", import.meta.url);
+const PUBLIC = new URL("../public/", import.meta.url);
+const NAME = "Location Value Covenants";
+const escapeHtml = value => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
+const slug = value => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
-await rm(outputRoot, { recursive: true, force: true });
-await mkdir(outputRoot, { recursive: true });
-
-for (const route of routes) {
-  const response = await site.fetch(new Request(`${origin}${route}`));
-  if (response.status !== 200) throw new Error(`Build failed for ${route}: HTTP ${response.status}`);
-  const directory = route === "/" ? outputRoot : path.join(outputRoot, route);
-  await mkdir(directory, { recursive: true });
-  await writeFile(path.join(directory, "index.html"), await response.text(), "utf8");
+function inline(value) {
+  return escapeHtml(value).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>").replace(/`(.+?)`/g, "<code>$1</code>").replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 }
 
-const notFound = await site.fetch(new Request(`${origin}/page-not-found/`));
-await writeFile(path.join(outputRoot, "404.html"), await notFound.text(), "utf8");
+function markdown(source) {
+  const lines = source.trim().split(/\r?\n/), html = [];
+  for (let i = 0; i < lines.length;) {
+    const line = lines[i].trim();
+    if (!line) { i++; continue; }
+    const heading = /^(#{2,4})\s+(.+?)(?:\s+\{#([^}]+)\})?$/.exec(line);
+    if (heading) { const level = heading[1].length; html.push(`<h${level} id="${heading[3] || slug(heading[2])}">${inline(heading[2])}</h${level}>`); i++; continue; }
+    if (line.startsWith("|")) {
+      const rows = [];
+      while (i < lines.length && lines[i].trim().startsWith("|")) rows.push(lines[i++].trim().slice(1, -1).split("|").map(x => x.trim()));
+      const data = rows.filter((_, index) => index !== 1), head = data.shift();
+      html.push(`<div class="table" tabindex="0" role="region" aria-label="Data table"><table><thead><tr>${head.map(x => `<th>${inline(x)}</th>`).join("")}</tr></thead><tbody>${data.map(row => `<tr>${row.map((x, index) => index ? `<td>${inline(x)}</td>` : `<th>${inline(x)}</th>`).join("")}</tr>`).join("")}</tbody></table></div>`); continue;
+    }
+    if (/^[-*]\s+/.test(line)) { const items = []; while (i < lines.length && /^[-*]\s+/.test(lines[i].trim())) items.push(lines[i++].trim().replace(/^[-*]\s+/, "")); html.push(`<ul>${items.map(x => `<li>${inline(x)}</li>`).join("")}</ul>`); continue; }
+    if (/^\d+\.\s+/.test(line)) { const items = []; while (i < lines.length && /^\d+\.\s+/.test(lines[i].trim())) items.push(lines[i++].trim().replace(/^\d+\.\s+/, "")); html.push(`<ol>${items.map(x => `<li>${inline(x)}</li>`).join("")}</ol>`); continue; }
+    const paragraph = [];
+    while (i < lines.length && lines[i].trim() && !/^(#{2,4})\s|^[-*]\s+|^\d+\.\s+|^\|/.test(lines[i].trim())) paragraph.push(lines[i++].trim());
+    html.push(`<p>${inline(paragraph.join(" "))}</p>`);
+  }
+  return html.join("\n");
+}
 
-console.log(`Built ${routes.length} pages and 404.html`);
+function parsePage(source, filename) {
+  const match = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/m.exec(source);
+  if (!match) throw new Error(`${filename}: missing front matter`);
+  const meta = {};
+  for (const line of match[1].split("\n")) { const index = line.indexOf(":"); if (index > 0) meta[line.slice(0, index).trim()] = line.slice(index + 1).trim().replace(/^"|"$/g, ""); }
+  for (const required of ["route", "title", "description", "heading", "layout"]) if (!meta[required]) throw new Error(`${filename}: missing ${required}`);
+  return { meta, body: match[2] };
+}
+
+const card = page => `<a href="${page.meta.route}"><small>${page.meta.number}</small><h3>${escapeHtml(page.meta.heading)}</h3><p>${escapeHtml(page.meta.summary)}</p><b>Read briefing →</b></a>`;
+const cards = apps => `<div class="cards">${apps.map(card).join("")}</div>`;
+const hero = page => `<header class="pagehero"><div class="wrap"><small>${escapeHtml(page.meta.eyebrow || "Policy")}</small><h1>${escapeHtml(page.meta.heading)}</h1><p>${escapeHtml(page.meta.intro || page.meta.description)}</p></div></header>`;
+
+function bodyFor(page, apps) {
+  const content = markdown(page.body);
+  if (page.meta.layout === "home") return `<section class="wrap homehero"><div><small>${escapeHtml(page.meta.eyebrow)}</small><h1>${escapeHtml(page.meta.heading)}</h1><p class="lead">${escapeHtml(page.meta.intro)}</p><p><a class="button" href="/briefing/">Read the policy briefing</a><a class="button ghost" href="/applications/">Explore five applications</a></p></div><aside><small>The proposition</small><ol><li><b>Voluntary</b><span>Property owners choose whether to participate.</span></li><li><b>Lower risk</b><span>Payments track local rental value rather than interest rates.</span></li><li><b>Public benefit</b><span>Revenue flows to public purposes rather than mortgage interest.</span></li></ol></aside></section><div class="wrap policy-content">${content}<h2>Five ways the covenant can be used</h2>${cards(apps)}</div>`;
+  if (page.meta.layout === "applications") return `${hero(page)}<section class="wrap section">${content}${cards(apps)}<div class="notice"><b>A note on the examples</b><p>Monetary figures and tax references illustrate the mechanism at the time of writing; they are not current quotations, calculations or personal advice.</p></div></section>`;
+  if (page.meta.layout === "application") return `<header class="apphero"><div class="wrap"><a href="/applications/">← All applications</a><small>Application ${page.meta.number}</small><h1>${escapeHtml(page.meta.heading)}</h1><p>${escapeHtml(page.meta.intro)}</p><i>${escapeHtml(page.meta.credit)}</i></div></header><div class="wrap layout"><aside class="toc"><b>On this page</b><a href="#basic-concept">Basic concept</a><a href="#worked-example">Worked example</a><a href="#policy-effect">Policy effect</a></aside><article>${content}<div class="notice"><b>Illustrative figures</b><p>Financial values, rates and tax references restyle the original policy example. They explain the proposed mechanism and are not current financial, tax or legal advice.</p></div><nav class="article-nav"><a href="/applications/">All applications</a><a href="/briefing/">Policy briefing</a></nav></article></div>`;
+  return `${hero(page)}<div class="wrap layout"><aside class="toc"><b>On this page</b><a href="#main-content">Main content</a></aside><article id="main-content" class="policy-content">${content}</article></div>`;
+}
+
+function header(route) {
+  const active = route === "/" ? "home" : route.startsWith("/briefing") ? "briefing" : route.startsWith("/applications") ? "applications" : "";
+  return `<a class="skip" href="#main">Skip to content</a><header class="head"><div class="wrap nav"><a class="brand" href="/"><span class="mark">LVC</span><span>${NAME}</span></a><nav class="links"><a ${active === "home" ? 'aria-current="page"' : ""} href="/">Home</a><a ${active === "briefing" ? 'aria-current="page"' : ""} href="/briefing/">Policy briefing</a><a ${active === "applications" ? 'aria-current="page"' : ""} href="/applications/">Applications</a></nav></div></header>`;
+}
+
+function shell(page, apps, css) {
+  const footer = `<footer class="foot"><div class="wrap footgrid"><div><b>${NAME}</b><p>A voluntary policy proposal for housing finance and public revenue reform.</p></div><nav><a href="/briefing/">Policy briefing</a><a href="/applications/">Applications</a><a href="/privacy/">Privacy</a><a href="/website-terms/">Terms</a></nav></div><div class="wrap fine">Policy material from the Systemic Fiscal Reform Group · © ${new Date().getUTCFullYear()}</div></footer>`;
+  return `<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico" sizes="any"><title>${escapeHtml(page.meta.title)} — ${NAME}</title><meta name="description" content="${escapeHtml(page.meta.description)}"><style>${css}</style></head><body>${header(page.meta.route)}<main id="main">${bodyFor(page, apps)}</main>${footer}</body></html>`;
+}
+
+async function filesUnder(directory) {
+  const files = [];
+  for (const entry of await readdir(directory, { withFileTypes: true })) { const target = new URL(entry.name + (entry.isDirectory() ? "/" : ""), directory); if (entry.isDirectory()) files.push(...await filesUnder(target)); else if (entry.name.endsWith(".md")) files.push(target); }
+  return files;
+}
+
+const css = `${await readFile(new URL("../assets/styles.css", import.meta.url), "utf8")}\n${await readFile(new URL("../assets/content.css", import.meta.url), "utf8")}`, pages = [];
+for (const file of await filesUnder(CONTENT)) pages.push(parsePage(await readFile(file, "utf8"), file.pathname));
+const apps = pages.filter(page => page.meta.layout === "application").sort((a, b) => a.meta.number.localeCompare(b.meta.number));
+await rm(PUBLIC, { recursive: true, force: true }); await mkdir(PUBLIC, { recursive: true });
+await copyFile(
+  new URL("../assets/favicon.ico", import.meta.url),
+  new URL("favicon.ico", PUBLIC)
+);
+for (const page of pages) { const relative = page.meta.route === "/" ? "index.html" : `${page.meta.route.slice(1)}index.html`; const destination = new URL(relative, PUBLIC); await mkdir(new URL("./", destination), { recursive: true }); await writeFile(destination, shell(page, apps, css)); }
+const notFound = { meta: { route: "/404/", title: "Page not found", description: "The requested page could not be found.", heading: "Page not found", intro: "The page may have moved as part of the new policy-site structure.", eyebrow: "404", layout: "standard" }, body: "[Return to the home page](/)" };
+await writeFile(new URL("404.html", PUBLIC), shell(notFound, apps, css));
+await mkdir(new URL(".well-known/", PUBLIC), { recursive: true });
+await writeFile(new URL(".well-known/security.txt", PUBLIC), "Contact: mailto:robinsmith3@gmail.com\nCanonical: https://locationvaluecovenants.org.uk/.well-known/security.txt\nPreferred-Languages: en\nExpires: 2027-08-20T23:59:59Z\n");
+console.log(`Built ${pages.length} pages and 404.html from Markdown`);

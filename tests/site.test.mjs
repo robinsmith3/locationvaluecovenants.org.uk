@@ -10,9 +10,12 @@ const routes = [
   ["public/applications/index.html", "From principle to practice"],
   ["public/applications/location-value-mortgage/index.html", "Location Value Mortgage"],
   ["public/applications/mortgage-rescue/index.html", "Location Value Mortgage Rescue"],
-  ["public/applications/homeowner-pension/index.html", "Homeowner Pension & Equity Release"],
+  ["public/applications/homeowner-pension/index.html", "Homeowner Pension &amp; Equity Release"],
   ["public/applications/inheritance-tax/index.html", "Paying Inheritance Tax"],
-  ["public/applications/property-tax/index.html", "Property Tax Substitution"]
+  ["public/applications/property-tax/index.html", "Property Tax Substitution"],
+  ["public/applications/monetary-stability/index.html", "Monetary Stability &amp; Inflation Control"],
+  ["public/privacy/index.html", "Privacy Policy"],
+  ["public/website-terms/index.html", "Website Terms of Use"]
 ];
 
 test("all static routes build with expected content", async () => {
@@ -32,6 +35,9 @@ test("excluded Blogger content is absent", async () => {
 test("site has custom 404, robots and sitemap support", async () => {
   const notFound = await readFile(path.resolve("public/404.html"), "utf8");
   assert.match(notFound, /Page not found/);
+  const security = await readFile(path.resolve("public/.well-known/security.txt"), "utf8");
+  assert.match(security, /Canonical: https:\/\/locationvaluecovenants\.org\.uk\/\.well-known\/security\.txt/);
+  assert.match(security, /Expires: 2027-08-20T23:59:59Z/);
 
   const env = { ENVIRONMENT: "production", ASSETS: { fetch: async () => new Response("asset") } };
   const robots = await worker.fetch(new Request("https://example.com/robots.txt"), env);

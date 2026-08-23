@@ -52,7 +52,9 @@ These commands validate and bundle without uploading anything.
 
 ## Content maintenance
 
-The authored site is in `scripts/site-source.mjs`. Run `npm run build` after changes. Do not edit generated files under `public/` directly.
+Each page is an ordinary Markdown file under `content/pages/`. Shared presentation is in `assets/styles.css`; the page renderer is `scripts/build.mjs`. Edit the relevant Markdown file, then run `npm test`. Do not edit generated files under `public/` directly because every build replaces them.
+
+The front matter at the top of each Markdown file controls its URL, browser title, description, heading and layout. Application pages also have their card summary, credit and display number there.
 
 ## Deployment order
 

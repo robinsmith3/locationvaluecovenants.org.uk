@@ -13,13 +13,13 @@ layout: application
 
 Owner-occupiers face several property-related taxes and charges. Stamp Duty Land Tax can reduce housing-market liquidity, while other charges are not linked directly to location value.
 
-Property Tax Substitution replaces selected legacy taxes with one payment linked to local rental values. It could be introduced nationally, area by area or by voluntary adoption. The task is to calculate a fair regular payment for each property.
+Property Tax Substitution replaces selected legacy taxes with one payment linked to local rental values. It could be introduced nationally, area by area or by voluntary adoption. The task is to calculate a fair initial regular payment as a substitute for the legacy taxes. That payment is then adjusted in line with local land values; it is not calculated from a precise valuation of the individual plot.
 
 ## Worked example {#worked-example}
 
 In the original briefing, Simon owns a Cambridge house worth £309,000 to a buyer. Simon pays £1,000 annual Council Tax and £139 for a television licence. On sale, the buyer offers £300,000 and pays £9,000 Stamp Duty. Spreading Stamp Duty across a typical seven-year tenure and adding the annual charges gives an illustrative covenant of £2,425 per year.
 
-The buyer offers £300,000 and enters the covenant. The property is then exempt from the substituted charges.
+The buyer offers £300,000 and enters the covenant. The property is then exempt from the substituted charges. The initial £2,425 payment is calculated from the taxes being replaced, not from the property’s precise land value. Local land values provide the index for later adjustments.
 
 | System | Seller receives | Stamp Duty | Council Tax | TV licence | Annual covenant |
 | --- | --- | --- | --- | --- | --- |

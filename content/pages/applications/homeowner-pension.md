@@ -13,7 +13,7 @@ layout: application
 
 Older homeowners may want extra income for travel, family support or rising bills. Conventional equity-release products have commercial terms, pricing and protections.
 
-A Homeowner Pension uses a Location Value Covenant rather than a conventional charge. The owner pays a regular covenant sum to government; government pays a monthly pension to the owner. The original proposal was designed for homeowners over 50.
+A Homeowner Pension uses a Location Value Covenant rather than a conventional charge. The owner accepts an agreed continuing covenant payment and government pays a monthly pension to the owner. The initial figures are calculated from the pension benefit and the homeowner’s circumstances; the covenant payment is then adjusted in line with local land values. A precise valuation of the individual plot is not required. The original proposal was designed for homeowners over 50.
 
 ## Worked example {#worked-example}
 
@@ -37,4 +37,4 @@ This option is most attractive to a homeowner who places greater value on income
 
 ## Policy effect {#policy-effect}
 
-The proposal creates a public alternative to commercial equity release. It converts part of a property’s location value into retirement income while making the continuing obligation visible in the future sale price and the next owner’s costs.
+The proposal creates a public alternative to commercial equity release. It exchanges retirement income for a continuing covenant whose capitalised value reduces the property’s future sale price. The initial covenant is determined from the pension arrangement rather than from a precise valuation of the property’s land, although subsequent payments are adjusted in line with local land values.

@@ -3,7 +3,7 @@ route: /
 title: A voluntary route to housing and tax reform
 description: A practical economic policy based on voluntary agreements between government and property owners.
 heading: A voluntary route to housing and tax reform.
-intro: A Location Value Covenant is an agreement between government and a property owner: public support replaces some existing or potential mortgage debt, and the owner makes an ongoing payment linked to the rental value of the location.
+intro: intro: A Location Value Covenant is an agreement between government and a property owner: public support replaces some existing or potential mortgage debt, and the owner makes an ongoing payment whose initial amount is agreed as part of the transaction and subsequently adjusted with local land values.
 eyebrow: A practical economic policy
 layout: home
 ---
@@ -21,7 +21,7 @@ An owner enters an LVC only by consent. If it is not better for the household, c
 
 ### Linked to location
 
-The payment follows local rental value, creating a different risk profile from an interest-bearing loan.
+The initial payment is agreed as part of the transaction and subsequently adjusted in line with local land values, creating a different risk profile from an interest-bearing loan. It does not require a precise valuation of the individual plot.
 
 ### Designed for transition
 

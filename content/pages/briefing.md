@@ -9,7 +9,7 @@ layout: standard
 ---
 ## Overview
 
-A Location Value Covenant (LVC) is a voluntary contract between a property owner and government. It is designed to collect the rental value of a property in exchange for reducing or eliminating existing or potential mortgage debt and reducing other taxes. It aims to provide a cheaper, less risky alternative to traditional mortgages while generating public revenue for national benefit.
+A Location Value Covenant (LVC) is a voluntary contract between a property owner and government. In exchange for reducing or eliminating existing or potential mortgage debt, settling another property-related liability or providing another defined benefit, the owner accepts a continuing payment attached to the property. Its initial amount is agreed as part of the transaction and is subsequently adjusted in line with local land values. It aims to provide a cheaper, less risky alternative to traditional mortgages while generating public revenue for national benefit.
 
 The distinctive proposition is reform by voluntary agreement rather than compulsion. A homeowner participates when the covenant offers a better fit than the next-best alternative.
 
@@ -21,7 +21,9 @@ Property owners opt in freely rather than being placed under a mandatory charge.
 
 ### Mortgage alternative
 
-A covenant replaces or reduces debt with payments based on rental value.
+A covenant replaces or reduces debt with a continuing payment whose initial amount reflects the public contribution and is subsequently adjusted in line with local land values.
+
+The LVC does not require the building and land to be valued separately. Local land values provide the index by which the continuing payment changes; they do not necessarily determine the initial amount of the public contribution.
 
 ### Public revenue
 

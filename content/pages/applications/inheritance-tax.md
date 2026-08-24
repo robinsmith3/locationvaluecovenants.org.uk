@@ -32,10 +32,12 @@ Sir James St’John leaves a £5 million estate including two London properties 
 * **Government:** It settles the inheritance-tax liability by acquiring a continuing, location-linked revenue asset instead of postponing collection or forcing an immediate property sale.
 * **Bank:** It avoids or reduces the need for a short-term loan secured against an estate, while remaining able to provide any smaller mortgage, payment or administration services required.
 
-The beneficiary exchanges part of the property’s future location value for immediate settlement of the tax liability and the freedom to retain or sell the property at a time of their choosing.
+The beneficiary exchanges part of the property’s unencumbered sale value for immediate settlement of the tax liability and the freedom to retain or sell the property at a time of their choosing. The reduction in sale value arises from the continuing payment that a future purchaser must assume.
 
 ## Policy effect {#policy-effect}
 
-Each property’s value falls to reflect its covenant, allowing a purchaser to use less debt even though total annual ownership cost remains broadly equivalent. The exact site valuation is less important than payments moving with local rental values.
+Each property’s value falls to reflect the capitalised value of its covenant, allowing a purchaser to use less debt even though the total annual ownership cost remains broadly equivalent.
 
-The original briefing considered elective or mandatory adoption. The wider LVC proposition on this site is voluntary.
+The precise land value of each property is not required. The inheritance-tax liability has already been calculated, and the covenants are designed collectively to have an equivalent capital value. The liability is allocated between the properties—roughly in proportion to their relative values—and converted into continuing annual payments.
+
+Local land values are then used only to adjust those payments over time. The system therefore needs a suitable local land-value index, but it does not require a detailed investigation into the particular attributes of each individual plot.

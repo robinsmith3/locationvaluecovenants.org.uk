@@ -32,14 +32,14 @@ Peter bought a £300,000 house in 2007 with a £250,000 mortgage costing £1,400
 
 ### Why would I choose this?
 
-* **Homeowner — why would I do this?** I exchange part of an unaffordable mortgage and some future location-value gains for lower monthly outgoings, reduced negative equity and a better chance of remaining in my home. I retain the value of the building and any improvements I make.
+* **Homeowner — why would I do this?** I replace part of an unaffordable mortgage with a lower continuing covenant payment. This reduces my monthly outgoings, addresses negative equity and gives me a better chance of remaining in my home. In exchange, the covenant reduces the market value of my interest in the property because a future purchaser must assume the payment.
 * **Government:** It can prevent avoidable repossessions and wider financial disruption while acquiring a continuing covenant revenue asset rather than paying an unrecoverable rescue grant.
 * **Bank:** It receives a public payment that removes part of a distressed mortgage, leaving a smaller loan that the homeowner is more likely to repay.
 
-For the homeowner, the alternative may not be retaining the whole of a future capital gain. It may be default, repossession or a forced sale. The LVC gives up part of the property’s future location value in exchange for greater security now.
+For the homeowner, the alternative may be default, repossession or a forced sale. The LVC exchanges part of the property’s unencumbered sale value for lower payments and greater security now. The amount of mortgage debt removed determines the initial covenant payment; the payment is then adjusted in line with local land values. No separate valuation of the individual plot is required.
 
 ## Policy effect {#policy-effect}
 
-Peter’s negative equity is addressed, his payments are manageable and default becomes less likely. If employment and location values fall, covenant payments also fall.
+Peter’s negative equity is addressed, his payments are manageable and default becomes less likely. If job losses cause local land and house values to fall, the local index and Peter’s covenant payment would also fall.
 
 If Peter sells, the price clears the remaining mortgage. A buyer with a £50,000 deposit needs only a £50,000 bank loan and pays about £870 per month across mortgage and covenant. An otherwise identical home without a covenant costs £225,000 and requires much more debt.

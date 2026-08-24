@@ -5,7 +5,7 @@ description: Replacing distressed mortgage debt with a Location Value Covenant.
 heading: Location Value Mortgage Rescue
 intro: A covenant-based intervention for households and lenders under financial stress.
 summary: Replacing part of distressed mortgage debt with a covenant to reduce household payments and default risk.
-credit: A Systemic Fiscal Reform Group briefing.
+credit: A Systemic Fiscal Reform Group briefing, adapted by Robin Smith.
 number: 02
 layout: application
 ---

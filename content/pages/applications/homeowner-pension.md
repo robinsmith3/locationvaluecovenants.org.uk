@@ -5,7 +5,7 @@ description: A public covenant-based alternative to conventional equity release.
 heading: Homeowner Pension & Equity Release
 intro: A regular retirement income exchanged for a continuing covenant on the property.
 summary: A public alternative to conventional equity release, exchanging a covenant for a regular retirement income.
-credit: A Systemic Fiscal Reform Group briefing by Dr Adrian Wrigley.
+credit: A Systemic Fiscal Reform Group briefing by Dr Adrian Wrigley, adapted by Robin Smith.
 number: 03
 layout: application
 ---

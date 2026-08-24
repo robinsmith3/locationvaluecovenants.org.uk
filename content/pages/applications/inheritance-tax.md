@@ -5,7 +5,7 @@ description: Settling property-based inheritance-tax liabilities through Locatio
 heading: Paying Inheritance Tax
 intro: An alternative to an immediate property sale or short-term borrowing when an estate lacks liquid funds.
 summary: Settling a property-based inheritance-tax liability without an immediate forced sale or bridging loan.
-credit: A Systemic Fiscal Reform Group briefing by Dr Adrian Wrigley.
+credit: A Systemic Fiscal Reform Group briefing by Dr Adrian Wrigley, adapted by Robin Smith.
 number: 04
 layout: application
 ---

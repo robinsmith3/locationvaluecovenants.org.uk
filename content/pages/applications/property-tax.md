@@ -5,7 +5,7 @@ description: Replacing selected property taxes with one Location Value Covenant 
 heading: Property Tax Substitution
 intro: A single, location-linked payment in place of several property-related taxes.
 summary: A single location-linked payment proposed as a substitute for several property-related taxes.
-credit: A Systemic Fiscal Reform Group briefing by Dr Adrian Wrigley.
+credit: A Systemic Fiscal Reform Group briefing by Dr Adrian Wrigley, adapted by Robin Smith.
 number: 05
 layout: application
 ---

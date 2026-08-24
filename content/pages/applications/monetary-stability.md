@@ -52,6 +52,37 @@ The Treasury does not issue a separate gilt for each home. Parliament would auth
 
 Government receives a continuing public asset in exchange: the right to collect the property’s LVC payment from successive owners. In the early years, new contributions would exceed covenant receipts. As the covenanted property base grew, its receipts could finance an increasing share of new LVCs, administration and other public purposes.
 
+### How the public contribution is valued
+
+The government does not make an unrecoverable contribution. It acquires a legally enforceable, continuing revenue-producing asset attached to the property.
+
+The capital value of that asset is the discounted value of its expected future net payments:
+
+**LVC value = Σ [expected net payment in year t ÷ (1 + r)^t]**
+
+For a payment expected to continue indefinitely and grow at a constant rate, this can be simplified to:
+
+**LVC value = P ÷ (r − g)**
+
+where:
+
+- **P** is the expected net covenant payment in the first year;
+- **r** is the discount rate, including financing cost and risk; and
+- **g** is the expected long-term growth rate of covenant payments.
+
+For example, a covenant payment of £500 per month produces £6,000 in its first year. Using an illustrative 5% discount rate and assuming no real payment growth:
+
+**£6,000 ÷ 0.05 = £120,000**
+
+The covenant therefore has an illustrative capital value of £120,000. On a property worth £300,000 without the covenant:
+
+- The public LVC fund pays £120,000 to the vendor.
+- The purchaser pays the remaining £180,000.
+- The vendor still receives the full £300,000.
+- The purchaser and future owners assume the continuing covenant payment.
+
+In practice, the calculation would use expected payments after allowing for administration, arrears, collection costs and other risks. The discount rate would also reflect government financing costs and uncertainty in future location values.
+
 ### The continuing payment
 
 The covenant payment withdraws disposable income from the property owner in a similar way to a tax payment. It is most counter-inflationary when receipts are used to reduce borrowing, retire debt or build the LVC fund rather than being immediately added to unrelated expenditure.
@@ -82,6 +113,14 @@ The appropriate use of covenant revenue could therefore vary with economic condi
 - **Potential monetary stabilisation:** slower mortgage-credit growth can moderate one source of property-driven monetary expansion.
 
 This could appeal simultaneously to households seeking lower-risk finance, governments seeking continuing revenue, and policymakers concerned with excessive leverage and financial instability.
+
+### Why would each participant choose this?
+
+* **Homeowner — why would I do this?** I choose a lower capital price and smaller mortgage in exchange for a continuing location-value payment and reduced exposure to future gains in the covenanted share of the location. I retain the value of the building, my improvements and any uncovenanted location share.
+* **Government:** It acquires a continuing public revenue asset while replacing part of the bank-created mortgage credit that would otherwise finance the purchase. This can reduce household leverage and improve monetary and financial resilience.
+* **Bank:** It provides a smaller, lower loan-to-value mortgage with less default and negative-equity risk. It retains a lending and customer-service role, although it earns interest on a smaller principal.
+
+The homeowner’s benefit is not free public money. The public contribution purchases the continuing covenant interest and reduces the capital price accordingly. The homeowner chooses greater affordability and lower financial risk today in exchange for a continuing payment and a smaller claim on future location value.
 
 ### Conditions required for the benefit
 

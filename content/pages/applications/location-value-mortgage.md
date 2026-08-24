@@ -44,6 +44,15 @@ The household also considers an identical house in a less expensive location for
 | Covenant payment | — | £500 |
 | Illustrative saving | — | £273 |
 
+### Why would I choose this?
+
+* **Homeowner — why would I do this?** I pay a lower capital price and need a smaller mortgage. This reduces my mortgage payments and exposure to interest rates, negative equity and repossession. In exchange, I accept a continuing LVC payment and receive less when I eventually sell because the purchaser also assumes that obligation. I retain the value of the building, my improvements and any uncovenanted share of the location value.
+* **Government:** It acquires a continuing, location-linked public revenue asset rather than making an unrecoverable grant. It can also reduce dependence on bank-created mortgage credit and improve financial stability.
+* **Bank:** It provides a smaller, lower loan-to-value mortgage with less default and negative-equity risk, while retaining the customer relationship. The trade-off is that it earns interest on a smaller loan.
+
+The homeowner is therefore choosing between paying more upfront through a larger mortgage in order to retain more future location value, or paying less upfront and accepting a continuing LVC obligation. The LVC is most attractive to someone who values affordability and financial resilience today more highly than retaining the whole of an uncertain future increase in location value.
+
+
 ## Policy effect {#policy-effect}
 
 The proposal adds another choice, allowing families to balance deposit, borrowing and covenant against their circumstances. Its central promise is more predictable budgeting based on local rental values rather than interest rates.

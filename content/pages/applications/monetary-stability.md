@@ -38,9 +38,13 @@ A household purchases a £300,000 property with a £60,000 deposit.
 | Government LVC contribution | — | £120,000 |
 | Total purchasing funds | £300,000 | £300,000 |
 
-Under the conventional transaction, the commercial bank creates a £240,000 mortgage. Under the LVC transaction, the bank creates only £120,000 of mortgage credit. The remaining £120,000 comes from the public LVC fund and is exchanged for a continuing covenant payment attached to the property.
+Under the conventional transaction, the purchaser pays the full £300,000 unencumbered value using a £60,000 deposit and a £240,000 mortgage.
 
-If the public contribution is financed from genuine existing savings, the same purchase is completed with £120,000 less newly created bank credit.
+Under the LVC transaction, the purchaser pays £180,000 using the same deposit and a £120,000 mortgage. The public LVC fund pays the remaining £120,000 to the vendor in exchange for the continuing covenant attached to the property. The vendor therefore still receives the full £300,000 assessed value.
+
+The purchaser has not received an unrequited £120,000 subsidy. The property is acquired subject to a continuing payment linked to the agreed share of its annually assessed location value. That obligation is capitalised into the £120,000 reduction in the price paid by the purchaser and will continue to affect its resale price.
+
+If the public contribution is financed from genuine existing savings, the transaction is completed with £120,000 less newly created commercial-bank mortgage credit while the public fund acquires a continuing location-value asset.
 
 ### What happens to the public money
 
@@ -53,6 +57,17 @@ Government receives a continuing public asset in exchange: the right to collect 
 The covenant payment withdraws disposable income from the property owner in a similar way to a tax payment. It is most counter-inflationary when receipts are used to reduce borrowing, retire debt or build the LVC fund rather than being immediately added to unrelated expenditure.
 
 If all receipts are immediately spent or used for broad tax reductions, much of that demand restraint is returned to the economy. The fiscal use of covenant revenue therefore matters.
+
+### How covenant revenue is used {#revenue-use}
+
+Continuing LVC payments initially reduce private disposable income. Whether this restrains aggregate demand depends on the government's overall fiscal response. If the revenue finances additional spending or immediate tax reductions, the short-term demand effect may be partly or wholly offset. If it reduces borrowing or is accumulated during inflationary periods, more of the restraint remains.
+
+This produces two distinct policy opportunities:
+
+- **Short-run demand management.** During periods of excessive inflation, covenant revenue could be used to reduce government borrowing or accumulated temporarily in a stabilisation fund. This would preserve more of the immediate restraint on aggregate demand.
+- **Long-run structural reform.** Covenant revenue could replace taxes that penalise employment, profits, investment and productive activity. Such tax substitution may not reduce aggregate demand immediately, but it could expand productive capacity, improve economic efficiency and reduce inflationary pressure over time.
+
+The appropriate use of covenant revenue could therefore vary with economic conditions. During an inflationary period, the priority might be demand restraint. As inflation subsides, more of the revenue could be used to replace economically damaging taxes.
 
 ## Policy effect {#policy-effect}
 
@@ -70,21 +85,33 @@ This could appeal simultaneously to households seeking lower-risk finance, gover
 
 ### Conditions required for the benefit
 
-The result is not automatic. A monetary-stability programme should require:
+The result depends on the LVC being treated as the purchase of a continuing public covenant asset, not as a grant or buyer subsidy. A monetary-stability programme should require:
 
-1. Each LVC contribution to displace an equivalent or greater amount of commercial mortgage lending.
-2. The LVC not to increase the purchaser’s total bidding budget merely because public support is available.
-3. Independent property and covenant valuation so the benefit is not captured through higher asking prices.
-4. Gilt funding directed primarily to genuine non-bank savings rather than associated monetary financing.
-5. Gradual issuance limits informed by inflation, mortgage-credit growth, housing supply and financial stability.
-6. Covenant receipts to be retained or used to reduce public borrowing when aggregate demand is excessive.
-7. Coordination between HM Treasury, the Bank of England, the Prudential Regulation Authority and the Debt Management Office.
+1. The purchaser’s reduced capital price to reflect the value of the continuing covenant obligation attached to the property.
+2. The public contribution to purchase a corresponding covenant interest rather than add to the purchaser’s net bidding capacity.
+3. Independent valuation separating the value of buildings and owner-funded improvements from the value attributable to the land and location.
+4. The continuing payment to remain linked to the agreed share of annually assessed location value.
+5. Each LVC contribution to replace commercial mortgage lending that would otherwise be required to finance the same unencumbered property value.
+6. Gilt funding to be directed primarily to genuine non-bank savings rather than associated monetary financing.
+7. Gradual issuance informed by inflation, mortgage-credit growth, housing supply and financial stability.
+8. Covenant receipts to be retained or used to reduce public borrowing when aggregate demand is excessive.
+9. Coordination between HM Treasury, the Bank of England, the Prudential Regulation Authority, the public valuation authorities and the Debt Management Office.
 
 ### Risks that must be controlled
 
-Lower monthly housing payments can leave households with more disposable income, which may raise consumption. Easier finance can also increase bids for a constrained housing supply. Additional gilt issuance may affect government borrowing costs and wider interest rates.
+An LVC is not equivalent to a grant, subsidised loan or conventional buyer-assistance scheme. The purchaser accepts a continuing payment linked to the annually assessed location value, and that liability should be reflected in a correspondingly lower capital price. A larger LVC therefore produces both a larger public contribution and a larger continuing obligation; it does not provide equivalent additional net purchasing power with which to bid up the property.
 
-These effects do not invalidate the proposal, but they mean that the programme must be assessed against the alternative mortgage that it replaces. The relevant question is not whether an LVC has no expansionary effects. It is whether the complete LVC transaction creates less credit, leverage and inflationary pressure than the conventional transaction that would otherwise occur.
+The principal property-market risk is incorrect or inconsistent valuation. The system must ensure that the purchaser is not charged both the full unencumbered capital value and the continuing LVC payment. Independent valuations should distinguish clearly between:
+
+- The value of buildings and improvements;
+- The unencumbered location value;
+- The proportion of location value covered by the LVC;
+- The resulting reduction in the purchaser’s capital price; and
+- The continuing payment associated with the covenanted share.
+
+Owner-funded buildings and improvements must remain outside the annual LVC assessment. The continuing payment should rise or fall only with the independently assessed value attributable to the location.
+
+Lower mortgage payments may leave households with more disposable income, which could increase consumption elsewhere in the economy. Additional gilt issuance may also affect government borrowing costs and wider interest rates. These macroeconomic effects should be assessed against the larger mortgage and greater credit creation that the LVC replaces.
 
 ### A defensible monetary-policy claim
 
@@ -102,9 +129,12 @@ A pilot should report:
 
 - The amount of LVC funding issued.
 - The mortgage lending directly displaced.
-- Changes in buyers’ total purchasing budgets.
-- Property-price effects relative to comparable transactions.
-- Covenant receipts, administration costs and arrears.
+- The independently assessed value of buildings and improvements.
+- The independently assessed unencumbered location value.
+- The purchaser’s reduced capital price and the public LVC contribution.
+- Whether resale prices continue to reflect the capitalised covenant obligation.
+- Annual changes in assessed location value and continuing payments.
+- Covenant receipts, administration costs, appeals and arrears.
 - Effects on household monthly outgoings and disposable income.
 - The source of gilt purchasers and the programme’s financing cost.
 - The net effect on public borrowing, credit growth and the wider economy.

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="880" viewBox="0 0 1200 880" role="img" aria-labelledby="title description">
+  <title id="title">How a Location Value Mortgage works</title>
+  <desc id="description">The buyer contributes a deposit and a smaller bank mortgage while government supplies the Location Value Covenant contribution. The vendor receives the full purchase price. The property owner then makes a continuing covenant payment to government, adjusted over time using a local land-value index.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#08706d"/>
+    </marker>
+    <style>
+      .background { fill: #f7f4ec; }
+      .title { fill: #162b31; font: 600 38px Georgia, 'Times New Roman', serif; }
+      .subtitle { fill: #53676c; font: 400 20px system-ui, -apple-system, 'Segoe UI', sans-serif; }
+      .box { fill: #ffffff; stroke: #cdd5d1; stroke-width: 2; }
+      .public { fill: #e3ece6; stroke: #08706d; stroke-width: 2; }
+      .property { fill: #103943; stroke: #103943; stroke-width: 2; }
+      .box-title { fill: #162b31; font: 600 22px system-ui, -apple-system, 'Segoe UI', sans-serif; }
+      .box-text { fill: #53676c; font: 400 18px system-ui, -apple-system, 'Segoe UI', sans-serif; }
+      .property-title { fill: #ffffff; font: 600 25px system-ui, -apple-system, 'Segoe UI', sans-serif; }
+      .property-text { fill: #d5e1e1; font: 400 18px system-ui, -apple-system, 'Segoe UI', sans-serif; }
+      .arrow { fill: none; stroke: #08706d; stroke-width: 4; marker-end: url(#arrow); }
+      .label { fill: #08706d; font: 600 16px system-ui, -apple-system, 'Segoe UI', sans-serif; }
+      .note { fill: #ebe5d8; stroke: #d0a34b; stroke-width: 2; }
+      .note-title { fill: #162b31; font: 600 20px system-ui, -apple-system, 'Segoe UI', sans-serif; }
+      .note-text { fill: #53676c; font: 400 17px system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    </style>
+  </defs>
+
+  <rect class="background" width="1200" height="880"/>
+
+  <text class="title" x="600" y="58" text-anchor="middle">How a Location Value Mortgage works</text>
+  <text class="subtitle" x="600" y="92" text-anchor="middle">Illustrative purchase of a £300,000 property</text>
+
+  <rect class="box" x="55" y="145" width="300" height="120" rx="8"/>
+  <text class="box-title" x="205" y="185" text-anchor="middle">Buyer</text>
+  <text class="box-text" x="205" y="220" text-anchor="middle">£60,000 deposit</text>
+
+  <rect class="box" x="450" y="145" width="300" height="120" rx="8"/>
+  <text class="box-title" x="600" y="185" text-anchor="middle">Bank</text>
+  <text class="box-text" x="600" y="220" text-anchor="middle">£120,000 mortgage</text>
+
+  <rect class="public" x="845" y="145" width="300" height="120" rx="8"/>
+  <text class="box-title" x="995" y="185" text-anchor="middle">Government LVC fund</text>
+  <text class="box-text" x="995" y="220" text-anchor="middle">£120,000 contribution</text>
+
+  <path class="arrow" d="M205 265 L205 326 L475 390"/>
+  <path class="arrow" d="M600 265 L600 375"/>
+  <path class="arrow" d="M995 265 L995 326 L725 390"/>
+
+  <rect class="property" x="390" y="375" width="420" height="135" rx="8"/>
+  <text class="property-title" x="600" y="420" text-anchor="middle">Property transaction completed</text>
+  <text class="property-text" x="600" y="458" text-anchor="middle">Vendor receives the full £300,000</text>
+  <text class="property-text" x="600" y="486" text-anchor="middle">Buyer acquires the property subject to the LVC</text>
+
+  <path class="arrow" d="M600 510 L600 590"/>
+  <text class="label" x="620" y="558">Continuing obligation</text>
+
+  <rect class="public" x="390" y="590" width="420" height="130" rx="8"/>
+  <text class="box-title" x="600" y="632" text-anchor="middle">Covenant payment to government</text>
+  <text class="box-text" x="600" y="668" text-anchor="middle">Initially £500 per month</text>
+  <text class="box-text" x="600" y="696" text-anchor="middle">£120,000 × 5% ÷ 12</text>
+
+  <rect class="note" x="55" y="590" width="275" height="130" rx="8"/>
+  <text class="note-title" x="192.5" y="630" text-anchor="middle">Future adjustments</text>
+  <text class="note-text" x="192.5" y="664" text-anchor="middle">Local land-value index</text>
+  <text class="note-text" x="192.5" y="692" text-anchor="middle">raises or lowers payment</text>
+  <path class="arrow" d="M330 655 L375 655"/>
+
+  <rect class="note" x="870" y="590" width="275" height="130" rx="8"/>
+  <text class="note-title" x="1007.5" y="630" text-anchor="middle">Future sale</text>
+  <text class="note-text" x="1007.5" y="664" text-anchor="middle">Next owner assumes LVC</text>
+  <text class="note-text" x="1007.5" y="692" text-anchor="middle">so sale price is reduced</text>
+  <path class="arrow" d="M825 655 L855 655"/>
+
+  <rect x="55" y="775" width="1090" height="65" rx="8" fill="#103943"/>
+  <text class="property-text" x="600" y="816" text-anchor="middle">Local land values index future payments; they do not determine the original £120,000 contribution.</text>
+</svg>

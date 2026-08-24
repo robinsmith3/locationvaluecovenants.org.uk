@@ -7,7 +7,12 @@ const escapeHtml = value => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;
 const slug = value => value.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
 function inline(value) {
-  return escapeHtml(value).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>").replace(/\*(.+?)\*/g, "<em>$1</em>").replace(/`(.+?)`/g, "<code>$1</code>").replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+  return escapeHtml(value)
+    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" loading="lazy">')
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\*(.+?)\*/g, "<em>$1</em>")
+    .replace(/`(.+?)`/g, "<code>$1</code>")
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 }
 
 function markdown(source) {
@@ -73,6 +78,11 @@ const css = `${await readFile(new URL("../assets/styles.css", import.meta.url), 
 for (const file of await filesUnder(CONTENT)) pages.push(parsePage(await readFile(file, "utf8"), file.pathname));
 const apps = pages.filter(page => page.meta.layout === "application").sort((a, b) => a.meta.number.localeCompare(b.meta.number));
 await rm(PUBLIC, { recursive: true, force: true }); await mkdir(PUBLIC, { recursive: true });
+await mkdir(new URL("assets/", PUBLIC), { recursive: true });
+await copyFile(
+  new URL("../assets/lvc-in-action.svg", import.meta.url),
+  new URL("assets/lvc-in-action.svg", PUBLIC)
+);
 await copyFile(
   new URL("../assets/favicon.ico", import.meta.url),
   new URL("favicon.ico", PUBLIC)

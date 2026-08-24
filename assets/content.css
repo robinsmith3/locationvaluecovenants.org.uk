@@ -27,3 +27,11 @@
 .policy-content a {
   color: var(--teal);
 }
+
+.layout article img {
+  display: block;
+  width: 100%;
+  max-width: 770px;
+  height: auto;
+  margin: 32px auto 48px;
+}

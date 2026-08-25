@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">The monetary-stability role of Location Value Covenants</title>
+  <desc id="desc">Existing savings purchase government gilts through normal public financing. A public LVC fund contributes to property transactions in exchange for continuing covenant assets. This replaces part of conventional bank mortgage lending. Property owners make continuing location-linked payments, which can support further LVCs, reduce borrowing or replace damaging taxes. Properly managed, the system may reduce household leverage, mortgage-credit creation and property-driven inflation.</desc>
+  <metadata>
+flowchart TB
+    S["Existing long-term savings&lt;br/&gt;pension funds, insurers, households"]
+    G["Normal government financing&lt;br/&gt;aggregate gilt issuance"]
+    F["Public LVC fund"]
+    T["Property transactions&lt;br/&gt;public contribution buys a covenant asset"]
+    M["Smaller bank mortgages&lt;br/&gt;less newly created mortgage credit"]
+    P["Property owners&lt;br/&gt;make continuing location-linked payments"]
+    R["Revenue choices&lt;br/&gt;fund further LVCs, reduce borrowing, or replace damaging taxes"]
+    O["Potential economy-wide result&lt;br/&gt;lower leverage and less property-driven inflation"]
+    S --&gt; G --&gt; F --&gt; T --&gt; M --&gt; O
+    T --&gt; P --&gt; F
+    F --&gt; R --&gt; O
+  </metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#08706d"/></marker>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b1842f"/></marker>
+    <style>
+      .title{font:500 34px Georgia,'Times New Roman',serif;fill:#162b31}.subtitle{font:16px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#53676c}.phase{font:700 13px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;letter-spacing:1.5px;fill:#08706d}.node-title{font:600 20px Georgia,'Times New Roman',serif;fill:#162b31}.node-copy{font:15px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#3a5156}.value{font:700 18px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#08706d}.gold-value{font:700 18px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#8b651f}.edge{fill:none;stroke:#08706d;stroke-width:3;marker-end:url(#arrow)}.edge-gold{fill:none;stroke:#b1842f;stroke-width:3;marker-end:url(#arrowGold)}.edge-dashed{fill:none;stroke:#08706d;stroke-width:2.5;stroke-dasharray:9 7;marker-end:url(#arrow)}.edge-label{font:600 13px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#162b31}.small{font:13px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#53676c}
+    </style>
+  </defs>
+  <rect width="1200" height="820" fill="#f7f4ec"/>
+  <text x="600" y="50" text-anchor="middle" class="title">The bigger monetary picture</text>
+  <text x="600" y="80" text-anchor="middle" class="subtitle">Where LVC funding comes from, where it goes, and how the continuing revenue returns</text>
+  <text x="60" y="125" class="phase">1 · FUNDING</text>
+  <rect x="60" y="145" width="310" height="125" rx="8" fill="#ffffff" stroke="#08706d" stroke-width="2"/>
+  <text x="215" y="184" text-anchor="middle" class="node-title">Existing long-term savings</text><text x="215" y="218" text-anchor="middle" class="node-copy">pension funds · insurers · households</text><text x="215" y="246" text-anchor="middle" class="small">money already in circulation</text>
+  <rect x="445" y="145" width="310" height="125" rx="8" fill="#ebe5d8" stroke="#b1842f" stroke-width="2"/>
+  <text x="600" y="184" text-anchor="middle" class="node-title">Normal government financing</text><text x="600" y="218" text-anchor="middle" class="gold-value">aggregate gilt issuance</text><text x="600" y="246" text-anchor="middle" class="small">not a separate gilt for each property</text>
+  <rect x="830" y="145" width="310" height="125" rx="8" fill="#e2ebe5" stroke="#08706d" stroke-width="2"/>
+  <text x="985" y="184" text-anchor="middle" class="node-title">Public LVC fund</text><text x="985" y="218" text-anchor="middle" class="value">programme funding</text><text x="985" y="246" text-anchor="middle" class="small">authorised and managed publicly</text>
+  <path d="M370 207 H432" class="edge-gold"/><text x="401" y="192" text-anchor="middle" class="edge-label">buys gilts</text><path d="M755 207 H817" class="edge"/><text x="786" y="192" text-anchor="middle" class="edge-label">supports</text>
+  <text x="60" y="327" class="phase">2 · DEPLOYMENT AND CREDIT SUBSTITUTION</text>
+  <rect x="135" y="350" width="385" height="150" rx="8" fill="#e2ebe5" stroke="#08706d" stroke-width="2"/>
+  <text x="327.5" y="390" text-anchor="middle" class="node-title">Property transactions</text><text x="327.5" y="426" text-anchor="middle" class="value">public contribution paid</text><text x="327.5" y="457" text-anchor="middle" class="node-copy">in exchange for a continuing covenant</text><text x="327.5" y="483" text-anchor="middle" class="small">the contribution purchases an asset—not a grant</text>
+  <rect x="680" y="350" width="385" height="150" rx="8" fill="#ffffff" stroke="#08706d" stroke-width="2"/>
+  <text x="872.5" y="390" text-anchor="middle" class="node-title">Smaller commercial mortgages</text><text x="872.5" y="426" text-anchor="middle" class="value">less newly created bank credit</text><text x="872.5" y="457" text-anchor="middle" class="node-copy">lower household leverage and interest exposure</text><text x="872.5" y="483" text-anchor="middle" class="small">benefit requires genuine mortgage displacement</text>
+  <path d="M985 270 C985 315 420 305 375 337" class="edge"/><text x="760" y="305" text-anchor="middle" class="edge-label">funds approved LVC contributions</text><path d="M520 425 H667" class="edge"/><text x="593.5" y="408" text-anchor="middle" class="edge-label">replaces part of</text>
+  <text x="60" y="557" class="phase">3 · CONTINUING REVENUE AND POLICY EFFECT</text>
+  <rect x="60" y="580" width="310" height="130" rx="8" fill="#ffffff" stroke="#b1842f" stroke-width="2"/>
+  <text x="215" y="618" text-anchor="middle" class="node-title">Property owners</text><text x="215" y="653" text-anchor="middle" class="gold-value">continuing LVC payments</text><text x="215" y="682" text-anchor="middle" class="small">linked to the agreed location-value share</text>
+  <rect x="445" y="580" width="310" height="130" rx="8" fill="#ebe5d8" stroke="#b1842f" stroke-width="2"/>
+  <text x="600" y="618" text-anchor="middle" class="node-title">Fiscal choices</text><text x="600" y="651" text-anchor="middle" class="node-copy">fund further LVCs · reduce borrowing</text><text x="600" y="678" text-anchor="middle" class="node-copy">or replace economically damaging taxes</text>
+  <rect x="830" y="580" width="310" height="130" rx="8" fill="#103943" stroke="#103943" stroke-width="2"/>
+  <text x="985" y="618" text-anchor="middle" style="font:600 20px Georgia,'Times New Roman',serif;fill:#ffffff">Potential wider result</text><text x="985" y="652" text-anchor="middle" style="font:700 18px ui-sans-serif,system-ui,sans-serif;fill:#acd3c2">lower leverage</text><text x="985" y="680" text-anchor="middle" style="font:15px ui-sans-serif,system-ui,sans-serif;fill:#d0dcde">less property-driven inflation pressure</text>
+  <path d="M327 500 C327 540 220 535 215 567" class="edge-gold"/><text x="275" y="538" text-anchor="middle" class="edge-label">covenant continues</text><path d="M370 645 H432" class="edge-gold"/><text x="401" y="630" text-anchor="middle" class="edge-label">returns</text><path d="M755 645 H817" class="edge"/><text x="786" y="630" text-anchor="middle" class="edge-label">supports</text>
+  <path d="M600 580 C600 545 985 550 985 283" class="edge-dashed"/><text x="786" y="537" text-anchor="middle" class="small">receipts can replenish the public fund</text><path d="M872 500 C900 535 955 540 970 567" class="edge"/>
+  <line x1="60" y1="758" x2="1140" y2="758" stroke="#cdd5d1" stroke-width="1"/><text x="600" y="788" text-anchor="middle" class="small">The monetary effect depends on the whole transaction, correct valuation, funding source and use of covenant revenue.</text>
+</svg>

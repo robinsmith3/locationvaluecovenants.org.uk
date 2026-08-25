@@ -99,6 +99,10 @@ await copyFile(
   new URL("assets/lvc-in-action.svg", PUBLIC)
 );
 await copyFile(
+  new URL("../assets/monetary-stability-policy-flow.svg", import.meta.url),
+  new URL("assets/monetary-stability-policy-flow.svg", PUBLIC)
+);
+await copyFile(
   new URL("../assets/favicon.ico", import.meta.url),
   new URL("favicon.ico", PUBLIC)
 );

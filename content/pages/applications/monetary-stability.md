@@ -54,6 +54,8 @@ The Treasury does not issue a separate gilt for each home. Parliament would auth
 
 Government receives a continuing public asset in exchange: the right to collect the property’s LVC payment from successive owners. In the early years, new contributions would exceed covenant receipts. As the covenanted property base grew, its receipts could finance an increasing share of new LVCs, administration and other public purposes.
 
+![How Location Value Covenant funding circulates through the economy and can support monetary stability](/assets/monetary-stability-policy-flow.svg)
+
 ### How the covenant asset is valued
 
 In the original example, the initial covenant payment is calculated directly from the agreed public contribution:

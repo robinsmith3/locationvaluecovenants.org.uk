@@ -37,6 +37,18 @@ function markdown(source) {
   return html.join("\n");
 }
 
+function tableOfContents(source) {
+  const links = source
+    .trim()
+    .split(/\r?\n/)
+    .map(line => /^(#{2,4})\s+(.+?)\s+\{#([^}]+)\}\s*$/.exec(line.trim()))
+    .filter(Boolean)
+    .map(match => `<a href="#${escapeHtml(match[3])}">${inline(match[2])}</a>`)
+    .join("");
+
+  return `<aside class="toc"><b>On this page</b>${links}</aside>`;
+}
+
 function parsePage(source, filename) {
   const match = /^---\n([\s\S]*?)\n---\n([\s\S]*)$/m.exec(source);
   if (!match) throw new Error(`${filename}: missing front matter`);
@@ -54,7 +66,10 @@ function bodyFor(page, apps) {
   const content = markdown(page.body);
   if (page.meta.layout === "home") return `<section class="wrap homehero"><div><small>${escapeHtml(page.meta.eyebrow)}</small><h1>${escapeHtml(page.meta.heading)}</h1><p class="lead">${escapeHtml(page.meta.intro)}</p><p><a class="button" href="/briefing/">Read the policy briefing</a><a class="button ghost" href="/applications/">Explore six applications</a></p></div><aside><small>The proposition</small><ol><li><b>Voluntary</b><span>Property owners choose whether to participate.</span></li><li><b>Lower risk</b><span>Payments track local rental value rather than interest rates.</span></li><li><b>Public benefit</b><span>Revenue flows to public purposes rather than mortgage interest.</span></li></ol></aside></section><div class="wrap policy-content">${content}<h2>Six ways the covenant can be used</h2>${cards(apps)}</div>`;
   if (page.meta.layout === "applications") return `${hero(page)}<section class="wrap section">${content}${cards(apps)}<div class="notice"><b>A note on the examples</b><p>Monetary figures and tax references illustrate the mechanism at the time of writing; they are not current quotations, calculations or personal advice.</p></div></section>`;
-  if (page.meta.layout === "application") return `<header class="apphero"><div class="wrap"><a href="/applications/">← All applications</a><small>Application ${page.meta.number}</small><h1>${escapeHtml(page.meta.heading)}</h1><p>${escapeHtml(page.meta.intro)}</p><i>${escapeHtml(page.meta.credit)}</i></div></header><div class="wrap layout"><aside class="toc"><b>On this page</b><a href="#basic-concept">Basic concept</a><a href="#worked-example">Worked example</a><a href="#policy-effect">Policy effect</a></aside><article>${content}<div class="notice"><b>Illustrative figures</b><p>Financial values, rates and tax references restyle the original policy example. They explain the proposed mechanism and are not current financial, tax or legal advice.</p></div><nav class="article-nav"><a href="/applications/">All applications</a><a href="/briefing/">Policy briefing</a></nav></article></div>`;
+  if (page.meta.layout === "application") {
+    const toc = tableOfContents(page.body);
+    return `<header class="apphero"><div class="wrap"><a href="/applications/">← All applications</a><small>Application ${page.meta.number}</small><h1>${escapeHtml(page.meta.heading)}</h1><p>${escapeHtml(page.meta.intro)}</p><i>${escapeHtml(page.meta.credit)}</i></div></header><div class="wrap layout">${toc}<article>${content}<div class="notice"><b>Illustrative figures</b><p>Financial values, rates and tax references restyle the original policy example. They explain the proposed mechanism and are not current financial, tax or legal advice.</p></div><nav class="article-nav"><a href="/applications/">All applications</a><a href="/briefing/">Policy briefing</a></nav></article></div>`;
+  }
   return `${hero(page)}<div class="wrap layout"><aside class="toc"><b>On this page</b><a href="#main-content">Main content</a></aside><article id="main-content" class="policy-content">${content}</article></div>`;
 }
 

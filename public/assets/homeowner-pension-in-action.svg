@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">How a Homeowner Pension works</title>
+  <desc id="desc">Government grants a 462 pound monthly Homeowner Pension. While the original homeowner owns the property, a 212 pound monthly covenant is deducted, leaving 250 pounds of additional monthly income. On sale, a future purchaser pays a lower property price and accepts the continuing covenant.</desc>
+  <metadata>
+flowchart TB
+    G["Government&lt;br/&gt;grants £462 monthly HOP"]
+    M["Original homeowner&lt;br/&gt;keeps existing income&lt;br/&gt;and receives £250 extra"]
+    P["Property&lt;br/&gt;carries £212 monthly LVC"]
+    B["Future purchaser&lt;br/&gt;pays about £42,000 less&lt;br/&gt;and accepts the LVC"]
+    G --&gt;|"£462 HOP"| M
+    M --&gt;|"£212 deducted while she owns"| P
+    P --&gt;|"continues with property"| B
+    B -.-&gt;|"after sale, purchaser pays LVC; former owner receives full HOP"| M
+  </metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#08706d"/>
+    </marker>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b1842f"/>
+    </marker>
+    <style>
+      .title { font: 500 34px Georgia, 'Times New Roman', serif; fill: #162b31; }
+      .subtitle { font: 16px ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #53676c; }
+      .phase { font: 700 13px ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; letter-spacing: 1.5px; fill: #08706d; }
+      .node-title { font: 600 20px Georgia, 'Times New Roman', serif; fill: #162b31; }
+      .node-copy { font: 15px ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #3a5156; }
+      .value { font: 700 23px ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #08706d; }
+      .edge { fill: none; stroke: #08706d; stroke-width: 3; marker-end: url(#arrow); }
+      .edge-gold { fill: none; stroke: #b1842f; stroke-width: 3; marker-end: url(#arrowGold); }
+      .edge-dashed { fill: none; stroke: #08706d; stroke-width: 2.5; stroke-dasharray: 9 7; marker-end: url(#arrow); }
+      .edge-label { font: 600 14px ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #162b31; }
+      .small { font: 13px ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif; fill: #53676c; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="720" fill="#f7f4ec"/>
+  <text x="600" y="54" text-anchor="middle" class="title">How a Homeowner Pension works</text>
+  <text x="600" y="84" text-anchor="middle" class="subtitle">Housing wealth is exchanged for income now; the covenant is reflected in the property's future price.</text>
+
+  <text x="65" y="132" class="phase">WHILE THE ORIGINAL HOMEOWNER OWNS THE PROPERTY</text>
+
+  <rect x="65" y="160" width="285" height="170" rx="8" fill="#e2ebe5" stroke="#08706d" stroke-width="2"/>
+  <text x="207.5" y="205" text-anchor="middle" class="node-title">Government</text>
+  <text x="207.5" y="245" text-anchor="middle" class="node-copy">grants a monthly</text>
+  <text x="207.5" y="282" text-anchor="middle" class="value">£462 HOP</text>
+
+  <rect x="458" y="160" width="285" height="170" rx="8" fill="#ffffff" stroke="#08706d" stroke-width="2"/>
+  <text x="600.5" y="201" text-anchor="middle" class="node-title">Original homeowner</text>
+  <text x="600.5" y="237" text-anchor="middle" class="node-copy">existing income is unchanged</text>
+  <text x="600.5" y="275" text-anchor="middle" class="value">£250 extra each month</text>
+  <text x="600.5" y="304" text-anchor="middle" class="small">£462 HOP − £212 covenant</text>
+
+  <rect x="850" y="160" width="285" height="170" rx="8" fill="#ebe5d8" stroke="#b1842f" stroke-width="2"/>
+  <text x="992.5" y="201" text-anchor="middle" class="node-title">The property</text>
+  <text x="992.5" y="237" text-anchor="middle" class="node-copy">carries a continuing</text>
+  <text x="992.5" y="275" text-anchor="middle" class="value">£212 monthly LVC</text>
+  <text x="992.5" y="304" text-anchor="middle" class="small">linked to local values</text>
+
+  <path d="M350 245 H445" class="edge"/>
+  <rect x="365" y="210" width="65" height="25" rx="4" fill="#f7f4ec"/>
+  <text x="397.5" y="228" text-anchor="middle" class="edge-label">£462</text>
+
+  <path d="M743 245 H837" class="edge-gold"/>
+  <rect x="756" y="205" width="68" height="45" rx="4" fill="#f7f4ec"/>
+  <text x="790" y="222" text-anchor="middle" class="edge-label">£212</text>
+  <text x="790" y="240" text-anchor="middle" class="small">deducted</text>
+
+  <text x="65" y="399" class="phase">AFTER THE PROPERTY IS SOLD</text>
+
+  <rect x="160" y="430" width="360" height="185" rx="8" fill="#ffffff" stroke="#08706d" stroke-width="2"/>
+  <text x="340" y="472" text-anchor="middle" class="node-title">Future purchaser</text>
+  <text x="340" y="510" text-anchor="middle" class="node-copy">receives the benefit upfront through a</text>
+  <text x="340" y="546" text-anchor="middle" class="value">lower purchase price</text>
+  <text x="340" y="578" text-anchor="middle" class="small">approximately £42,000 less in Maude's example</text>
+
+  <rect x="680" y="430" width="360" height="185" rx="8" fill="#ebe5d8" stroke="#b1842f" stroke-width="2"/>
+  <text x="860" y="472" text-anchor="middle" class="node-title">The exchange</text>
+  <text x="860" y="510" text-anchor="middle" class="node-copy">the purchaser accepts and pays the</text>
+  <text x="860" y="546" text-anchor="middle" class="value">continuing LVC</text>
+  <text x="860" y="578" text-anchor="middle" class="small">and the former owner receives the full HOP</text>
+
+  <path d="M520 522 H667" class="edge-gold"/>
+  <rect x="545" y="484" width="98" height="27" rx="4" fill="#f7f4ec"/>
+  <text x="594" y="503" text-anchor="middle" class="edge-label">in return for</text>
+
+  <path d="M992 330 C992 380 860 390 860 417" class="edge-dashed"/>
+  <text x="955" y="379" text-anchor="end" class="small">covenant follows the property</text>
+
+  <line x1="65" y1="658" x2="1135" y2="658" stroke="#cdd5d1" stroke-width="1"/>
+  <text x="600" y="690" text-anchor="middle" class="small">Illustrative figures from the original policy example; not a current financial quotation.</text>
+</svg>

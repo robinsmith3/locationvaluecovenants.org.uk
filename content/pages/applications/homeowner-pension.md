@@ -46,6 +46,8 @@ If Maude sells, the purchaser takes the property subject to the covenant and its
 
 The figures come from the original briefing and are illustrative rather than current quotations.
 
+![How the Homeowner Pension converts property value into additional income](/assets/homeowner-pension-in-action.svg)
+
 ### Why does the covenant increase for a younger homeowner? {#age-and-covenant}
 
 The younger the homeowner is when the Homeowner Pension begins, the longer government is likely to make pension payments. The original examples therefore assign a larger covenant to a younger recipient in exchange for providing the same £250 of additional monthly income over a longer expected lifetime. This is why Liz's annual covenant and estimated reduction in property value are greater than Maude's.

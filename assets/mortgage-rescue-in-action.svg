@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="830" viewBox="0 0 1200 830" role="img" aria-labelledby="title desc">
+  <title id="title">How Location Value Mortgage Rescue works</title>
+  <desc id="desc">Before rescue, Peter has a 250,000 pound mortgage on a property worth 225,000 pounds, pays 1,400 pounds each month and has 25,000 pounds of negative equity. A public rescue fund settles 150,000 pounds with the lender in exchange for a continuing 520 pound monthly covenant. The bank retains a smaller 100,000 pound mortgage. Peter pays 1,220 pounds each month, saves 180 pounds and no longer has the illustrated negative equity. A future buyer pays a lower price and accepts the covenant. Government receives continuing payments and may avoid wider financial and social losses.</desc>
+  <metadata>
+flowchart TB
+    B["Before rescue&lt;br/&gt;£250k mortgage on £225k home&lt;br/&gt;£1,400 monthly payment&lt;br/&gt;£25k negative equity"]
+    G["Public rescue fund&lt;br/&gt;settles £150k with lender"]
+    C["Homeowner grants continuing LVC&lt;br/&gt;£520 monthly, linked to local values"]
+    K["Bank after rescue&lt;br/&gt;£100k smaller, safer mortgage"]
+    H["Homeowner after rescue&lt;br/&gt;£1,220 total monthly payments&lt;br/&gt;£180 monthly saving&lt;br/&gt;negative equity removed"]
+    F["Future purchaser&lt;br/&gt;pays about £100k, not £225k&lt;br/&gt;accepts continuing LVC"]
+    P["Public value&lt;br/&gt;continuing revenue asset&lt;br/&gt;plus avoided financial and social losses"]
+    B --&gt; G
+    G --&gt;|"£150k settlement"| K
+    B --&gt; C
+    C --&gt; H
+    K --&gt; H
+    C --&gt; F
+    C --&gt; P
+    F --&gt;|"continuing payments"| P
+  </metadata>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#08706d"/></marker>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#b1842f"/></marker>
+    <style>
+      .title{font:500 34px Georgia,'Times New Roman',serif;fill:#162b31}.subtitle{font:16px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#53676c}.phase{font:700 13px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;letter-spacing:1.5px;fill:#08706d}.node-title{font:600 20px Georgia,'Times New Roman',serif;fill:#162b31}.node-copy{font:15px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#3a5156}.value{font:700 19px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#08706d}.gold-value{font:700 19px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#8b651f}.danger{font:700 19px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#9a3f35}.edge{fill:none;stroke:#08706d;stroke-width:3;marker-end:url(#arrow)}.edge-gold{fill:none;stroke:#b1842f;stroke-width:3;marker-end:url(#arrowGold)}.edge-label{font:600 13px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#162b31}.small{font:13px ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;fill:#53676c}
+    </style>
+  </defs>
+  <rect width="1200" height="830" fill="#f7f4ec"/>
+  <text x="600" y="50" text-anchor="middle" class="title">How Location Value Mortgage Rescue works</text>
+  <text x="600" y="80" text-anchor="middle" class="subtitle">The main benefit is debt and shortfall relief—not merely the £180 monthly saving</text>
+
+  <text x="60" y="122" class="phase">1 · BEFORE RESCUE</text>
+  <rect x="250" y="140" width="700" height="130" rx="8" fill="#ffffff" stroke="#9a3f35" stroke-width="2"/>
+  <text x="600" y="178" text-anchor="middle" class="node-title">Peter is at risk of default or forced sale</text>
+  <text x="390" y="218" text-anchor="middle" class="value">£250,000 mortgage</text><text x="600" y="218" text-anchor="middle" class="node-copy">on a £225,000 home</text><text x="810" y="218" text-anchor="middle" class="danger">−£25,000 equity</text>
+  <text x="600" y="248" text-anchor="middle" class="node-copy">Monthly mortgage payment: £1,400</text>
+
+  <text x="60" y="320" class="phase">2 · RESCUE TRANSACTION</text>
+  <rect x="60" y="340" width="310" height="140" rx="8" fill="#e2ebe5" stroke="#08706d" stroke-width="2"/>
+  <text x="215" y="380" text-anchor="middle" class="node-title">Public rescue fund</text><text x="215" y="418" text-anchor="middle" class="value">£150,000 settlement</text><text x="215" y="450" text-anchor="middle" class="small">exact legal mechanism must be specified</text>
+  <rect x="445" y="340" width="310" height="140" rx="8" fill="#ffffff" stroke="#08706d" stroke-width="2"/>
+  <text x="600" y="380" text-anchor="middle" class="node-title">Bank</text><text x="600" y="418" text-anchor="middle" class="value">mortgage falls to £100,000</text><text x="600" y="450" text-anchor="middle" class="small">smaller loan with lower expected default loss</text>
+  <rect x="830" y="340" width="310" height="140" rx="8" fill="#ebe5d8" stroke="#b1842f" stroke-width="2"/>
+  <text x="985" y="380" text-anchor="middle" class="node-title">Property covenant</text><text x="985" y="418" text-anchor="middle" class="gold-value">£520 each month</text><text x="985" y="450" text-anchor="middle" class="small">continues with successive owners</text>
+  <path d="M370 410 H432" class="edge"/><text x="401" y="395" text-anchor="middle" class="edge-label">to lender</text><path d="M755 410 H817" class="edge-gold"/><text x="786" y="395" text-anchor="middle" class="edge-label">in exchange</text>
+
+  <text x="60" y="535" class="phase">3 · WHO BENEFITS, AND HOW?</text>
+  <rect x="60" y="555" width="335" height="165" rx="8" fill="#e2ebe5" stroke="#08706d" stroke-width="2"/>
+  <text x="227.5" y="594" text-anchor="middle" class="node-title">Peter now</text><text x="227.5" y="631" text-anchor="middle" class="value">£1,220 total each month</text><text x="227.5" y="659" text-anchor="middle" class="node-copy">£180 immediate saving</text><text x="227.5" y="687" text-anchor="middle" class="node-copy">negative equity removed</text><text x="227.5" y="709" text-anchor="middle" class="small">can remain or sell without illustrated shortfall</text>
+  <rect x="432.5" y="555" width="335" height="165" rx="8" fill="#ffffff" stroke="#08706d" stroke-width="2"/>
+  <text x="600" y="594" text-anchor="middle" class="node-title">Future purchaser</text><text x="600" y="631" text-anchor="middle" class="value">pays about £100,000</text><text x="600" y="659" text-anchor="middle" class="node-copy">instead of £225,000</text><text x="600" y="687" text-anchor="middle" class="node-copy">needs much less mortgage debt</text><text x="600" y="709" text-anchor="middle" class="small">accepts the continuing covenant</text>
+  <rect x="805" y="555" width="335" height="165" rx="8" fill="#103943" stroke="#103943" stroke-width="2"/>
+  <text x="972.5" y="594" text-anchor="middle" style="font:600 20px Georgia,'Times New Roman',serif;fill:#ffffff">Government and public</text><text x="972.5" y="631" text-anchor="middle" style="font:700 18px ui-sans-serif,system-ui,sans-serif;fill:#acd3c2">continuing revenue asset</text><text x="972.5" y="659" text-anchor="middle" style="font:15px ui-sans-serif,system-ui,sans-serif;fill:#d0dcde">plus avoided repossession, housing</text><text x="972.5" y="683" text-anchor="middle" style="font:15px ui-sans-serif,system-ui,sans-serif;fill:#d0dcde">and financial-stability losses</text><text x="972.5" y="709" text-anchor="middle" style="font:13px ui-sans-serif,system-ui,sans-serif;fill:#91a5aa">financial and wider value should be reported separately</text>
+  <path d="M600 480 C520 515 300 515 240 542" class="edge"/><path d="M985 480 C900 525 670 510 620 542" class="edge-gold"/><path d="M985 480 V542" class="edge-gold"/>
+
+  <line x1="60" y1="768" x2="1140" y2="768" stroke="#cdd5d1" stroke-width="1"/>
+  <text x="600" y="797" text-anchor="middle" class="small">Illustrative 2008 figures. Peter gives up future location-value upside in return for debt relief, payment relief and an exit from negative equity.</text>
+</svg>

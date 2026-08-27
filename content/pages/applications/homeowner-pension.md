@@ -46,13 +46,14 @@ If Maude sells, the purchaser takes the property subject to the covenant and its
 
 The figures come from the original briefing and are illustrative rather than current quotations.
 
+## How the LVC works {#how-it-works}
 ![How the Homeowner Pension converts property value into additional income](/assets/homeowner-pension-in-action.svg)
 
-### Why does the covenant increase for a younger homeowner? {#age-and-covenant}
+### Why does the covenant increase for a younger homeowner? 
 
 The younger the homeowner is when the Homeowner Pension begins, the longer government is likely to make pension payments. The original examples therefore assign a larger covenant to a younger recipient in exchange for providing the same £250 of additional monthly income over a longer expected lifetime. This is why Liz's annual covenant and estimated reduction in property value are greater than Maude's.
 
-### Is the covenant unfair to a future owner? {#future-owner}
+### Is the covenant unfair to a future owner? 
 
 The future owner does not receive Maude's Homeowner Pension, but they should not pay the price of an otherwise identical property without a covenant. The continuing payment reduces what purchasers are willing and able to pay for the property. In the original example, Maude's house is therefore estimated to sell for approximately £42,000 less than it would without the covenant.
 
@@ -71,7 +72,7 @@ This is economically fair only if:
 
 The estimated price reduction is not guaranteed to equal every payment eventually made. Its market value will depend on interest rates, expected increases in the covenant, local demand and buyers' attitudes to the obligation. A transparent valuation method and clear consumer protections would therefore be essential.
 
-## How might the income be taxed? {#tax-treatment}
+## How might the income be taxed?
 
 The original proposal describes the Homeowner Pension as tax-free. That would be a deliberate policy choice requiring legislation; calling the payment a “pension” would not by itself determine its tax treatment.
 
@@ -84,7 +85,7 @@ It would be misleading to add the gross £462 to Maude's taxable income while di
 
 Income Tax and means-tested benefits are separate questions. Even if some or all of the Homeowner Pension were tax-free, legislation would also need to state how it affects Pension Credit, council tax support, care funding and other means-tested assistance.
 
-### Why would I choose this?
+## The beneficiaries {#beneficiaries}
 
 * **Homeowner — why would I do this?** I receive income in addition to my existing pension or other income, without selling my home or taking a conventional equity-release loan on which interest may compound. I am exchanging part of the property's future sale value—and potentially part of my beneficiaries' inheritance—for more disposable income during my lifetime.
 * **Future purchaser:** I do not receive the original owner's Homeowner Pension, but I acquire the property at a lower price and require less mortgage debt. In exchange, I accept the disclosed covenant payment for as long as I own the property, and the covenant should again be reflected in the price when I sell.

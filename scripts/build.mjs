@@ -110,6 +110,10 @@ await copyFile(
   new URL("../assets/homeowner-pension-in-action.svg", import.meta.url),
   new URL("assets/homeowner-pension-in-action.svg", PUBLIC)
 );
+await copyFile(
+  new URL("../assets/mortgage-rescue-in-action.svg", import.meta.url),
+  new URL("assets/mortgage-rescue-in-action.svg", PUBLIC)
+);
 for (const page of pages) { const relative = page.meta.route === "/" ? "index.html" : `${page.meta.route.slice(1)}index.html`; const destination = new URL(relative, PUBLIC); await mkdir(new URL("./", destination), { recursive: true }); await writeFile(destination, shell(page, apps, css)); }
 const notFound = { meta: { route: "/404/", title: "Page not found", description: "The requested page could not be found.", heading: "Page not found", intro: "The page may have moved as part of the new policy-site structure.", eyebrow: "404", layout: "standard" }, body: "[Return to the home page](/)" };
 await writeFile(new URL("404.html", PUBLIC), shell(notFound, apps, css));

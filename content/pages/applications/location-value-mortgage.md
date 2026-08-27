@@ -46,11 +46,11 @@ The household also considers an identical house in a less expensive location for
 | Covenant payment | — | £500 |
 | Illustrative saving | — | £273 |
 
-### How the transaction works
+## How the LVC works {#how-it-works}
 
 ![Location Value Mortgage transaction showing the buyer’s deposit, smaller bank mortgage and government LVC contribution completing the purchase, followed by a continuing covenant payment to government.](/assets/lvc-in-action.svg)
 
-### Why would I choose this?
+## The beneficiaries {#beneficiaries}
 
 * **Homeowner — why would I do this?** I require a smaller mortgage and make lower combined monthly payments. This reduces my exposure to mortgage interest rates, negative equity and repossession. In exchange, I accept a continuing LVC payment, and the market value of my interest in the property is lower because a future purchaser must assume the same obligation.
 * **Government:** It acquires a continuing, index-linked public revenue asset rather than making an unrecoverable grant. It can also reduce dependence on bank-created mortgage credit and improve financial stability.

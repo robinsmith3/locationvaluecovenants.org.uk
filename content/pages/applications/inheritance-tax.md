@@ -26,7 +26,7 @@ Sir James St’John leaves a £5 million estate including two London properties 
 | Country estate | £2,100,000 | £1,160,000 | £56,256 |
 | IHT liability | £1,875,200 now | — | £112,512 total |
 
-### Why would I choose this?
+## The beneficiaries {#beneficiaries}
 
 * **Homeowner or beneficiary — why would I do this?** I can retain an inherited property without arranging an expensive bridging loan or selling it quickly to meet the inheritance-tax deadline. In exchange, I accept a continuing LVC payment and a lower future sale price reflecting that obligation.
 * **Government:** It settles the inheritance-tax liability by acquiring a continuing, location-linked revenue asset instead of postponing collection or forcing an immediate property sale.

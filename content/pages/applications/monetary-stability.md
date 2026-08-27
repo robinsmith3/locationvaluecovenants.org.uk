@@ -121,7 +121,7 @@ The appropriate use of covenant revenue could therefore vary with economic condi
 
 This could appeal simultaneously to households seeking lower-risk finance, governments seeking continuing revenue, and policymakers concerned with excessive leverage and financial instability.
 
-### Why would each participant choose this?
+## The beneficiaries {#beneficiaries}
 
 * **Homeowner — why would I do this?** I replace part of a large interest-bearing mortgage with a lower continuing covenant payment. This reduces my monthly costs and exposure to mortgage rates, negative equity and repossession. In exchange, the covenant reduces the future sale price because the next owner must assume the same obligation.
 * **Government:** It acquires a continuing public revenue asset while replacing part of the bank-created mortgage credit that would otherwise finance the purchase. This can reduce household leverage and improve monetary and financial resilience.

@@ -26,7 +26,7 @@ The buyer offers £300,000 and enters the covenant. The property is then exempt 
 | Legacy taxes | £300,000 | £9,000 | £1,000 | £139 | £0 |
 | Covenant substitution | £300,000 | £0 | £0 | £0 | £2,425 |
 
-### Why would I choose this?
+## The beneficiaries {#beneficiaries}
 
 * **Homeowner — why would I do this?** I replace several property-related taxes with one transparent payment linked to location value. Removing Stamp Duty reduces the upfront cost of moving and makes it easier to choose a home appropriate to my circumstances. The continuing covenant is visible and should be reflected in the property’s capital price.
 * **Government:** It receives a more coherent and durable revenue stream linked to location value, with fewer barriers to property transactions than Stamp Duty creates.

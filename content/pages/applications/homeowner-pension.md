@@ -72,7 +72,7 @@ This is economically fair only if:
 
 The estimated price reduction is not guaranteed to equal every payment eventually made. Its market value will depend on interest rates, expected increases in the covenant, local demand and buyers' attitudes to the obligation. A transparent valuation method and clear consumer protections would therefore be essential.
 
-## How might the income be taxed?
+### How might the income be taxed?
 
 The original proposal describes the Homeowner Pension as tax-free. That would be a deliberate policy choice requiring legislation; calling the payment a “pension” would not by itself determine its tax treatment.
 

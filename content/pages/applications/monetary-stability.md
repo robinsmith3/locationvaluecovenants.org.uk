@@ -48,13 +48,24 @@ The initial LVC is not calculated from a precise valuation of the land or from a
 
 If the public contribution is financed from genuine existing savings, the transaction is completed with £120,000 less newly created commercial-bank mortgage credit while the public fund acquires a continuing revenue-producing asset.
 
+## How an LVC works {#how-it-works}
+![How Location Value Covenant funding circulates through the economy and can support monetary stability](/assets/monetary-stability-policy-flow.svg)
+
+## The beneficiaries {#beneficiaries}
+
+* **Homeowner — why would I do this?** I replace part of a large interest-bearing mortgage with a lower continuing covenant payment. This reduces my monthly costs and exposure to mortgage rates, negative equity and repossession. In exchange, the covenant reduces the future sale price because the next owner must assume the same obligation.
+* **Government:** It acquires a continuing public revenue asset while replacing part of the bank-created mortgage credit that would otherwise finance the purchase. This can reduce household leverage and improve monetary and financial resilience.
+* **Bank:** It provides a smaller, lower loan-to-value mortgage with less default and negative-equity risk. It retains a lending and customer-service role, although it earns interest on a smaller principal.
+
+The homeowner’s benefit is not free public money. The public contribution is exchanged for a continuing payment attached to the property. The homeowner chooses greater affordability and lower financial risk today while accepting the corresponding reduction in the property’s future sale price.
+
+## Effects of an LVC {#effects}
+
 ### What happens to the public money
 
 The Treasury does not issue a separate gilt for each home. Parliament would authorise an LVC programme, and its aggregate cash requirement would form part of normal government financing. A public LVC fund would pay the approved contribution through the purchaser’s bank or conveyancer when the covenant was registered.
 
 Government receives a continuing public asset in exchange: the right to collect the property’s LVC payment from successive owners. In the early years, new contributions would exceed covenant receipts. As the covenanted property base grew, its receipts could finance an increasing share of new LVCs, administration and other public purposes.
-
-![How Location Value Covenant funding circulates through the economy and can support monetary stability](/assets/monetary-stability-policy-flow.svg)
 
 ### How the covenant asset is valued
 
@@ -96,7 +107,7 @@ The covenant payment withdraws disposable income from the property owner in a si
 
 If all receipts are immediately spent or used for broad tax reductions, much of that demand restraint is returned to the economy. The fiscal use of covenant revenue therefore matters.
 
-### How covenant revenue is used {#revenue-use}
+### How covenant revenue is used
 
 Continuing LVC payments initially reduce private disposable income. Whether this restrains aggregate demand depends on the government's overall fiscal response. If the revenue finances additional spending or immediate tax reductions, the short-term demand effect may be partly or wholly offset. If it reduces borrowing or is accumulated during inflationary periods, more of the restraint remains.
 
@@ -120,14 +131,6 @@ The appropriate use of covenant revenue could therefore vary with economic condi
 - **Potential monetary stabilisation:** slower mortgage-credit growth can moderate one source of property-driven monetary expansion.
 
 This could appeal simultaneously to households seeking lower-risk finance, governments seeking continuing revenue, and policymakers concerned with excessive leverage and financial instability.
-
-## The beneficiaries {#beneficiaries}
-
-* **Homeowner — why would I do this?** I replace part of a large interest-bearing mortgage with a lower continuing covenant payment. This reduces my monthly costs and exposure to mortgage rates, negative equity and repossession. In exchange, the covenant reduces the future sale price because the next owner must assume the same obligation.
-* **Government:** It acquires a continuing public revenue asset while replacing part of the bank-created mortgage credit that would otherwise finance the purchase. This can reduce household leverage and improve monetary and financial resilience.
-* **Bank:** It provides a smaller, lower loan-to-value mortgage with less default and negative-equity risk. It retains a lending and customer-service role, although it earns interest on a smaller principal.
-
-The homeowner’s benefit is not free public money. The public contribution is exchanged for a continuing payment attached to the property. The homeowner chooses greater affordability and lower financial risk today while accepting the corresponding reduction in the property’s future sale price.
 
 ### Conditions required for the benefit
 

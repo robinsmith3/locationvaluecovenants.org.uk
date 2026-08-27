@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">How a Location Value Covenant can settle an inheritance-tax liability</title>
+  <desc id="desc">An estate grants continuing covenants to government in settlement of inheritance tax. Beneficiaries retain lower-valued properties, future purchasers pay lower prices and assume the covenants, and continuing payments return to government.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#37576b"/></marker>
+    <style>
+      .box{fill:#f7fafb;stroke:#37576b;stroke-width:2}.public{fill:#eef6f1;stroke:#35664a}.buyer{fill:#fff8e8;stroke:#8a6424}.t{font-family:Arial,sans-serif;fill:#182a35;text-anchor:middle}.h{font-size:21px;font-weight:700}.p{font-size:16px}.line{fill:none;stroke:#37576b;stroke-width:2.2;marker-end:url(#arrow)}.label{font-family:Arial,sans-serif;font-size:14px;fill:#37576b;text-anchor:middle}.caption{font-family:Arial,sans-serif;font-size:16px;font-weight:700;fill:#182a35;text-anchor:middle}
+    </style>
+  </defs>
+  <text x="480" y="34" class="caption">An immediate tax bill becomes a continuing property obligation</text>
+  <rect class="box" x="285" y="58" width="390" height="100" rx="8"/>
+  <text class="t h" x="480" y="88">Estate before settlement</text><text class="t p" x="480" y="116">£1.875m inheritance-tax bill</text><text class="t p" x="480" y="140">valuable property, but insufficient cash</text>
+  <path class="line" d="M480 158V205"/><text class="label" x="585" y="188">executors choose LVC settlement</text>
+  <rect class="box" x="285" y="207" width="390" height="108" rx="8"/>
+  <text class="t h" x="480" y="238">Property covenants granted</text><text class="t p" x="480" y="267">£112,512 initial annual payments</text><text class="t p" x="480" y="291">attached to the three properties</text>
+  <path class="line" d="M365 315C340 350 260 359 225 391"/><text class="label" x="235" y="350">tax settled</text>
+  <path class="line" d="M595 315C620 350 700 359 735 391"/><text class="label" x="725" y="350">estate released</text>
+  <rect class="public" x="60" y="393" width="330" height="116" rx="8"/>
+  <text class="t h" x="225" y="425">Government</text><text class="t p" x="225" y="454">accepts continuing revenue assets</text><text class="t p" x="225" y="480">instead of immediate cash</text>
+  <rect class="box" x="570" y="393" width="330" height="116" rx="8"/>
+  <text class="t h" x="735" y="425">Beneficiaries</text><text class="t p" x="735" y="454">retain about £2.52m of property</text><text class="t p" x="735" y="480">avoid forced sale or bridging loan</text>
+  <path class="line" d="M735 509V564"/><text class="label" x="825" y="541">sell when they choose</text>
+  <rect class="buyer" x="570" y="566" width="330" height="116" rx="8"/>
+  <text class="t h" x="735" y="598">Future purchasers</text><text class="t p" x="735" y="627">pay lower property prices</text><text class="t p" x="735" y="653">and assume continuing covenants</text>
+  <path class="line" d="M570 624C440 624 370 555 310 509"/><text class="label" x="425" y="599">continuing payments</text>
+  <text class="caption" x="480" y="708">Lower inherited and resale value is the cost of settling the original tax debt</text>
+</svg>

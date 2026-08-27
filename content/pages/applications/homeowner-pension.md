@@ -97,3 +97,66 @@ This option is most attractive to a homeowner who places greater value on income
 ## Policy effect {#policy-effect}
 
 The proposal creates a public alternative to commercial equity release. It converts part of a property's future value into additional retirement income while making the continuing obligation visible in the future sale price and the next owner's costs. It does not create the extra income by reducing the homeowner's existing pension: the new Homeowner Pension exceeds the covenant payment while she owns the property.
+
+## Combining more than one LVC {#property-tax-substitution}
+
+Property Tax Substitution is fully compatible with the Homeowner Pension and could be offered whenever a Homeowner Pension is created.
+
+Both proposals use a continuing payment attached to the property and adjusted in line with local location values. Creating them together could therefore share much of the same valuation, legal registration, billing and administration.
+
+The combined arrangement would contain two identifiable components:
+
+* **The Homeowner Pension covenant**, granted in exchange for the additional lifetime income paid to the homeowner; and
+* **The Property Tax Substitution covenant**, replacing the taxes and charges included in that scheme.
+
+The components could be collected as one payment, but should remain separately stated. This would allow the homeowner, government, mortgage lender and future purchaser to see how much relates to the pension and how much replaces existing taxes.
+
+### How it could work 
+
+When the Homeowner Pension is established:
+
+1. Government calculates the gross Homeowner Pension and the covenant required in exchange for it.
+2. The homeowner chooses—or, under a universal version, is required—to place the property into the Property Tax Substitution scheme at the same time.
+3. Selected annual property charges are removed and replaced by a separately calculated tax-substitution component.
+4. Both components are registered against the property and adjusted using the applicable local location-value index.
+5. Government issues one statement showing the gross pension, each covenant component and the resulting net payment.
+
+The property-tax component should not be described as a deduction from the homeowner’s pre-existing pension or savings. It replaces taxes and charges that the household would otherwise pay separately.
+
+For example, if the Homeowner Pension produces:
+
+* A gross pension of £462 per month; and
+* A Homeowner Pension covenant of £212 per month;
+
+the homeowner receives £250 per month of additional income before considering Property Tax Substitution.
+
+If selected annual property charges are then converted into a property-tax covenant, the homeowner makes that payment but no longer pays the substituted charges separately. The statement should show both sides so that the apparent reduction in the pension is not confused with the homeowner losing part of their existing income.
+
+### Preserving the intended pension benefit 
+
+A difficulty arises if the property-tax covenant includes an annualised amount for Stamp Duty as well as the homeowner’s existing annual charges. The homeowner receives the immediate benefit of exemption from Council Tax or other recurring charges, but does not personally receive the Stamp Duty benefit until the property is sold—and that benefit may principally accrue to the purchaser.
+
+There are several possible ways to avoid weakening the Homeowner Pension’s intended income uplift:
+
+* Initially substitute only the annual charges currently paid by the homeowner, adding the transaction-tax component when the property is next sold;
+* Credit the capital value of the future Stamp Duty exemption when calculating the combined property and covenant values; or
+* Set the gross Homeowner Pension and combined covenant together so that the homeowner still receives the intended net additional income after the substituted taxes are taken into account.
+
+Whichever method is adopted, the homeowner should be shown their position before and after the complete arrangement—not merely the gross pension and combined covenant payment.
+
+### What happens after a sale? 
+
+The Homeowner Pension remains personal to its original recipient, while both covenants remain attached to the property.
+
+After a sale:
+
+* The original homeowner continues receiving the Homeowner Pension under the scheme’s terms;
+* The purchaser assumes the Homeowner Pension covenant;
+* The purchaser assumes the Property Tax Substitution covenant;
+* The purchaser receives the associated property-tax exemptions; and
+* The combined obligations and exemptions are reflected in the purchase price and affordability assessment.
+
+The future purchaser therefore receives two benefits in exchange for the combined payment: a lower property price reflecting the Homeowner Pension covenant and exemption from the taxes replaced by the Property Tax Substitution covenant.
+
+Using the two applications together could make administration simpler, extend property-tax reform gradually as Homeowner Pensions are created and give the homeowner one comprehensible account. Their economic purposes must nevertheless remain distinct: one releases housing wealth as additional lifetime income, while the other replaces existing taxes.
+

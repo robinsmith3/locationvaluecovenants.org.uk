@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 960 735" role="img" aria-labelledby="title desc">
+  <title id="title">How Property Tax Substitution changes the flow of property taxes</title>
+  <desc id="desc">Stamp Duty and illustrative annual charges are replaced by one continuing covenant. The homeowner needs less money upfront, government receives continuing revenue, lenders assess one visible obligation, and future purchasers inherit both the covenant and the tax exemptions.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#37576b"/></marker>
+    <style>
+      .box{fill:#f7fafb;stroke:#37576b;stroke-width:2}.public{fill:#eef6f1;stroke:#35664a;stroke-width:2}.buyer{fill:#fff8e8;stroke:#8a6424;stroke-width:2}.bank{fill:#f3f0fa;stroke:#65528a;stroke-width:2}.t{font-family:Arial,sans-serif;fill:#182a35;text-anchor:middle}.h{font-size:20px;font-weight:700}.p{font-size:16px}.line{fill:none;stroke:#37576b;stroke-width:2.2;marker-end:url(#arrow)}.label{font-family:Arial,sans-serif;font-size:14px;fill:#37576b;text-anchor:middle}.caption{font-family:Arial,sans-serif;font-size:16px;font-weight:700;fill:#182a35;text-anchor:middle}
+    </style>
+  </defs>
+  <text x="480" y="32" class="caption">Several differently timed charges become one continuing payment</text>
+  <rect class="box" x="80" y="60" width="330" height="116" rx="8"/>
+  <text class="t h" x="245" y="92">Legacy tax system</text><text class="t p" x="245" y="122">£9,000 Stamp Duty at purchase</text><text class="t p" x="245" y="148">plus £1,139 illustrative annual charges</text>
+  <path class="line" d="M410 118H548"/><text class="label" x="479" y="101">taxes combined</text>
+  <rect class="box" x="550" y="60" width="330" height="116" rx="8"/>
+  <text class="t h" x="715" y="92">LVC substitution</text><text class="t p" x="715" y="122">no substituted taxes</text><text class="t p" x="715" y="148">one £2,425 initial annual payment</text>
+  <path class="line" d="M650 176C610 224 555 232 480 259"/><path class="line" d="M780 176C820 224 840 233 842 259"/>
+  <rect class="buyer" x="315" y="261" width="330" height="116" rx="8"/>
+  <text class="t h" x="480" y="293">Homeowner</text><text class="t p" x="480" y="323">needs £9,000 less upfront</text><text class="t p" x="480" y="349">makes one regular payment</text>
+  <rect class="public" x="670" y="261" width="250" height="116" rx="8"/>
+  <text class="t h" x="795" y="293">Government</text><text class="t p" x="795" y="323">receives continuing</text><text class="t p" x="795" y="349">location-linked revenue</text>
+  <rect class="bank" x="40" y="261" width="240" height="116" rx="8"/>
+  <text class="t h" x="160" y="293">Lender</text><text class="t p" x="160" y="323">less upfront funding</text><text class="t p" x="160" y="349">LVC in affordability test</text>
+  <path class="line" d="M280 319H315"/>
+  <path class="line" d="M480 377V465"/><text class="label" x="590" y="425">sale without new Stamp Duty</text>
+  <rect class="buyer" x="315" y="467" width="330" height="126" rx="8"/>
+  <text class="t h" x="480" y="499">Future purchaser</text><text class="t p" x="480" y="529">avoids a new transaction-tax bill</text><text class="t p" x="480" y="555">assumes both the covenant</text><text class="t p" x="480" y="579">and the associated exemptions</text>
+  <path class="line" d="M645 530C730 520 782 455 795 377"/><text class="label" x="752" y="478">continuing payments</text>
+  <rect class="box" x="190" y="640" width="580" height="58" rx="8"/>
+  <text class="t p" x="480" y="675">The trade: less tax when moving ↔ a continuing location-linked obligation</text>
+  <text class="caption" x="480" y="727">This changes when tax is paid; it does not make the public-revenue requirement disappear</text>
+</svg>

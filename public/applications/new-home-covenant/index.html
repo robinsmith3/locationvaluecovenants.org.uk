@@ -1,0 +1,274 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>New Home Covenant — Location Value Covenants</title><meta name="description" content="Using a Location Value Covenant to fund part of a newly built home’s price while ensuring that the builder receives the full agreed amount."><link rel="icon" href="/favicon.ico" sizes="any"><style>:root{--ink:#162b31;--muted:#53676c;--paper:#f7f4ec;--navy:#103943;--deep:#092a32;--teal:#08706d;--mint:#acd3c2;--gold:#d0a34b;--line:#cdd5d1;--serif:Georgia,'Times New Roman',serif;--sans:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.68 var(--sans)}
+a{color:inherit}
+.wrap{width:min(calc(100% - 40px),1180px);margin:auto}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;background:white;padding:10px;z-index:99}
+.head{position:sticky;top:0;z-index:10;background:rgba(247,244,236,.96);border-bottom:1px solid #d2d5cf}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800}
+.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--navy);color:white;font-size:11px;letter-spacing:.1em}
+.links{display:flex;gap:30px}
+.links a{text-decoration:none;font-size:14px;font-weight:700;padding:25px 0 21px;border-bottom:3px solid transparent}
+.links a[aria-current]{border-color:var(--gold)}
+h1,h2{font-family:var(--serif);font-weight:500;letter-spacing:-.035em;line-height:1.08}
+h1{font-size:clamp(3rem,7vw,6rem)}
+h2{font-size:clamp(2rem,4vw,3.2rem)}
+h3{line-height:1.28}
+small,article em{display:block;color:var(--teal);font-style:normal;font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+.homehero{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center;padding:88px 0 100px}
+.homehero h1{margin:14px 0 25px}
+.lead{font-size:21px;color:#40575d}
+.button{display:inline-block;background:var(--teal);color:#fff;padding:13px 20px;margin:16px 10px 0 0;text-decoration:none;font-size:14px;font-weight:800}
+.button.ghost{background:transparent;color:var(--ink);border:1px solid #8b9999}
+.homehero aside{background:var(--navy);color:white;padding:34px;box-shadow:14px 14px #d8d0bf}
+.homehero aside small{color:var(--mint)}
+.homehero ol{list-style:none;padding:0;margin:20px 0 0}
+.homehero li{display:flex;flex-direction:column;padding:17px 0;border-top:1px solid #ffffff33}
+.homehero li span{color:#c6d5d7;font-size:14px}
+.band{background:#e3ece6;padding:85px 0}
+.intro{display:grid;grid-template-columns:1fr 3fr;gap:55px}
+.intro p{font-size:19px;color:#3d5358}
+.section{padding:95px 0}
+.section>h2{max-width:800px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.features div{padding:32px;border-right:1px solid var(--line)}
+.features div:last-child{border:0}
+.features h3{font:500 25px var(--serif)}
+.features p,.cards p{color:var(--muted);font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.cards>a{min-height:315px;padding:25px 22px;display:flex;flex-direction:column;text-decoration:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.15s}
+.cards>a:hover{background:#fff;transform:translateY(-3px)}
+.cards h3{font:500 24px var(--serif);margin-top:35px}
+.cards b{margin-top:auto;color:var(--teal);font-size:13px}
+.closing{background:var(--deep);color:white;text-align:center;padding:95px 0}
+.closing small{color:var(--mint)}
+.closing p{max-width:700px;margin:auto;color:#c7d5d7}
+.button.light{background:white;color:var(--deep)}
+.pagehero{background:var(--deep);color:white;padding:80px 0}
+.pagehero small{color:var(--mint)}
+.pagehero h1{margin:10px 0 18px}
+.pagehero p{font-size:21px;max-width:730px;color:#d0dcde}
+.layout{display:grid;grid-template-columns:220px minmax(0,770px);gap:75px;align-items:start;padding:78px 0 110px}
+.toc{position:sticky;top:108px;border-top:3px solid var(--gold);padding-top:16px}
+.toc b{font-size:13px}
+.toc a{display:block;text-decoration:none;color:var(--muted);font-size:14px;padding:6px 0}
+.layout article section{margin-bottom:72px}
+.layout article h2[id],.layout article h3[id],.layout article h4[id]{scroll-margin-top:105px}
+.layout article h2{margin-bottom:23px}
+.layout article p,.layout article li{color:#3a5156}
+.definitions{display:grid;grid-template-columns:1fr 1fr;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.definitions div{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.definitions p{font-size:15px;margin:0}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.compare div{background:#e2ebe5;padding:27px}
+.app-list{list-style:none;padding:0;border-top:1px solid var(--line)}
+.app-list li{display:grid;grid-template-columns:45px 1fr;gap:12px;padding:21px 0;border-bottom:1px solid var(--line)}
+.app-list span{font-size:12px;color:var(--teal)}
+.app-list a{font:600 22px var(--serif)}
+.app-list p{font-size:14px;margin:4px 0}
+.apphero{background:#e2ebe5;padding:52px 0 65px}
+.apphero>a{color:var(--teal)}
+.apphero small{margin-top:45px}
+.apphero h1{margin:10px 0 20px}
+.apphero>div>p{font:500 25px/1.45 var(--serif);max-width:800px}
+.apphero i{color:#66787b;font-size:13px}
+.table{overflow:auto;margin:28px 0 40px}
+.table:focus{outline:3px solid var(--gold)}
+table{border-collapse:collapse;width:100%;min-width:620px;background:#fff;font-size:14px}
+th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #d5dcda;vertical-align:top}
+thead th{background:var(--navy);color:white}
+tbody tr:nth-child(even){background:#f0f3ef}
+.notice{background:#ebe5d8;border-left:4px solid var(--gold);padding:23px 26px;margin-top:45px}
+.notice p{margin:5px 0;color:var(--muted);font-size:14px}
+.article-nav{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:22px;margin-top:45px}
+.article-nav a{color:var(--teal);font-weight:800;font-size:14px}
+.foot{background:#081f25;color:#d5dede;padding:55px 0 20px}
+.footgrid{display:flex;justify-content:space-between;gap:50px}
+.foot p{color:#91a5aa;font-size:13px}
+.foot nav{display:flex;gap:20px}
+.fine{border-top:1px solid #ffffff22;margin-top:35px;padding-top:18px;color:#819499;font-size:12px}
+@media(max-width:950px){.homehero{grid-template-columns:1fr}
+.intro{grid-template-columns:1fr}
+.cards{grid-template-columns:repeat(2,1fr)}
+.layout{grid-template-columns:180px 1fr;gap:40px}
+}
+@media(max-width:650px){body{font-size:16px}
+.wrap{width:min(calc(100% - 28px),1180px)}
+.brand>span:last-child{display:none}
+.links{gap:15px}
+.links a{font-size:12px}
+.homehero{padding:55px 0 70px}
+.homehero aside{box-shadow:8px 8px #d8d0bf}
+.features,.cards,.definitions,.compare{grid-template-columns:1fr}
+.features div{border-right:0;border-bottom:1px solid var(--line)}
+.cards>a{min-height:245px}
+.layout{display:block;padding:55px 0 75px}
+.toc{position:static;margin-bottom: 50px}
+.toc b{display:block;margin-bottom; 8px}
+.toc a{display:block;margin-right: 0}
+.apphero{padding:45px 0 55px}
+.footgrid,.article-nav{flex-direction:column}
+.table{margin-inline:-14px;padding-inline:14px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+.cards>a{transition:none}
+}
+.policy-content {
+  padding-top: 35px;
+  padding-bottom: 80px;
+}
+
+.policy-content > h2 {
+  margin-top: 65px;
+}
+
+.policy-content > h3 {
+  margin-top: 38px;
+  font: 500 25px var(--serif);
+}
+
+.policy-content > p,
+.policy-content > ul,
+.policy-content > ol {
+  max-width: 770px;
+}
+
+.policy-content code {
+  font-size: .9em;
+  background: #ebe5d8;
+  padding: .1em .35em;
+}
+
+.policy-content a {
+  color: var(--teal);
+}
+
+.layout article img {
+  display: block;
+  width: 100%;
+  max-width: 770px;
+  height: auto;
+  margin: 32px auto 48px;
+}</style></head><body><a class="skip" href="#main">Skip to content</a><header class="head"><div class="wrap nav"><a class="brand" href="/"><span class="mark">LVC</span><span>Location Value Covenants</span></a><nav class="links"><a  href="/">Home</a><a  href="/briefing/">Policy briefing</a><a aria-current="page" href="/applications/">Applications</a></nav></div></header><main id="main"><header class="apphero"><div class="wrap"><a href="/applications/">← All applications</a><small>Application 06</small><h1>New Home Covenant</h1><p>A lower-capital route into a newly built home that connects public LVC funding directly to additional housing supply.</p><i>A Systemic Fiscal Reform Group briefing, developed by Robin Smith.</i></div></header><div class="wrap layout"><aside class="toc"><b>On this page</b><a href="#basic-concept">Basic concept</a><a href="#worked-example">Worked example</a><a href="#how-it-works">How the LVC works</a><a href="#beneficiaries">The beneficiaries</a><a href="#policy-effect">Policy effect</a></aside><article><h2 id="basic-concept">Basic concept</h2>
+<p>A New Home Covenant would allow the purchaser of a newly completed home to replace part of the conventional purchase price and mortgage with a continuing Location Value Covenant.</p>
+<p>The public LVC fund pays an agreed contribution towards the home at completion. The purchaser supplies the balance. The builder receives the full independently verified price, so the developer is not required to provide a discount or wait for covenant payments.</p>
+<p>In exchange for the public contribution, an LVC is registered against the new home. The owner makes a continuing payment that is subsequently adjusted in line with relevant local location values. When the property is sold, the covenant remains attached to it and is reflected in the price paid by the next owner.</p>
+<p>The defining feature is <strong>additional housing supply</strong>. The contribution is available only when an eligible new home is completed and added to the usable housing stock. This distinguishes the New Home Covenant from assistance that increases purchasing power for existing homes without increasing supply.</p>
+<p>The basic exchange is:</p>
+<p><strong>Smaller purchase balance and mortgage today ↔ a continuing covenant attached to the new home</strong></p>
+<p>This is a policy proposal, not a currently available UK mortgage or home-purchase product.</p>
+<h2 id="worked-example">Worked example</h2>
+<p>A builder completes a new home with an independently verified uncovenanted price of £300,000.</p>
+<p>The purchaser chooses a £120,000 New Home Covenant contribution. At completion:</p>
+<ul><li>The public LVC fund pays £120,000.</li><li>The purchaser supplies £180,000 from their deposit and mortgage.</li><li>The builder receives the full £300,000.</li><li>A continuing covenant is registered against the property.</li></ul>
+<p>At an illustrative initial covenant rate of 5%, the opening payment is:</p>
+<p><strong>£120,000 × 5% = £6,000 a year, or £500 a month</strong></p>
+<div class="table" tabindex="0" role="region" aria-label="Data table"><table><thead><tr><th>Transaction</th><th>Conventional purchase</th><th>New Home Covenant</th></tr></thead><tbody><tr><th>Builder receives</th><td>£300,000</td><td>£300,000</td></tr><tr><th>Public LVC contribution</th><td>£0</td><td>£120,000</td></tr><tr><th>Purchaser supplies</th><td>£300,000</td><td>£180,000</td></tr><tr><th>Initial covenant payment</th><td>£0</td><td>£6,000 a year</td></tr></tbody></table></div>
+<h2 id="how-it-works">How the LVC works</h2>
+<p><img src="/assets/new-home-covenant.svg" alt="How a New Home Covenant pays the builder in full while reducing the purchaser’s mortgage requirement" loading="lazy"></p>
+<p>The purchaser does not receive £120,000 as freely spendable cash. It is paid into the property transaction and reduces the amount that the purchaser must provide.</p>
+<h3 id="effect-on-the-mortgage">Effect on the mortgage</h3>
+<p>Suppose the purchaser has a £60,000 deposit.</p>
+<p>Without the covenant:</p>
+<ul><li>Purchase price: £300,000;</li><li>Deposit: £60,000; and</li><li>Mortgage required: £240,000.</li></ul>
+<p>With the £120,000 covenant:</p>
+<ul><li>Purchaser’s balance: £180,000;</li><li>Deposit: £60,000;</li><li>Mortgage required: £120,000; and</li><li>Continuing covenant: initially £500 a month.</li></ul>
+<p>The buyer’s mortgage principal is therefore £120,000 lower. The covenant is not free and must be included in affordability calculations, but the household has much less conventional debt and less exposure to mortgage interest rates.</p>
+<p>The exact monthly comparison depends on mortgage rates, repayment terms, covenant indexation and the length of ownership. The New Home Covenant should not be advertised as automatically cheaper over every possible lifetime.</p>
+<h2 id="beneficiaries">The beneficiaries</h2>
+<ul><li><strong>Purchaser — why would I do this?</strong> I can buy a newly built home with a much smaller mortgage and less exposure to interest-rate changes. I accept a continuing covenant and a lower future selling price.</li><li><strong>Builder:</strong> I receive the full verified price at completion and gain access to a wider pool of purchasers. I must meet eligibility, price-verification and completion requirements.</li><li><strong>Government:</strong> It connects home-purchase assistance to additional supply and acquires a continuing public revenue asset. It assumes financing, valuation, administration and programme-design risk.</li><li><strong>Bank:</strong> I provide a smaller, lower loan-to-value mortgage with a larger collateral buffer. I must include the covenant in affordability and value the property subject to it.</li><li><strong>Future purchaser:</strong> I buy the covenanted home for less and need less mortgage debt. I assume the continuing payment, which is reflected again when I later sell.</li><li><strong>Wider community:</strong> Additional construction can expand housing supply, employment and the local tax base. Those benefits depend on genuine additionality rather than relabelling planned development.</li></ul>
+<h2 id="why-might-a-purchaser-choose-it">Why might a purchaser choose it?</h2>
+<p>The New Home Covenant can make a newly built home accessible with a smaller mortgage and potentially a smaller deposit requirement.</p>
+<p>The purchaser may gain:</p>
+<ul><li>A substantially lower conventional mortgage;</li><li>Less mortgage interest over the loan term;</li><li>Less exposure to refinancing at higher interest rates;</li><li>A reduced risk of negative mortgage equity;</li><li>A lower barrier to buying a newly built home; and</li><li>A payment linked to local location values rather than a fixed debt principal.</li></ul>
+<p>In exchange, the purchaser accepts:</p>
+<ul><li>A continuing payment that may rise or fall with the agreed index;</li><li>A covenant that may continue after the mortgage has been repaid;</li><li>A lower future selling price than the same home would command without the covenant; and</li><li>The possibility that the covenant costs more or less than the displaced mortgage over a particular period.</li></ul>
+<p>The relevant choice is not between paying £300,000 and receiving £120,000 for nothing. It is between two ways of financing the same new home:</p>
+<p><strong>Larger mortgage and no covenant ↔ smaller mortgage and a continuing covenant</strong></p>
+<h2 id="why-might-a-builder-participate">Why might a builder participate?</h2>
+<p>The builder receives the full £300,000 at completion in either case. The covenant does not require the builder to accept £180,000 for a £300,000 home.</p>
+<p>Participation could benefit builders by:</p>
+<ul><li>Increasing the number of purchasers able to afford a newly built home;</li><li>Reducing dependence on very high loan-to-value mortgages;</li><li>Supporting sales during periods when mortgage credit is tight;</li><li>Increasing confidence that completed homes can be sold; and</li><li>Helping schemes reach the sales rate needed to finance later construction phases.</li></ul>
+<p>The builder should receive no payment merely for labelling an existing property “eligible.” Public money is released only for a qualifying additional home, against verified completion and sale.</p>
+<p>The independently verified price is essential. Without it, a developer could raise the headline price because public money is available, allowing the contribution to be captured as additional profit or land value rather than reducing the purchaser’s financing requirement.</p>
+<h2 id="what-happens-when-the-home-is-sold">What happens when the home is sold?</h2>
+<p>The covenant remains attached to the property. The first owner stops making the payment and the purchaser assumes it.</p>
+<p>The future buyer did not receive the original £120,000 contribution, but receives its economic effect through the property’s lower covenanted price.</p>
+<p>If an otherwise comparable uncovenanted home is worth £300,000, a buyer will not normally pay the same £300,000 for a home carrying a £500 monthly continuing obligation. The market capitalises the payment into a price discount.</p>
+<p>The precise discount is not guaranteed to equal £120,000. It will depend on:</p>
+<ul><li>The current covenant payment;</li><li>Expected future indexation;</li><li>Market discount and mortgage rates;</li><li>Administration and enforcement risk;</li><li>Availability of finance for covenanted properties; and</li><li>Buyers’ preferences between upfront price and continuing payments.</li></ul>
+<p>The future buyer’s exchange is:</p>
+<p><strong>Lower purchase price and smaller mortgage ↔ assumption of the continuing covenant</strong></p>
+<p>When that buyer later sells, the same adjustment occurs again. The covenant and its price effect travel together through successive ownerships.</p>
+<h2 id="why-might-government-support-it">Why might government support it?</h2>
+<p>The public contribution is not necessarily an unrecoverable housing grant. Government acquires a legally enforceable, continuing revenue-producing asset attached to a newly created home.</p>
+<p>The policy could:</p>
+<ul><li>Connect home-purchase assistance directly to additional supply;</li><li>Reduce the amount of new commercial-bank mortgage credit required;</li><li>Help first-time buyers without giving them a one-off discount that disappears on resale;</li><li>Create a long-term public revenue stream;</li><li>Support construction through downturns; and</li><li>Allow part of future location value to support public finances.</li></ul>
+<p>Government also bears real risks. It must finance the contribution upfront, value the covenant prudently, administer payments, manage arrears and ensure that developers do not capture the wider public value through higher prices or land bids.</p>
+<p>The public asset should be valued as the discounted value of expected future net covenant payments, after allowing for financing costs, indexation, administration, non-payment and policy risk.</p>
+<h2 id="why-might-a-bank-participate">Why might a bank participate?</h2>
+<p>The purchaser may still need a conventional mortgage, but it is substantially smaller.</p>
+<p>In the worked example, the bank lends £120,000 rather than £240,000. This can produce:</p>
+<ul><li>A lower loan-to-value ratio;</li><li>A larger buffer against property-price falls;</li><li>Lower loss exposure if the borrower defaults; and</li><li>A mortgage payment that is easier for the borrower to maintain.</li></ul>
+<p>The bank must include the covenant payment in its affordability assessment. Its security valuation must be the market value of the property <strong>subject to the covenant</strong>, not the £300,000 uncovenanted price paid to the builder.</p>
+<p>A smaller loan is not automatically more profitable for the bank, but it should be less exposed to housing-market and borrower-default risk.</p>
+<h2 id="why-tying-support-to-new-supply-matters">Why tying support to new supply matters</h2>
+<p>Housing assistance can raise prices when it gives buyers more spending power to compete for an unchanged stock of homes.</p>
+<p>The New Home Covenant is intended to avoid that mistake by making eligibility conditional on an additional completed dwelling. Every public contribution accompanies another usable home entering the market.</p>
+<p>This does not make price inflation impossible. If developers know that purchasers have access to public contributions, they or the original landowner may attempt to capture part of the wider public value through higher prices or land bids.</p>
+<p>The programme should therefore test two kinds of additionality:</p>
+<ol><li><strong>Physical additionality:</strong> the home must be genuinely new and added to the usable stock.</li><li><strong>Financial additionality:</strong> the contribution must reduce the purchaser’s required capital rather than inflate the verified price, land value or developer margin.</li></ol>
+<p>Useful safeguards could include:</p>
+<ul><li>Independent comparison with similar uncovenanted new and existing homes;</li><li>Published build-cost, land-cost and margin information for supported schemes;</li><li>Competitive allocation of programme capacity between developers;</li><li>Payment only after completion and independent certification;</li><li>Limits on purchases from connected parties;</li><li>Clawback for misrepresentation or artificial price inflation; and</li><li>Priority for projects that would not otherwise proceed at the same scale or speed.</li></ul>
+<h2 id="where-does-the-public-money-come-from">Where does the public money come from?</h2>
+<p>The public LVC fund must supply £120,000 at completion before it has received years of covenant payments.</p>
+<p>It could be financed through:</p>
+<ul><li>Government borrowing, including gilts purchased by existing savers;</li><li>Reinvestment of receipts from an established LVC portfolio;</li><li>Public pension or institutional investment through government securities;</li><li>Proceeds from public land; or</li><li>A mixture of these sources.</li></ul>
+<p>The fund acquires the covenant asset in exchange. Its financial sustainability depends on whether expected net receipts justify the contribution and financing cost.</p>
+<p>The contribution should be recorded transparently as the acquisition of a long-lived public financial asset, with any subsidy element reported separately. A covenant with an expected net value below the public payment may still be justified by additional housing or wider public value, but that difference is a public subsidy and should not be concealed as asset value.</p>
+<h2 id="how-is-the-initial-covenant-determined">How is the initial covenant determined?</h2>
+<p>The initial covenant follows from the contribution chosen under the programme and the applicable starting rate:</p>
+<p><strong>Initial annual payment = public contribution × initial covenant rate</strong></p>
+<p>In the example:</p>
+<p><strong>£120,000 × 5% = £6,000 a year</strong></p>
+<p>The system does not need to calculate the precise standalone land value beneath the individual home to establish that opening payment. The £120,000 contribution determines it.</p>
+<p>Local land or rental values are then used to adjust the payment over time. The index should reflect changes in the location rather than changes caused solely by the owner’s later extensions, refurbishment or maintenance.</p>
+<p>Ordinary property valuation remains essential for verifying the uncovenanted price, assessing the covenanted market value and protecting the purchaser and public fund. That is different from making the opening contribution a fixed percentage of a precise individual land valuation.</p>
+<h2 id="who-should-be-eligible">Who should be eligible?</h2>
+<p>Several models are possible.</p>
+<h3 id="first-time-buyers">First-time buyers</h3>
+<p>Restricting the initial programme to first-time buyers would target the largest deposit and mortgage-access problems. It would also provide a controlled route for testing affordability, valuation and resale.</p>
+<p>The limitation is that a developer needs purchasers throughout the market. Excluding movers could reduce sales chains and the overall construction response.</p>
+<h3 id="tenants-buying-a-new-home">Tenants buying a new home</h3>
+<p>Priority could be given to social or private tenants moving into ownership. Each successful purchase could release an existing rented home for another household.</p>
+<p>The programme would need safeguards against selecting only higher-income tenants while leaving the supply of affordable rented housing unchanged.</p>
+<h3 id="all-purchasers-of-qualifying-new-homes">All purchasers of qualifying new homes</h3>
+<p>Universal availability would be simplest and could generate the strongest supply response. It would also require the largest public financing capacity and create the greatest risk of contributions being capitalised into new-build land prices.</p>
+<h3 id="scheme-based-allocation">Scheme-based allocation</h3>
+<p>Government could allocate a fixed LVC funding envelope competitively to developments offering the best combination of:</p>
+<ul><li>Additional homes;</li><li>Lower verified purchaser prices;</li><li>Infrastructure and environmental quality;</li><li>Affordable and mixed-tenure provision;</li><li>Delivery speed; and</li><li>Public value for the covenant contribution.</li></ul>
+<p>This might control fiscal exposure more effectively than an unlimited entitlement.</p>
+<h2 id="could-the-covenant-fund-100-of-the-home">Could the covenant fund 100% of the home?</h2>
+<p>In principle, the public contribution could cover the entire independently verified price. The builder would be paid in full, while the purchaser would acquire the home for little or no upfront capital and assume a much larger continuing covenant.</p>
+<p>That would not be a free home. The covenant’s capitalised value could reduce the property’s cash resale price towards zero, and the owner would remain responsible for a substantial continuing payment.</p>
+<p>A 100% New Home Covenant would create difficult questions:</p>
+<ul><li>What financial stake does the purchaser have at inception?</li><li>How are maintenance, abandonment and payment incentives protected?</li><li>Can the property support any additional mortgage?</li><li>What happens if the covenant becomes unaffordable?</li><li>Would buyers prefer renting or a conventional mortgage to such a large permanent obligation?</li><li>Would the covenant 'eating' into the value of the bricks and mortar cause problems?</li></ul>
+<p>A capped partial contribution is therefore a more credible starting design. Higher percentages could be tested only after a functioning resale, mortgage and arrears market exists.</p>
+<h2 id="effects-on-house-prices-and-construction">Effects on house prices and construction</h2>
+<p>The immediate cash price of an LVC-funded home should be lower because the public contribution replaces part of the purchaser’s capital requirement. The full economic housing cost includes both that price and the covenant.</p>
+<p>Across the wider market, the effect depends on supply:</p>
+<ul><li>If the programme causes more homes to be built, it can relieve scarcity and reduce upward pressure on prices.</li><li>If developers merely relabel homes that would have been built anyway, the supply benefit is small.</li><li>If landowners capture expected contributions through higher land prices, public funding may increase land values rather than affordability.</li><li>If mortgage lending falls by the amount of the LVC contribution, less newly created bank credit enters the property market.</li><li>If purchasers borrow the same amount despite the contribution, the policy may increase total bidding power and become inflationary.</li></ul>
+<p>The programme should therefore measure mortgage debt displaced, homes genuinely added, purchaser prices, land prices, developer margins and construction rates—not merely the number of covenants issued.</p>
+<h2 id="consumer-and-public-protections">Consumer and public protections</h2>
+<p>A New Home Covenant would require:</p>
+<ol><li>Independent verification that the home is newly completed, habitable and genuinely additional.</li><li>Independent valuation of the uncovenanted price and estimated covenanted market value.</li><li>Full disclosure of the current payment, index, expected price effect and possible lifetime cost.</li><li>An affordability assessment covering the mortgage, covenant, service charges, maintenance and other property costs.</li><li>Separate legal and financial advice for the purchaser.</li><li>Clear responsibility for defects, warranties and building-safety obligations.</li><li>Published rules for arrears, hardship, deferral, enforcement and any redemption right.</li><li>Mortgage-lender recognition and standard conveyancing documentation.</li><li>Controls preventing the public contribution from inflating prices, land values or connected-party transactions.</li><li>Public reporting of financing costs, covenant asset values, developer participation, additional homes and mortgage debt displaced.</li></ol>
+<h2 id="policy-effect">Policy effect</h2>
+<p>The New Home Covenant combines two objectives that are often pursued separately: helping households finance home ownership and increasing the supply of homes.</p>
+<p>The purchaser obtains a lower-capital route into a newly built property. The builder receives the full verified price. The bank provides a smaller mortgage. Government acquires a continuing revenue asset rather than making a simple one-off grant. Future owners receive the lower covenanted price and assume the payment.</p>
+<p>Its strongest systemic advantage is that LVC purchasing support is released only when another home enters the usable stock. This reduces—but does not eliminate—the risk that easier finance merely raises the price of existing housing.</p>
+<p>The policy succeeds only when three outcomes occur together:</p>
+<ul><li>A genuinely additional home is completed;</li><li>The purchaser’s conventional mortgage or capital requirement is actually reduced; and</li><li>The public receives a covenant asset whose value and wider value justifies the contribution.</li></ul>
+<p>If those tests are met, the New Home Covenant could provide a scalable way to fund new housing while gradually replacing part of mortgage debt with long-term, location-linked public revenue.</p><div class="notice"><b>Illustrative figures</b><p>Financial values, rates and tax references restyle the original policy example. They explain the proposed mechanism and are not current financial, tax or legal advice.</p></div><nav class="article-nav"><a href="/applications/">All applications</a><a href="/briefing/">Policy briefing</a></nav></article></div></main><footer class="foot"><div class="wrap footgrid"><div><b>Location Value Covenants</b><p>A voluntary policy proposal for housing finance and public revenue reform.</p></div><nav><a href="/briefing/">Policy briefing</a><a href="/applications/">Applications</a><a href="/privacy/">Privacy</a><a href="/website-terms/">Terms</a></nav></div><div class="wrap fine">Policy material from the Systemic Fiscal Reform Group · © 2026</div></footer></body></html>

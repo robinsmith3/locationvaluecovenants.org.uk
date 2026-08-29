@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 960 780" role="img" aria-labelledby="title desc">
+  <title id="title">How a New Home Covenant pays the builder in full while reducing the purchaser’s mortgage requirement</title>
+  <desc id="desc">For a three hundred thousand pound newly completed home, the public LVC fund pays one hundred and twenty thousand pounds and the purchaser supplies one hundred and eighty thousand pounds. The builder receives the full price, the home carries a continuing covenant, and future purchasers pay a lower price and assume the payment.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#37576b"/></marker>
+    <style>
+      .box{fill:#f7fafb;stroke:#37576b;stroke-width:2}.public{fill:#eef6f1;stroke:#35664a;stroke-width:2}.buyer{fill:#fff8e8;stroke:#8a6424;stroke-width:2}.future{fill:#f3f0fa;stroke:#65528a;stroke-width:2}.t{font-family:Arial,sans-serif;fill:#182a35;text-anchor:middle}.h{font-size:20px;font-weight:700}.p{font-size:15px}.line{fill:none;stroke:#37576b;stroke-width:2.2;marker-end:url(#arrow)}.label{font-family:Arial,sans-serif;font-size:14px;fill:#37576b;text-anchor:middle}.caption{font-family:Arial,sans-serif;font-size:16px;font-weight:700;fill:#182a35;text-anchor:middle}
+    </style>
+  </defs>
+  <text x="480" y="31" class="caption">Public funding replaces part of the purchaser’s capital—not part of the builder’s price</text>
+  <rect class="box" x="315" y="55" width="330" height="103" rx="8"/>
+  <text class="t h" x="480" y="86">Eligible new home completed</text><text class="t p" x="480" y="115">independently verified price</text><text class="t p" x="480" y="139">£300,000 without covenant</text>
+  <rect class="public" x="55" y="225" width="330" height="110" rx="8"/>
+  <text class="t h" x="220" y="257">Public LVC fund</text><text class="t p" x="220" y="287">pays £120,000</text><text class="t p" x="220" y="311">at completion</text>
+  <rect class="buyer" x="575" y="225" width="330" height="110" rx="8"/>
+  <text class="t h" x="740" y="257">Purchaser</text><text class="t p" x="740" y="287">supplies £180,000</text><text class="t p" x="740" y="311">from deposit and smaller mortgage</text>
+  <path class="line" d="M480 158V378"/><text class="label" x="553" y="196">completion verified</text>
+  <rect class="box" x="315" y="380" width="330" height="108" rx="8"/>
+  <text class="t h" x="480" y="412">Builder receives £300,000</text><text class="t p" x="480" y="442">full verified price paid</text><text class="t p" x="480" y="466">when the new home is delivered</text>
+  <path class="line" d="M385 280C430 296 426 345 430 378"/><text class="label" x="370" y="350">£120k</text>
+  <path class="line" d="M575 280C530 296 534 345 530 378"/><text class="label" x="590" y="350">£180k</text>
+  <rect class="public" x="315" y="553" width="330" height="110" rx="8"/>
+  <text class="t h" x="480" y="585">New Home Covenant</text><text class="t p" x="480" y="615">initially £6,000 a year</text><text class="t p" x="480" y="639">linked to local location values</text>
+  <path class="line" d="M480 488V551"/><text class="label" x="575" y="524">registered on title</text>
+  <path class="line" d="M480 663V708"/><text class="label" x="610" y="691">passes with lower-priced home</text>
+  <rect class="future" x="260" y="710" width="440" height="54" rx="8"/>
+  <text class="t p" x="480" y="742">Future purchaser pays less and assumes the continuing covenant</text>
+  <path class="line" d="M260 737C86 722 65 491 151 335"/>
+</svg>

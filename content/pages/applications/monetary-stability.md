@@ -6,7 +6,7 @@ heading: Monetary Stability & Inflation Control
 intro: A potentially powerful adoption case: replacing part of bank-created mortgage credit with long-term public funding drawn from existing savings.
 summary: A strategic national merit: less bank-created mortgage credit, lower household leverage and a potential brake on property-driven inflation.
 credit: A Systemic Fiscal Reform Group policy analysis by Robin Smith.
-number: 06
+number: 08
 layout: application
 ---
 ## Basic concept {#basic-concept}

@@ -7,4 +7,4 @@ intro: Seven proposals show how Location Value Covenants could address household
 eyebrow: Worked briefings
 layout: applications
 ---
-The following briefings apply the same voluntary covenant mechanism to home purchase, mortgage distress, retirement income, inheritance tax, property-tax reform and wider property-related investment. The monetary-stability briefing sets out a potentially important national merit: replacing part of bank-created mortgage credit with long-term public funding drawn from existing savings.
+The following briefings apply the same voluntary covenant mechanism to home purchase, mortgage distress, retirement income, inheritance tax, property-tax reform, wider property-related investment and new-home construction. The monetary-stability briefing sets out a potentially important national merit: replacing part of bank-created mortgage credit with long-term public funding drawn from existing savings.

@@ -1,0 +1,250 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wider Property Investment and Support — Location Value Covenants</title><meta name="description" content="Using Location Value Covenants to finance property improvements, business premises, infrastructure and major property-related liabilities."><link rel="icon" href="/favicon.ico" sizes="any"><style>:root{--ink:#162b31;--muted:#53676c;--paper:#f7f4ec;--navy:#103943;--deep:#092a32;--teal:#08706d;--mint:#acd3c2;--gold:#d0a34b;--line:#cdd5d1;--serif:Georgia,'Times New Roman',serif;--sans:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.68 var(--sans)}
+a{color:inherit}
+.wrap{width:min(calc(100% - 40px),1180px);margin:auto}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;background:white;padding:10px;z-index:99}
+.head{position:sticky;top:0;z-index:10;background:rgba(247,244,236,.96);border-bottom:1px solid #d2d5cf}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800}
+.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--navy);color:white;font-size:11px;letter-spacing:.1em}
+.links{display:flex;gap:30px}
+.links a{text-decoration:none;font-size:14px;font-weight:700;padding:25px 0 21px;border-bottom:3px solid transparent}
+.links a[aria-current]{border-color:var(--gold)}
+h1,h2{font-family:var(--serif);font-weight:500;letter-spacing:-.035em;line-height:1.08}
+h1{font-size:clamp(3rem,7vw,6rem)}
+h2{font-size:clamp(2rem,4vw,3.2rem)}
+h3{line-height:1.28}
+small,article em{display:block;color:var(--teal);font-style:normal;font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+.homehero{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center;padding:88px 0 100px}
+.homehero h1{margin:14px 0 25px}
+.lead{font-size:21px;color:#40575d}
+.button{display:inline-block;background:var(--teal);color:#fff;padding:13px 20px;margin:16px 10px 0 0;text-decoration:none;font-size:14px;font-weight:800}
+.button.ghost{background:transparent;color:var(--ink);border:1px solid #8b9999}
+.homehero aside{background:var(--navy);color:white;padding:34px;box-shadow:14px 14px #d8d0bf}
+.homehero aside small{color:var(--mint)}
+.homehero ol{list-style:none;padding:0;margin:20px 0 0}
+.homehero li{display:flex;flex-direction:column;padding:17px 0;border-top:1px solid #ffffff33}
+.homehero li span{color:#c6d5d7;font-size:14px}
+.band{background:#e3ece6;padding:85px 0}
+.intro{display:grid;grid-template-columns:1fr 3fr;gap:55px}
+.intro p{font-size:19px;color:#3d5358}
+.section{padding:95px 0}
+.section>h2{max-width:800px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.features div{padding:32px;border-right:1px solid var(--line)}
+.features div:last-child{border:0}
+.features h3{font:500 25px var(--serif)}
+.features p,.cards p{color:var(--muted);font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.cards>a{min-height:315px;padding:25px 22px;display:flex;flex-direction:column;text-decoration:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.15s}
+.cards>a:hover{background:#fff;transform:translateY(-3px)}
+.cards h3{font:500 24px var(--serif);margin-top:35px}
+.cards b{margin-top:auto;color:var(--teal);font-size:13px}
+.closing{background:var(--deep);color:white;text-align:center;padding:95px 0}
+.closing small{color:var(--mint)}
+.closing p{max-width:700px;margin:auto;color:#c7d5d7}
+.button.light{background:white;color:var(--deep)}
+.pagehero{background:var(--deep);color:white;padding:80px 0}
+.pagehero small{color:var(--mint)}
+.pagehero h1{margin:10px 0 18px}
+.pagehero p{font-size:21px;max-width:730px;color:#d0dcde}
+.layout{display:grid;grid-template-columns:220px minmax(0,770px);gap:75px;align-items:start;padding:78px 0 110px}
+.toc{position:sticky;top:108px;border-top:3px solid var(--gold);padding-top:16px}
+.toc b{font-size:13px}
+.toc a{display:block;text-decoration:none;color:var(--muted);font-size:14px;padding:6px 0}
+.layout article section{margin-bottom:72px}
+.layout article h2[id],.layout article h3[id],.layout article h4[id]{scroll-margin-top:105px}
+.layout article h2{margin-bottom:23px}
+.layout article p,.layout article li{color:#3a5156}
+.definitions{display:grid;grid-template-columns:1fr 1fr;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.definitions div{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.definitions p{font-size:15px;margin:0}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.compare div{background:#e2ebe5;padding:27px}
+.app-list{list-style:none;padding:0;border-top:1px solid var(--line)}
+.app-list li{display:grid;grid-template-columns:45px 1fr;gap:12px;padding:21px 0;border-bottom:1px solid var(--line)}
+.app-list span{font-size:12px;color:var(--teal)}
+.app-list a{font:600 22px var(--serif)}
+.app-list p{font-size:14px;margin:4px 0}
+.apphero{background:#e2ebe5;padding:52px 0 65px}
+.apphero>a{color:var(--teal)}
+.apphero small{margin-top:45px}
+.apphero h1{margin:10px 0 20px}
+.apphero>div>p{font:500 25px/1.45 var(--serif);max-width:800px}
+.apphero i{color:#66787b;font-size:13px}
+.table{overflow:auto;margin:28px 0 40px}
+.table:focus{outline:3px solid var(--gold)}
+table{border-collapse:collapse;width:100%;min-width:620px;background:#fff;font-size:14px}
+th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #d5dcda;vertical-align:top}
+thead th{background:var(--navy);color:white}
+tbody tr:nth-child(even){background:#f0f3ef}
+.notice{background:#ebe5d8;border-left:4px solid var(--gold);padding:23px 26px;margin-top:45px}
+.notice p{margin:5px 0;color:var(--muted);font-size:14px}
+.article-nav{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:22px;margin-top:45px}
+.article-nav a{color:var(--teal);font-weight:800;font-size:14px}
+.foot{background:#081f25;color:#d5dede;padding:55px 0 20px}
+.footgrid{display:flex;justify-content:space-between;gap:50px}
+.foot p{color:#91a5aa;font-size:13px}
+.foot nav{display:flex;gap:20px}
+.fine{border-top:1px solid #ffffff22;margin-top:35px;padding-top:18px;color:#819499;font-size:12px}
+@media(max-width:950px){.homehero{grid-template-columns:1fr}
+.intro{grid-template-columns:1fr}
+.cards{grid-template-columns:repeat(2,1fr)}
+.layout{grid-template-columns:180px 1fr;gap:40px}
+}
+@media(max-width:650px){body{font-size:16px}
+.wrap{width:min(calc(100% - 28px),1180px)}
+.brand>span:last-child{display:none}
+.links{gap:15px}
+.links a{font-size:12px}
+.homehero{padding:55px 0 70px}
+.homehero aside{box-shadow:8px 8px #d8d0bf}
+.features,.cards,.definitions,.compare{grid-template-columns:1fr}
+.features div{border-right:0;border-bottom:1px solid var(--line)}
+.cards>a{min-height:245px}
+.layout{display:block;padding:55px 0 75px}
+.toc{position:static;margin-bottom: 50px}
+.toc b{display:block;margin-bottom; 8px}
+.toc a{display:block;margin-right: 0}
+.apphero{padding:45px 0 55px}
+.footgrid,.article-nav{flex-direction:column}
+.table{margin-inline:-14px;padding-inline:14px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+.cards>a{transition:none}
+}
+.policy-content {
+  padding-top: 35px;
+  padding-bottom: 80px;
+}
+
+.policy-content > h2 {
+  margin-top: 65px;
+}
+
+.policy-content > h3 {
+  margin-top: 38px;
+  font: 500 25px var(--serif);
+}
+
+.policy-content > p,
+.policy-content > ul,
+.policy-content > ol {
+  max-width: 770px;
+}
+
+.policy-content code {
+  font-size: .9em;
+  background: #ebe5d8;
+  padding: .1em .35em;
+}
+
+.policy-content a {
+  color: var(--teal);
+}
+
+.layout article img {
+  display: block;
+  width: 100%;
+  max-width: 770px;
+  height: auto;
+  margin: 32px auto 48px;
+}</style></head><body><a class="skip" href="#main">Skip to content</a><header class="head"><div class="wrap nav"><a class="brand" href="/"><span class="mark">LVC</span><span>Location Value Covenants</span></a><nav class="links"><a  href="/">Home</a><a  href="/briefing/">Policy briefing</a><a aria-current="page" href="/applications/">Applications</a></nav></div></header><main id="main"><header class="apphero"><div class="wrap"><a href="/applications/">← All applications</a><small>Application 07</small><h1>Wider Property Investment and Support</h1><p>A common framework for supplying property-related capital, works or services in exchange for continuing property-linked public revenue.</p><i>A Systemic Fiscal Reform Group briefing, developed by Robin Smith.</i></div></header><div class="wrap layout"><aside class="toc"><b>On this page</b><a href="#basic-concept">Basic concept</a><a href="#common-mechanism">How the common mechanism works</a><a href="#housing-access">Housing creation and access</a><a href="#new-homes">LVC-funded new homes</a><a href="#deposit-replacement">First-home deposit replacement</a><a href="#tenant-purchase">Social tenants purchasing their homes</a><a href="#affordable-housing">Preserving affordable housing</a><a href="#improvement-resilience">Improvement, safety and resilience</a><a href="#retrofit">Home improvement and energy retrofit</a><a href="#building-safety">Building-safety remediation</a><a href="#empty-homes">Empty and derelict homes</a><a href="#flood-resilience">Flood and conservation resilience</a><a href="#life-events">Support through major life events</a><a href="#social-care">Residential social care</a><a href="#arrears">Council-tax and secured-debt arrears</a><a href="#separation">Divorce and separation</a><a href="#succession">Agricultural and business succession</a><a href="#business-infrastructure">Business, infrastructure and regeneration</a><a href="#business-premises">Business premises</a><a href="#infrastructure">Local infrastructure</a><a href="#participant-wider public values">What is in it for each participant?</a><a href="#suitability-test">The test for a suitable LVC application</a><a href="#valuation">Valuation and combined covenants</a><a href="#policy-effect">Policy effect</a></aside><article><h2 id="basic-concept">Basic concept</h2>
+<p>Location Value Covenants can do more than help purchase a home, rescue a mortgage, provide retirement income or settle a tax liability.</p>
+<p>The same mechanism can support a wider range of public purposes whenever four elements are present:</p>
+<ol><li>A property owner or purchaser receives defined capital, works, services or liability settlement.</li><li>Government or a public LVC fund supplies something with an identifiable value and cost.</li><li>A continuing payment is attached to the property as consideration.</li><li>Future owners receive the property at a price reflecting the covenant and assume its continuing payment.</li></ol>
+<p>The underlying exchange is:</p>
+<p><strong>Property-related value supplied now ↔ a continuing location-linked payment attached to the property</strong></p>
+<p>Government does not necessarily make an unrecoverable grant. It acquires a legally enforceable revenue-producing asset. The recipient does not receive free money: the property assumes a continuing obligation that affects its future market price.</p>
+<p>This framework could encompass new housing, property improvement, conservation, business investment, local infrastructure and assistance during major household transitions.</p>
+<p>These are policy proposals, not currently available UK financial products or alternatives to regulated advice.</p>
+<h2 id="common-mechanism">How the common mechanism works</h2>
+<p>The precise wider public value differs between applications, but the financial sequence is broadly the same:</p>
+<ol><li>The public fund assesses the proposed expenditure and the wider public value connected to the property.</li><li>The owner or purchaser receives an agreed contribution, service or liability settlement.</li><li>An LVC is registered against the property.</li><li>The initial covenant payment is calculated from the value supplied and the programme’s published valuation assumptions.</li><li>The payment is subsequently adjusted using an appropriate local location-value index.</li><li>On sale, the covenant passes to the purchaser and is reflected in the price.</li><li>Continuing payments return to the public fund and can support further investment, reduce borrowing or replace other taxes.</li></ol>
+<p><img src="/assets/wider-property-investment-and-support.svg" alt="How an LVC can provide property-related investment or support in exchange for continuing public revenue" loading="lazy"></p>
+<p>The covenant should remain distinct from an ordinary loan. It has no conventional principal balance that is gradually repaid to zero. Unless the scheme provides a redemption mechanism, the payment continues after the original recipient has sold the property and after any accompanying mortgage has ended.</p>
+<h2 id="housing-access">Housing creation and access</h2>
+<h3 id="new-homes">LVC-funded new homes</h3>
+<p>The strongest wider application may be financing part of the price of newly constructed homes.</p>
+<p>Suppose a builder completes a home for which the agreed market price without a covenant is £300,000. A public LVC fund contributes £120,000 and the purchaser supplies the remaining £180,000.</p>
+<div class="table" tabindex="0" role="region" aria-label="Data table"><table><thead><tr><th>New-home transaction</th><th>Amount</th></tr></thead><tbody><tr><th>Builder receives</th><td>£300,000</td></tr><tr><th>Public LVC contribution</th><td>£120,000</td></tr><tr><th>Purchaser supplies</th><td>£180,000</td></tr><tr><th>Illustrative initial covenant at 5%</th><td>£6,000 a year</td></tr></tbody></table></div>
+<p>The builder still receives the full £300,000, so the policy does not require the developer to absorb the purchaser’s financing wider public value. The buyer needs £120,000 less purchase capital and potentially a much smaller mortgage. In exchange, the property carries the continuing covenant.</p>
+<p>This is particularly attractive because the funding is connected to additional housing supply. Assistance that merely increases buyers’ spending power for the existing stock can be capitalised into higher prices. Tying the contribution to newly completed homes helps match additional purchasing capacity with additional supply.</p>
+<h3 id="deposit-replacement">First-home deposit replacement</h3>
+<p>An LVC contribution could replace some or all of the deposit and high loan-to-value borrowing required by a first-time buyer.</p>
+<p>The purchaser would gain earlier access to ownership without waiting many years to accumulate a large deposit. Government would acquire a continuing asset rather than guaranteeing a highly leveraged private mortgage or making a non-recoverable grant.</p>
+<p>This is closely related to the Location Value Mortgage and should use the same valuation and affordability rules. It is best understood as a targeted route into that application rather than a completely different financial instrument.</p>
+<h3 id="tenant-purchase">Social tenants purchasing their homes</h3>
+<p>A social landlord could transfer a home for a reduced cash price plus an LVC instead of granting a large outright Right to Buy discount.</p>
+<p>The tenant would obtain a more affordable route into ownership. The public sector would retain a permanent revenue interest rather than simply surrendering part of the property’s value.</p>
+<p>To avoid depleting social housing, receipts and public contributions could be reserved for replacement homes. Alternatively, the programme could be limited to new supply or properties that the landlord had already decided to sell.</p>
+<h3 id="affordable-housing">Preserving affordable housing</h3>
+<p>LVC funding could reduce the initial price of designated affordable homes while keeping the public contribution attached to the property across successive sales.</p>
+<p>Unlike a subsidy captured entirely by the first purchaser, a continuing covenant and resale framework could preserve the distinction between the lower cash price and the property’s uncovenanted value. The design would need to avoid duplicating or conflicting with existing shared-ownership, planning-obligation and resale-restriction arrangements.</p>
+<h2 id="improvement-resilience">Improvement, safety and resilience</h2>
+<h3 id="retrofit">Home improvement and energy retrofit</h3>
+<p>The public fund could pay for approved work such as:</p>
+<ul><li>Insulation and energy-efficiency improvements;</li><li>Heat pumps, solar panels and energy storage;</li><li>Adaptations for disability or reduced mobility;</li><li>Water-efficiency measures; or</li><li>Structural work required to extend the useful life of the home.</li></ul>
+<p>For example, government might fund £30,000 of approved work in exchange for an illustrative initial covenant of £1,500 a year at a 5% initial rate.</p>
+<p>The owner receives the improvement without taking a £30,000 conventional loan. Government receives a continuing revenue asset. A future purchaser assumes the covenant but receives the safer, more efficient or more usable property.</p>
+<p>The work must offer a genuine wider public value. The covenant may reduce the property’s price, while the improvement may increase its condition, usefulness or value. The owner and future purchaser should be shown the expected net effect rather than either side in isolation.</p>
+<h3 id="building-safety">Building-safety remediation</h3>
+<p>An LVC could fund essential cladding removal, fire-safety work or structural remediation where the cost cannot be recovered fully from the developer, freeholder, insurer or another responsible party.</p>
+<p>This could be preferable to leaving homes unsafe, bankrupting innocent leaseholders or creating conventional debts that prevent sale and remortgaging.</p>
+<p>The covenant should fund only the legitimate residual cost. It must not allow parties responsible for defective work to transfer their liabilities to residents or government.</p>
+<p>In multi-unit buildings, the covenant would need to be allocated fairly between the freehold, common parts and individual dwellings. Leasehold law, mortgage-lender consent and existing service-charge obligations would require careful integration.</p>
+<h3 id="empty-homes">Empty and derelict homes</h3>
+<p>Councils could finance the restoration of long-term empty or uninhabitable homes in exchange for an LVC.</p>
+<p>The owner would receive renovation capital without a conventional secured loan. The community would gain an occupied home, improved surroundings and a restored tax base. Government would receive a continuing payment rather than making an unrecoverable renovation grant.</p>
+<p>Eligibility should require verified additional occupancy or substantial remediation. Otherwise public finance could subsidise work that the owner would have undertaken without assistance.</p>
+<h3 id="flood-resilience">Flood and conservation resilience</h3>
+<p>The public fund could pay for flood doors, raised services, drainage, heat protection or other measures that make vulnerable properties safer and more insurable.</p>
+<p>The strongest case arises where preventive investment costs less than repeated emergency assistance and uninsured damage. The covenant payment and expected avoided public losses should be evaluated separately, so that wider public wider public values are not mistaken for the financial value of the covenant itself.</p>
+<h2 id="life-events">Support through major life events</h2>
+<h3 id="social-care">Residential social care</h3>
+<p>An older or disabled homeowner may need care while possessing substantial housing wealth but limited cash income. Government could fund eligible care costs in exchange for an LVC rather than requiring an immediate home sale or allowing a conventional deferred-payment debt to accumulate with interest.</p>
+<p>The resident receives care rather than cash. The property assumes the continuing payment. When it is eventually sold, the purchaser pays a lower price reflecting the covenant and becomes responsible for it.</p>
+<p>This is related to the Homeowner Pension because both convert part of housing wealth into a present personal wider public value. The principal difference is that the wider public value is an approved care service rather than freely spendable income.</p>
+<h3 id="arrears">Council-tax and secured-debt arrears</h3>
+<p>Where a viable household faces enforcement or forced sale because property-related public debts have accumulated, a carefully limited LVC could settle the arrears.</p>
+<p>The immediate wider public value would be removal of the enforcement threat and consolidation of the liability into a property-linked payment. The public sector would exchange an uncertain or expensive debt-recovery process for a continuing asset.</p>
+<p>This should not become a routine method for avoiding current payments. It would be most defensible where the household can meet its future obligations, independent advice confirms that the exchange is preferable and enforcement would create a disproportionate public and personal loss.</p>
+<h3 id="separation">Divorce and separation</h3>
+<p>Following separation, one partner may be unable to refinance the mortgage and release the other partner’s equity while retaining the family home.</p>
+<p>An LVC contribution could provide part of the required capital. The departing partner receives the agreed settlement, the resident partner requires a smaller replacement mortgage and children may avoid an unnecessary move.</p>
+<p>In exchange, the property carries a continuing covenant and has a lower future sale price. This is essentially a specialised Location Value Mortgage and should be compared with sale, private refinancing and other family-law arrangements.</p>
+<h3 id="succession">Agricultural and business succession</h3>
+<p>A family farm or property-dependent business can be economically viable but unable to fund inheritance, retirement or partner-buyout liabilities without selling productive land.</p>
+<p>An LVC could settle an agreed capital liability while allowing the enterprise to continue. The payment would attach to the property and pass to a future owner.</p>
+<p>Agricultural and commercial location values behave differently from residential values. The index, affordability tests and treatment of buildings, equipment, crops and business goodwill would therefore require a specialised design.</p>
+<h2 id="business-infrastructure">Business, infrastructure and regeneration</h2>
+<h3 id="business-premises">Business premises</h3>
+<p>A small or growing business could use an LVC contribution to acquire premises with a smaller commercial mortgage.</p>
+<p>The vendor receives the full agreed price. The business retains more capital for equipment, employees and expansion. Government acquires a continuing revenue asset linked to the premises. A future purchaser pays less for the covenanted property and assumes the payment.</p>
+<p>This application could redirect some financing away from passive property debt and towards productive business activity. It would still expose the business to a continuing property cost, and the covenant would need to be included in insolvency, refinancing and lease calculations.</p>
+<h3 id="infrastructure">Local infrastructure</h3>
+<p>LVCs could help finance infrastructure that provides identifiable wider public values to participating properties, including:</p>
+<ul><li>Transport connections;</li><li>Local roads and utilities;</li><li>Schools and community facilities;</li><li>Parks and public-realm improvements;</li><li>Flood defences; or</li><li>Town-centre regeneration.</li></ul>
+<p>Owners might voluntarily grant a covenant in exchange for a direct connection, improvement contribution, tax reduction or another defined wider public value. As local accessibility and desirability changed, payments would follow the agreed local location-value index.</p>
+<p>This differs from imposing a general land-value tax after public investment has occurred. The LVC rests on a defined voluntary exchange. The wider public value offered to each participating owner must therefore be sufficiently clear to support that agreement.</p>
+<p>Area-wide infrastructure would also gove wider public value to non-participating properties. Government would need to decide how general taxation, developer contributions and voluntary covenants should share costs without giving free riders an unfair advantage. But this added public vlaue will be reflected in higher land value indexes anyway so the more widey LVC's get adotped the less this is an issue.</p>
+<h2 id="participant-wider public values">What is in it for each participant?</h2>
+<ul><li><strong>Property owner or purchaser — why would I do this?</strong> I receive a home, improvement, service, liability settlement or other substantial wider public value without finding the entire cost immediately or taking an equivalent conventional loan. I accept a continuing payment and a corresponding effect on the property’s future selling price.</li><li><strong>Future purchaser:</strong> I pay a price that reflects the covenant and receive the improved property or the wider public value. I assume the continuing payment and pass it to the next owner when I sell.</li><li><strong>Government or public fund:</strong> It advances money or provides a valuable wider public value while acquiring a continuing revenue-producing asset. The transaction is worthwhile only if the covenant’s expected net value and any separately measured public wider public values justify the cost and risk.</li><li><strong>Bank or mortgage lender:</strong> The borrower may need less conventional debt and present a lower loan-to-value risk. The lender must nevertheless include every covenant in affordability and security valuations.</li><li><strong>Builder, contractor or service provider:</strong> It receives payment when the home, improvement or service is delivered rather than waiting for covenant receipts over many years.</li><li><strong>Wider community:</strong> It may gain additional homes, safer buildings, improved infrastructure, stronger businesses or reduced crisis expenditure. These wider public values should be assessed separately from the covenant’s financial value.</li></ul>
+<h2 id="suitability-test">The test for a suitable LVC application</h2>
+<p>Not every desirable public expenditure should produce a permanent property covenant. A proposal is a strong candidate only where:</p>
+<ol><li>The recipient obtains a clear, substantial and property-related wider public value.</li><li>The public contribution and covenant can be valued transparently.</li><li>The property can reasonably carry the payment without becoming unsaleable or unaffordable.</li><li>A future purchaser receives a lower price or continuing wider public value in exchange for assuming the obligation.</li><li>The local index is relevant to the property and can be independently administered.</li><li>The arrangement is better for the recipient and public than a grant, tax adjustment, conventional loan or existing legal remedy.</li><li>The scheme does not excuse a developer, insurer, lender or other responsible party from an existing liability.</li><li>The covenant does not charge owners for value created solely by their own later improvements.</li></ol>
+<p>Where these conditions are absent, an LVC can become merely a complicated permanent charge rather than a useful exchange.</p>
+<h2 id="valuation">Valuation and combined covenants</h2>
+<p>The initial payment should be derived from the value supplied under the particular programme, not from an assumption that every application requires a precise standalone valuation of the land beneath the property.</p>
+<p>The public asset is the discounted value of expected future net covenant payments. Valuation should allow for financing costs, indexation, administration, arrears, enforcement, uncertainty and any right of redemption.</p>
+<p>A property might acquire more than one LVC over time—for example, a Location Value Mortgage followed by a retrofit covenant and later a Homeowner Pension. The components could be collected together, but each should remain separately identified and valued.</p>
+<p>Before adding another covenant, the combined payment must pass a new affordability assessment. The homeowner and any future purchaser should see:</p>
+<ul><li>The purpose and current amount of every component;</li><li>How each component changes over time;</li><li>The wider public value originally supplied;</li><li>Any wider public value or exemption that continues for future owners;</li><li>The combined effect on market value; and</li><li>Whether any component can be reduced or redeemed.</li></ul>
+<h2 id="policy-effect">Policy effect</h2>
+<p>Wider Property Investment and Support would turn the LVC from a housing-finance instrument into a general framework for property-related public investment.</p>
+<p>It could increase housing supply, reduce reliance on conventional secured debt, improve buildings, finance resilience, preserve viable homes and businesses through difficult transitions and help communities fund infrastructure.</p>
+<p>The framework’s discipline is as important as its flexibility. Every application must identify the actual wider public value, the public cost, the covenant asset acquired and the position of future owners. Wider public value can strengthen the case for intervention, but they should not be silently added to the covenant’s accounting value.</p>
+<p>Used selectively, the approach could replace some grants, guarantees and secured loans with assets that continue producing public revenue. Used indiscriminately, it could burden properties with overlapping permanent charges. The purpose of a common framework is to make that distinction visible before any covenant is created.</p><div class="notice"><b>Illustrative figures</b><p>Financial values, rates and tax references restyle the original policy example. They explain the proposed mechanism and are not current financial, tax or legal advice.</p></div><nav class="article-nav"><a href="/applications/">All applications</a><a href="/briefing/">Policy briefing</a></nav></article></div></main><footer class="foot"><div class="wrap footgrid"><div><b>Location Value Covenants</b><p>A voluntary policy proposal for housing finance and public revenue reform.</p></div><nav><a href="/briefing/">Policy briefing</a><a href="/applications/">Applications</a><a href="/privacy/">Privacy</a><a href="/website-terms/">Terms</a></nav></div><div class="wrap fine">Policy material from the Systemic Fiscal Reform Group · © 2026</div></footer></body></html>

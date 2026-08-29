@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 960 760" role="img" aria-labelledby="title desc">
+  <title id="title">How wider property investment and support can be financed through an LVC</title>
+  <desc id="desc">A public LVC fund provides money, work or services for housing, improvement, household support, business or infrastructure. The property grants a continuing covenant, future owners assume it through an adjusted price, and payments return to the fund.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#37576b"/></marker>
+    <style>
+      .box{fill:#f7fafb;stroke:#37576b;stroke-width:2}.public{fill:#eef6f1;stroke:#35664a;stroke-width:2}.benefit{fill:#fff8e8;stroke:#8a6424;stroke-width:2}.future{fill:#f3f0fa;stroke:#65528a;stroke-width:2}.t{font-family:Arial,sans-serif;fill:#182a35;text-anchor:middle}.h{font-size:20px;font-weight:700}.p{font-size:15px}.line{fill:none;stroke:#37576b;stroke-width:2.2;marker-end:url(#arrow)}.label{font-family:Arial,sans-serif;font-size:14px;fill:#37576b;text-anchor:middle}.caption{font-family:Arial,sans-serif;font-size:16px;font-weight:700;fill:#182a35;text-anchor:middle}
+    </style>
+  </defs>
+  <text x="480" y="32" class="caption">One common exchange can support many property-related purposes</text>
+  <rect class="public" x="315" y="58" width="330" height="104" rx="8"/>
+  <text class="t h" x="480" y="89">Public LVC fund</text><text class="t p" x="480" y="118">supplies money, work, infrastructure</text><text class="t p" x="480" y="142">or another defined public value</text>
+  <path class="line" d="M480 162V215"/><text class="label" x="585" y="194">public value provided now</text>
+  <rect class="benefit" x="65" y="217" width="250" height="124" rx="8"/>
+  <text class="t h" x="190" y="248">Housing and access</text><text class="t p" x="190" y="277">new homes • deposits</text><text class="t p" x="190" y="302">tenant purchase • affordability</text>
+  <rect class="benefit" x="355" y="217" width="250" height="124" rx="8"/>
+  <text class="t h" x="480" y="248">Safer properties</text><text class="t p" x="480" y="277">retrofit • remediation</text><text class="t p" x="480" y="302">empty homes • resilience</text>
+  <rect class="benefit" x="645" y="217" width="250" height="124" rx="8"/>
+  <text class="t h" x="770" y="248">People and places</text><text class="t p" x="770" y="277">care • life transitions • business</text><text class="t p" x="770" y="302">infrastructure • regeneration</text>
+  <path class="line" d="M190 341C210 395 310 400 390 431"/><path class="line" d="M480 341V426"/><path class="line" d="M770 341C750 395 650 400 570 431"/>
+  <rect class="box" x="315" y="428" width="330" height="114" rx="8"/>
+  <text class="t h" x="480" y="459">Property grants an LVC</text><text class="t p" x="480" y="488">continuing, location-linked payment</text><text class="t p" x="480" y="514">registered for successive owners</text>
+  <path class="line" d="M390 542C330 574 290 589 265 616"/><text class="label" x="294" y="572">adjusted sale price</text>
+  <path class="line" d="M570 542C630 574 670 589 695 616"/><text class="label" x="670" y="572">continuing payments</text>
+  <rect class="future" x="70" y="618" width="330" height="104" rx="8"/>
+  <text class="t h" x="235" y="649">Future owner</text><text class="t p" x="235" y="678">receives the property and public value</text><text class="t p" x="235" y="702">at a price reflecting the covenant</text>
+  <rect class="public" x="560" y="618" width="330" height="104" rx="8"/>
+  <text class="t h" x="725" y="649">Public revenue returns</text><text class="t p" x="725" y="678">supports further investment</text><text class="t p" x="725" y="702">or reduces other financing needs</text>
+  <path class="line" d="M890 670C940 530 940 172 646 111"/>
+  <text class="caption" x="480" y="752">The wider public value, covenant and future-owner position must remain visible as one exchange</text>
+</svg>

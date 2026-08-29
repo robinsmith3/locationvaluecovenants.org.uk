@@ -64,7 +64,7 @@ const hero = page => `<header class="pagehero"><div class="wrap"><small>${escape
 
 function bodyFor(page, apps) {
   const content = markdown(page.body);
-  if (page.meta.layout === "home") return `<section class="wrap homehero"><div><small>${escapeHtml(page.meta.eyebrow)}</small><h1>${escapeHtml(page.meta.heading)}</h1><p class="lead">${escapeHtml(page.meta.intro)}</p><p><a class="button" href="/briefing/">Read the policy briefing</a><a class="button ghost" href="/applications/">Explore six applications</a></p></div><aside><small>The proposition</small><ol><li><b>Voluntary</b><span>Property owners choose whether to participate.</span></li><li><b>Lower risk</b><span>Payments track local rental value rather than interest rates.</span></li><li><b>Public benefit</b><span>Revenue flows to public purposes rather than mortgage interest.</span></li></ol></aside></section><div class="wrap policy-content">${content}<h2>Six ways the covenant can be used</h2>${cards(apps)}</div>`;
+  if (page.meta.layout === "home") return `<section class="wrap homehero"><div><small>${escapeHtml(page.meta.eyebrow)}</small><h1>${escapeHtml(page.meta.heading)}</h1><p class="lead">${escapeHtml(page.meta.intro)}</p><p><a class="button" href="/briefing/">Read the policy briefing</a><a class="button ghost" href="/applications/">Explore seven applications</a></p></div><aside><small>The proposition</small><ol><li><b>Voluntary</b><span>Property owners choose whether to participate.</span></li><li><b>Lower risk</b><span>Payments track local rental value rather than interest rates.</span></li><li><b>Public benefit</b><span>Revenue flows to public purposes rather than mortgage interest.</span></li></ol></aside></section><div class="wrap policy-content">${content}<h2>Seven ways the covenant can be used</h2>${cards(apps)}</div>`;
   if (page.meta.layout === "applications") return `${hero(page)}<section class="wrap section">${content}${cards(apps)}<div class="notice"><b>A note on the examples</b><p>Monetary figures and tax references illustrate the mechanism at the time of writing; they are not current quotations, calculations or personal advice.</p></div></section>`;
   if (page.meta.layout === "application") {
     const toc = tableOfContents(page.body);
@@ -121,6 +121,11 @@ await copyFile(
 await copyFile(
   new URL("../assets/property-tax-in-action.svg", import.meta.url),
   new URL("assets/property-tax-in-action.svg", PUBLIC)
+);
+await copyFile(
+  new URL(
+    "../assets/wider-property-investment-and-support.svg", import.meta.url),
+  new URL("assets/wider-property-investment-and-support.svg", PUBLIC)
 );
 for (const page of pages) { const relative = page.meta.route === "/" ? "index.html" : `${page.meta.route.slice(1)}index.html`; const destination = new URL(relative, PUBLIC); await mkdir(new URL("./", destination), { recursive: true }); await writeFile(destination, shell(page, apps, css)); }
 const notFound = { meta: { route: "/404/", title: "Page not found", description: "The requested page could not be found.", heading: "Page not found", intro: "The page may have moved as part of the new policy-site structure.", eyebrow: "404", layout: "standard" }, body: "[Return to the home page](/)" };

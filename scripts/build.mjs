@@ -80,7 +80,7 @@ function header(route) {
 
 function shell(page, apps, css) {
   const footer = `<footer class="foot"><div class="wrap footgrid"><div><b>${NAME}</b><p>A voluntary policy proposal for housing finance and public revenue reform.</p></div><nav><a href="/briefing/">Policy briefing</a><a href="/applications/">Applications</a><a href="/privacy/">Privacy</a><a href="/website-terms/">Terms</a></nav></div><div class="wrap fine">Policy material from the Systemic Fiscal Reform Group · © ${new Date().getUTCFullYear()}</div></footer>`;
-  return `<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(page.meta.title)} — ${NAME}</title><meta name="description" content="${escapeHtml(page.meta.description)}"><link rel="icon" href="/favicon.ico" sizes="any"><style>${css}</style></head><body>${header(page.meta.route)}<main id="main">${bodyFor(page, apps)}</main>${footer}</body></html>`;
+  return `<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(page.meta.title)} — ${NAME}</title><meta name="description" content="${escapeHtml(page.meta.description)}"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any"><style>${css}</style></head><body>${header(page.meta.route)}<main id="main">${bodyFor(page, apps)}</main>${footer}</body></html>`;
 }
 
 async function filesUnder(directory) {
@@ -130,6 +130,15 @@ await copyFile(
 await copyFile(
   new URL("../assets/new-home-covenant.svg", import.meta.url),
   new URL("assets/new-home-covenant.svg", PUBLIC)
+);
+await copyFile(
+  new URL("../assets/favicon.svg", import.meta.url),
+  new URL("favicon.svg", PUBLIC)
+);
+
+await copyFile(
+  new URL("../assets/favicon.ico", import.meta.url),
+  new URL("favicon.ico", PUBLIC)
 );
 for (const page of pages) { const relative = page.meta.route === "/" ? "index.html" : `${page.meta.route.slice(1)}index.html`; const destination = new URL(relative, PUBLIC); await mkdir(new URL("./", destination), { recursive: true }); await writeFile(destination, shell(page, apps, css)); }
 const notFound = { meta: { route: "/404/", title: "Page not found", description: "The requested page could not be found.", heading: "Page not found", intro: "The page may have moved as part of the new policy-site structure.", eyebrow: "404", layout: "standard" }, body: "[Return to the home page](/)" };

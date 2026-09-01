@@ -1,9 +1,9 @@
 ---
 route: /applications/
 title: Policy applications
-description: Seven practical applications and strategic merits of Location Value Covenants.
+description: Explore practical applications and strategic merits of Location Value Covenants.
 heading: From principle to practice
-intro: Seven proposals show how Location Value Covenants could address household, fiscal and monetary-policy problems.
+intro: These proposals show how Location Value Covenants could address household, fiscal and monetary-policy problems.
 eyebrow: Worked briefings
 layout: applications
 ---

@@ -15,9 +15,7 @@ This website, locationvaluecovenants.org.uk, is operated by the Systemic Fiscal 
 
 For the purposes of UK data protection law, the website operator is responsible for deciding how personal information associated with this website is used.
 
-Privacy enquiries may be sent to:
-
-**robinsmith3@gmail.com**
+Privacy enquiries may be sent to: **[locationvaluecovenants@gmail.com](mailto:locationvaluecovenants@gmail.com)**
 
 ## 2. Purpose of this website
 
@@ -95,7 +93,7 @@ Depending on the circumstances, UK data protection law may give you rights to:
 
 Because we do not maintain visitor profiles and may possess only limited technical records, we may not always be able to identify information as relating to a particular visitor.
 
-To exercise a right, contact **[locationvaluecovenants@gmail.com](mailto:robinsmith3@gmail.com)**.
+To exercise a right, contact **[locationvaluecovenants@gmail.com](mailto:locationvaluecovenants@gmail.com)**.
 
 You may also complain to the Information Commissioner’s Office at [ico.org.uk](https://ico.org.uk/).
 

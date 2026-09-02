@@ -15,9 +15,7 @@ These terms apply to your use of locationvaluecovenants.org.uk.
 
 The website is operated by the Systemic Fiscal Reform Group under the name Location Value Covenants. By using the website, you agree to these terms. If you do not agree with them, you should stop using the website.
 
-Questions concerning these terms may be sent to:
-
-**locationvaluecovenants@gmail.com**
+Questions concerning these terms may be sent to: **[locationvaluecovenants@gmail.com](mailto:locationvaluecovenants@gmail.com)**
 
 ## 2. Purpose of the website
 

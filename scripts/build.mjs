@@ -79,7 +79,8 @@ function header(route) {
 }
 
 function shell(page, apps, css) {
-  const footer = `<footer class="foot"><div class="wrap footgrid"><div><b>${NAME}</b><p>A voluntary policy proposal for housing finance and public revenue reform.</p></div><nav><a href="/briefing/">Policy briefing</a><a href="/applications/">Applications</a><a href="/privacy/">Privacy</a><a href="/website-terms/">Terms</a></nav></div><div class="wrap fine">Policy material from the Systemic Fiscal Reform Group · © ${new Date().getUTCFullYear()}</div></footer>`;
+  const footer = `<footer class="foot"><div class="wrap footgrid"><div><b>${NAME}</b><p>A voluntary policy proposal for housing finance and public revenue reform.</p><p>Contact: <a href="mailto:locationvaluecovenants@gmail.com">locationvaluecovenants@gmail.com</a></p></div><nav><a href="/briefing/">Policy briefing</a><a href="/applications/">Applications</a><a href="/privacy/">Privacy</a><a href="/website-terms/">Terms</a></nav></div><div class="wrap fine">Policy material from the Systemic Fiscal Reform Group · © ${new Date().getUTCFullYear()}</div></footer>`;
+
   return `<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(page.meta.title)} — ${NAME}</title><meta name="description" content="${escapeHtml(page.meta.description)}"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any"><style>${css}</style></head><body>${header(page.meta.route)}<main id="main">${bodyFor(page, apps)}</main>${footer}</body></html>`;
 }
 

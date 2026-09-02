@@ -17,7 +17,7 @@ The website is operated by the Systemic Fiscal Reform Group under the name Locat
 
 Questions concerning these terms may be sent to:
 
-**robinsmith3@gmail.com**
+**locationvaluecovenants@gmail.com**
 
 ## 2. Purpose of the website
 

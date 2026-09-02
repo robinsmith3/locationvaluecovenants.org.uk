@@ -95,7 +95,7 @@ Depending on the circumstances, UK data protection law may give you rights to:
 
 Because we do not maintain visitor profiles and may possess only limited technical records, we may not always be able to identify information as relating to a particular visitor.
 
-To exercise a right, contact **[robinsmith3@gmail.com](mailto:robinsmith3@gmail.com)**.
+To exercise a right, contact **[locationvaluecovenants@gmail.com](mailto:robinsmith3@gmail.com)**.
 
 You may also complain to the Information Commissioner’s Office at [ico.org.uk](https://ico.org.uk/).
 

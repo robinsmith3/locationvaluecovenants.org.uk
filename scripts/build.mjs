@@ -144,5 +144,5 @@ for (const page of pages) { const relative = page.meta.route === "/" ? "index.ht
 const notFound = { meta: { route: "/404/", title: "Page not found", description: "The requested page could not be found.", heading: "Page not found", intro: "The page may have moved as part of the new policy-site structure.", eyebrow: "404", layout: "standard" }, body: "[Return to the home page](/)" };
 await writeFile(new URL("404.html", PUBLIC), shell(notFound, apps, css));
 await mkdir(new URL(".well-known/", PUBLIC), { recursive: true });
-await writeFile(new URL(".well-known/security.txt", PUBLIC), "Contact: mailto:robinsmith3@gmail.com\nCanonical: https://locationvaluecovenants.org.uk/.well-known/security.txt\nPreferred-Languages: en\nExpires: 2027-08-20T23:59:59Z\n");
+await writeFile(new URL(".well-known/security.txt", PUBLIC), "Contact: mailto:locationvaluecovenants@gmail.com\nCanonical: https://locationvaluecovenants.org.uk/.well-known/security.txt\nPreferred-Languages: en\nExpires: 2027-08-20T23:59:59Z\n");
 console.log(`Built ${pages.length} pages and 404.html from Markdown`);

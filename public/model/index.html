@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>National LVC model — Location Value Covenants</title>
+  <meta
+    name="description"
+    content="Three illustrative national scenarios showing how wider adoption of Location Value Covenants might affect households, housing, mortgage debt and the economy."
+  >
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link
+    rel="icon"
+    href="/favicon.svg?v=2"
+    type="image/svg+xml"
+    sizes="any"
+  >
+  <style>:root{--ink:#162b31;--muted:#53676c;--paper:#f7f4ec;--navy:#103943;--deep:#092a32;--teal:#08706d;--mint:#acd3c2;--gold:#d0a34b;--line:#cdd5d1;--serif:Georgia,'Times New Roman',serif;--sans:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.68 var(--sans)}
+a{color:inherit}
+.wrap{width:min(calc(100% - 40px),1180px);margin:auto}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;background:white;padding:10px;z-index:99}
+.head{position:sticky;top:0;z-index:10;background:rgba(247,244,236,.96);border-bottom:1px solid #d2d5cf}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800}
+.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--navy);color:white;font-size:11px;letter-spacing:.1em}
+.links{display:flex;gap:30px}
+.links a{text-decoration:none;font-size:14px;font-weight:700;padding:25px 0 21px;border-bottom:3px solid transparent}
+.links a[aria-current]{border-color:var(--gold)}
+h1,h2{font-family:var(--serif);font-weight:500;letter-spacing:-.035em;line-height:1.08}
+h1{font-size:clamp(3rem,7vw,6rem)}
+h2{font-size:clamp(2rem,4vw,3.2rem)}
+h3{line-height:1.28}
+small,article em{display:block;color:var(--teal);font-style:normal;font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+.homehero{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center;padding:88px 0 100px}
+.homehero h1{margin:14px 0 25px}
+.lead{font-size:21px;color:#40575d}
+.button{display:inline-block;background:var(--teal);color:#fff;padding:13px 20px;margin:16px 10px 0 0;text-decoration:none;font-size:14px;font-weight:800}
+.button.ghost{background:transparent;color:var(--ink);border:1px solid #8b9999}
+.homehero aside{background:var(--navy);color:white;padding:34px;box-shadow:14px 14px #d8d0bf}
+.homehero aside small{color:var(--mint)}
+.homehero ol{list-style:none;padding:0;margin:20px 0 0}
+.homehero li{display:flex;flex-direction:column;padding:17px 0;border-top:1px solid #ffffff33}
+.homehero li span{color:#c6d5d7;font-size:14px}
+.band{background:#e3ece6;padding:85px 0}
+.intro{display:grid;grid-template-columns:1fr 3fr;gap:55px}
+.intro p{font-size:19px;color:#3d5358}
+.section{padding:95px 0}
+.section>h2{max-width:800px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.features div{padding:32px;border-right:1px solid var(--line)}
+.features div:last-child{border:0}
+.features h3{font:500 25px var(--serif)}
+.features p,.cards p{color:var(--muted);font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.cards>a{min-height:315px;padding:25px 22px;display:flex;flex-direction:column;text-decoration:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.15s}
+.cards>a:hover{background:#fff;transform:translateY(-3px)}
+.cards h3{font:500 24px var(--serif);margin-top:35px}
+.cards b{margin-top:auto;color:var(--teal);font-size:13px}
+.closing{background:var(--deep);color:white;text-align:center;padding:95px 0}
+.closing small{color:var(--mint)}
+.closing p{max-width:700px;margin:auto;color:#c7d5d7}
+.button.light{background:white;color:var(--deep)}
+.pagehero{background:var(--deep);color:white;padding:80px 0}
+.pagehero small{color:var(--mint)}
+.pagehero h1{margin:10px 0 18px}
+.pagehero p{font-size:21px;max-width:730px;color:#d0dcde}
+.layout{display:grid;grid-template-columns:220px minmax(0,770px);gap:75px;align-items:start;padding:78px 0 110px}
+.toc{position:sticky;top:108px;border-top:3px solid var(--gold);padding-top:16px}
+.toc b{font-size:13px}
+.toc a{display:block;text-decoration:none;color:var(--muted);font-size:14px;padding:6px 0}
+.layout article section{margin-bottom:72px}
+.layout article h2[id],.layout article h3[id],.layout article h4[id]{scroll-margin-top:105px}
+.layout article h2{margin-bottom:23px}
+.layout article p,.layout article li{color:#3a5156}
+.definitions{display:grid;grid-template-columns:1fr 1fr;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.definitions div{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.definitions p{font-size:15px;margin:0}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.compare div{background:#e2ebe5;padding:27px}
+.app-list{list-style:none;padding:0;border-top:1px solid var(--line)}
+.app-list li{display:grid;grid-template-columns:45px 1fr;gap:12px;padding:21px 0;border-bottom:1px solid var(--line)}
+.app-list span{font-size:12px;color:var(--teal)}
+.app-list a{font:600 22px var(--serif)}
+.app-list p{font-size:14px;margin:4px 0}
+.apphero{background:#e2ebe5;padding:52px 0 65px}
+.apphero>a{color:var(--teal)}
+.apphero small{margin-top:45px}
+.apphero h1{margin:10px 0 20px}
+.apphero>div>p{font:500 25px/1.45 var(--serif);max-width:800px}
+.apphero i{color:#66787b;font-size:13px}
+.table{overflow:auto;margin:28px 0 40px}
+.table:focus{outline:3px solid var(--gold)}
+table{border-collapse:collapse;width:100%;min-width:620px;background:#fff;font-size:14px}
+th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #d5dcda;vertical-align:top}
+thead th{background:var(--navy);color:white}
+tbody tr:nth-child(even){background:#f0f3ef}
+.notice{background:#ebe5d8;border-left:4px solid var(--gold);padding:23px 26px;margin-top:45px}
+.notice p{margin:5px 0;color:var(--muted);font-size:14px}
+.article-nav{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:22px;margin-top:45px}
+.article-nav a{color:var(--teal);font-weight:800;font-size:14px}
+.foot{background:#081f25;color:#d5dede;padding:55px 0 20px}
+.footgrid{display:flex;justify-content:space-between;gap:50px}
+.foot p{color:#91a5aa;font-size:13px}
+.foot nav{display:flex;gap:20px}
+.fine{border-top:1px solid #ffffff22;margin-top:35px;padding-top:18px;color:#819499;font-size:12px}
+@media(max-width:950px){.homehero{grid-template-columns:1fr}
+.intro{grid-template-columns:1fr}
+.cards{grid-template-columns:repeat(2,1fr)}
+.layout{grid-template-columns:180px 1fr;gap:40px}
+}
+@media(max-width:650px){body{font-size:16px}
+.wrap{width:min(calc(100% - 28px),1180px)}
+.brand>span:last-child{display:none}
+.links{gap:15px}
+.links a{font-size:12px}
+.homehero{padding:55px 0 70px}
+.homehero aside{box-shadow:8px 8px #d8d0bf}
+.features,.cards,.definitions,.compare{grid-template-columns:1fr}
+.features div{border-right:0;border-bottom:1px solid var(--line)}
+.cards>a{min-height:245px}
+.layout{display:block;padding:55px 0 75px}
+.toc{position:static;margin-bottom: 50px}
+.toc b{display:block;margin-bottom; 8px}
+.toc a{display:block;margin-right: 0}
+.apphero{padding:45px 0 55px}
+.footgrid,.article-nav{flex-direction:column}
+.table{margin-inline:-14px;padding-inline:14px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+.cards>a{transition:none}
+}
+.policy-content {
+  padding-top: 35px;
+  padding-bottom: 80px;
+}
+
+.policy-content > h2 {
+  margin-top: 65px;
+}
+
+.policy-content > h3 {
+  margin-top: 38px;
+  font: 500 25px var(--serif);
+}
+
+.policy-content > p,
+.policy-content > ul,
+.policy-content > ol {
+  max-width: 770px;
+}
+
+.policy-content code {
+  font-size: .9em;
+  background: #ebe5d8;
+  padding: .1em .35em;
+}
+
+.policy-content a {
+  color: var(--teal);
+}
+
+.layout article img {
+  display: block;
+  width: 100%;
+  max-width: 770px;
+  height: auto;
+  margin: 32px auto 48px;
+}</style>
+</head>
+<body>
+  
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="head">
+      <div class="wrap nav">
+        <a class="brand" href="/">
+          <span class="mark">LVC</span>
+          <span>Location Value Covenants</span>
+        </a>
+
+        <nav class="links" aria-label="Main navigation">
+          <a
+            
+            href="/"
+          >Home</a>
+
+          <a
+            
+            href="/briefing/"
+          >Policy briefing</a>
+
+          <a
+            
+            href="/applications/"
+          >Applications</a>
+
+          <a
+            aria-current="page"
+            href="/model/"
+          >National model</a>
+        </nav>
+      </div>
+    </header>
+  
+  <main id="main">
+    <header class="pagehero"><div class="wrap"><small>National model</small><h1>What could LVC adoption change?</h1><p>A transparent comparison of three possible paths against what might happen without Location Value Covenants.</p></div></header><div class="wrap layout"><aside class="toc"><b>On this page</b><a href="#main-content">Main content</a></aside><article id="main-content" class="policy-content"><h2 id="question">The question this model asks</h2>
+<p>What might change if Location Value Covenants were adopted gradually across the country?</p>
+<p>The model compares two paths over 20 years. The <strong>baseline</strong> assumes that LVCs are not introduced. The <strong>LVC path</strong> applies all eight proposed applications, from the Location Value Mortgage to New Home Covenants, wider property investment and monetary stability.</p>
+<p>This is a scenario tool, not an official forecast. It shows the consequences of the assumptions entered. It does not prove that those assumptions will occur.</p>
+<h2 id="scenarios">Three possible scenarios</h2>
+<p>The scenarios deliberately range from cautious adoption to a favourable case. The average scenario is the central illustration, not a prediction.</p>
+<div class="table" tabindex="0" role="region" aria-label="Data table"><table><thead><tr><th>Assumption</th><th>Conservative</th><th>Average</th><th>Best case</th></tr></thead><tbody><tr><th>Eventual take-up</th><td>10%</td><td>25%</td><td>50%</td></tr><tr><th>Time to reach take-up</th><td>10 years</td><td>8 years</td><td>5 years</td></tr><tr><th>Annual funding capacity at full take-up</th><td>£10bn</td><td>£25bn</td><td>£50bn</td></tr><tr><th>Annual funding growth</th><td>1%</td><td>2%</td><td>3%</td></tr><tr><th>Average mortgage rate</th><td>3.5%</td><td>4.5%</td><td>5.5%</td></tr><tr><th>Public funding cost</th><td>4.0%</td><td>3.5%</td><td>2.5%</td></tr><tr><th>Household cash-flow spent in the economy</th><td>40%</td><td>60%</td><td>75%</td></tr><tr><th>Displacement of the gross GDP effect</th><td>30%</td><td>15%</td><td>5%</td></tr></tbody></table></div>
+<p>All three runs assume starting GDP of £2.7 trillion at today's prices, starting mortgage debt of £1.7 trillion, baseline real GDP growth of 1.5%, baseline mortgage-credit growth of 2.5%, inflation of 2% and 180,000 new homes a year without LVCs.</p>
+<h2 id="conservative">Conservative scenario</h2>
+<p><img src="/assets/model/conservative.svg" alt="Conservative LVC national scenario" loading="lazy"></p>
+<p>With slow take-up and restricted funding, the estimated effects remain modest. By year 20, GDP is £3.6bn higher than the baseline, mortgage debt is £9.3bn lower, annual new-home output is 2,500 higher and cumulative additional homes reach 38,750.</p>
+<p>This run is useful as a test of whether the policy still makes a difference when adoption is limited and costs are relatively high.</p>
+<h2 id="average">Average scenario</h2>
+<p><img src="/assets/model/average.svg" alt="Average LVC national scenario" loading="lazy"></p>
+<p>With take-up reaching 25%, GDP is £35.2bn higher than the baseline in year 20. Mortgage debt is £69.3bn lower, annual new-home output is 6,250 higher and cumulative additional homes reach 103,125.</p>
+<p>In year 20, the model calculates £1.94bn of mortgage interest avoided and £1.24bn of covenant payments. The resulting net household cash-flow improvement is about £0.70bn for that year, of which £0.42bn is assumed to return to the economy through household spending.</p>
+<h2 id="best-case">Best-case scenario</h2>
+<p><img src="/assets/model/best-case.svg" alt="Best-case LVC national scenario" loading="lazy"></p>
+<p>This is a favourable upper scenario rather than a forecast. Take-up reaches 50%, funding expands more quickly, mortgage rates are higher than the public funding cost, and little investment is assumed to be displaced.</p>
+<p>By year 20, GDP is £211.6bn higher than the baseline, mortgage debt is £336.0bn lower, annual new-home output is 12,500 higher and cumulative additional homes reach 225,000. The estimated inflation rate is 0.15 percentage points below the baseline.</p>
+<p>The large GDP result depends heavily on favourable assumptions. It should be read as an indication of what would have to go right, not what must happen.</p>
+<h2 id="method">What produces the changes?</h2>
+<p>The model works through five main channels:</p>
+<ol><li><strong>Mortgage substitution.</strong> LVC funding replaces part of the mortgage credit that would otherwise be created by commercial banks.</li><li><strong>Household cash flow.</strong> Households avoid mortgage interest but make continuing covenant payments. The difference is the estimated household cash-flow change.</li><li><strong>Spending.</strong> A selected proportion of that household cash-flow change is assumed to be spent in the wider economy.</li><li><strong>Housing and investment.</strong> New homes, infrastructure and regeneration create direct economic activity. The model deducts an assumed amount that might merely displace other activity.</li><li><strong>Public finances.</strong> Covenant receipts and other associated revenue are recorded alongside the cost of funding and administering the programme.</li></ol>
+<p>The mortgage rate therefore does not create a one-sided gain. A higher mortgage rate increases the interest households avoid, but the model separately charges the public LVC fund its own funding cost. The difference between those rates matters.</p>
+<h2 id="results">What the results indicate</h2>
+<p>Across the three scenarios, the model indicates several possible advantages if LVCs operate as assumed:</p>
+<ul><li>Lower conventional mortgage debt and less dependence on bank-created mortgage credit;</li><li>Lower household interest costs after covenant payments are taken into account;</li><li>More homes through the New Home Covenant;</li><li>Additional construction, infrastructure and regeneration activity;</li><li>A possible reduction in property-driven inflationary pressure; and</li><li>A continuing stream of covenant receipts attached to funded properties.</li></ul>
+<p>The model also identifies costs. On the assumptions used here, annual public funding and administration costs are greater than direct covenant and associated programme receipts during the 20-year period. In the average scenario, the net annual public-finance figure is approximately <strong>minus £2.07bn in year 20</strong>. This does not by itself determine whether the programme is worthwhile: government would also hold long-lived covenant assets, while households, housing supply and the wider economy may improve. But the funding gap would have to be planned for and independently costed.</p>
+<h2 id="limits">What the model cannot tell us</h2>
+<p>The calculations do not yet model regional differences, property-price feedback, defaults, changes in covenant valuations, bank behaviour, tax feedback, construction labour shortages or a full response from the Bank of England.</p>
+<p>The results are therefore best used to compare assumptions and identify the questions that a detailed Treasury or independent fiscal model would need to answer. They should not be used for personal financial decisions or quoted as guaranteed national outcomes.</p>
+<h2 id="reproduce">Reproducing the results</h2>
+<p>The model is generated by a small, dependency-free Python program. Each run produces the annual data as CSV, the chart as SVG and a text file recording every assumption. This makes it possible for other people to inspect the calculations, change the inputs and challenge the conclusions.</p>
+<p>The source code and three CSV datasets are available for independent inspection:</p>
+<ul><li><a href="/assets/model/lvc_national_model.py">Download the model source code</a></li><li><a href="/assets/model/conservative.csv">Download the conservative scenario data</a></li><li><a href="/assets/model/average.csv">Download the average scenario data</a></li><li><a href="/assets/model/best-case.csv">Download the best-case scenario data</a></li></ul></article></div>
+  </main>
+  
+    <footer class="foot">
+      <div class="wrap footgrid">
+        <div>
+          <b>Location Value Covenants</b>
+          <p>
+            A voluntary policy proposal for housing finance and
+            public revenue reform.
+          </p>
+          <p>
+            Contact:
+            <a href="mailto:locationvaluecovenants@gmail.com">
+              locationvaluecovenants@gmail.com
+            </a>
+          </p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <a href="/briefing/">Policy briefing</a>
+          <a href="/applications/">Applications</a>
+          <a href="/model/">National model</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/website-terms/">Terms</a>
+        </nav>
+      </div>
+
+      <div class="wrap fine">
+        Policy material from the Systemic Fiscal Reform Group ·
+        © 2026
+      </div>
+    </footer>
+  
+</body>
+</html>

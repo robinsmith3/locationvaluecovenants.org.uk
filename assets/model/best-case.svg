@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1160" viewBox="0 0 1200 1160">
+<rect width="100%" height="100%" fill="#f7faf7"/>
+<style>text{font-family:Arial,sans-serif;fill:#183028}.title{font-size:26px;font-weight:700}.sub{font-size:13px;fill:#53655e}.pt{font-size:16px;font-weight:700}.axis{font-size:11px;fill:#53655e}.grid{stroke:#d9e3dd;stroke-width:1}.base{stroke:#6b7280;stroke-width:3;fill:none}.lvc{stroke:#15803d;stroke-width:3;fill:none}</style>
+<text x="45" y="42" class="title">LVC national scenario: adoption versus baseline</text>
+<text x="45" y="66" class="sub">Applications: 01, 02, 03, 04, 05, 06, 07, 08 · Illustrative assumptions, not a forecast</text>
+<line x1="810" y1="38" x2="850" y2="38" class="base"/><text x="860" y="42" class="sub">No-adoption baseline</text>
+<line x1="1010" y1="38" x2="1050" y2="38" class="lvc"/><text x="1060" y="42" class="sub">LVC scenario</text>
+<text x="55" y="87" class="pt">Real GDP (£bn)</text>
+<line x1="55" y1="105.0" x2="565" y2="105.0" class="grid"/>
+<text x="47" y="109.0" text-anchor="end" class="axis">4,062.2</text>
+<line x1="55" y1="168.8" x2="565" y2="168.8" class="grid"/>
+<text x="47" y="172.8" text-anchor="end" class="axis">3,696.4</text>
+<line x1="55" y1="232.5" x2="565" y2="232.5" class="grid"/>
+<text x="47" y="236.5" text-anchor="end" class="axis">3,330.6</text>
+<line x1="55" y1="296.2" x2="565" y2="296.2" class="grid"/>
+<text x="47" y="300.2" text-anchor="end" class="axis">2,964.9</text>
+<line x1="55" y1="360.0" x2="565" y2="360.0" class="grid"/>
+<text x="47" y="364.0" text-anchor="end" class="axis">2,599.1</text>
+<polyline points="55.0,342.4 80.5,335.4 106.0,328.2 131.5,320.9 157.0,313.5 182.5,306.0 208.0,298.4 233.5,290.7 259.0,282.9 284.5,274.9 310.0,266.9 335.5,258.7 361.0,250.4 386.5,241.9 412.0,233.4 437.5,224.7 463.0,215.8 488.5,206.9 514.0,197.8 539.5,188.6 565.0,179.2" class="base"/>
+<polyline points="55.0,342.4 80.5,335.1 106.0,327.5 131.5,319.5 157.0,311.0 182.5,302.0 208.0,292.7 233.5,283.1 259.0,273.1 284.5,262.7 310.0,252.0 335.5,240.9 361.0,229.4 386.5,217.5 412.0,205.3 437.5,192.6 463.0,179.5 488.5,165.9 514.0,151.9 539.5,137.5 565.0,122.6" class="lvc"/>
+<text x="55" y="380" class="axis">Year 0</text>
+<text x="565" y="380" text-anchor="end" class="axis">Year 20</text>
+<text x="640" y="87" class="pt">Mortgage debt (£bn)</text>
+<line x1="640" y1="105.0" x2="1150" y2="105.0" class="grid"/>
+<text x="632" y="109.0" text-anchor="end" class="axis">2,872.5</text>
+<line x1="640" y1="168.8" x2="1150" y2="168.8" class="grid"/>
+<text x="632" y="172.8" text-anchor="end" class="axis">2,557.7</text>
+<line x1="640" y1="232.5" x2="1150" y2="232.5" class="grid"/>
+<text x="632" y="236.5" text-anchor="end" class="axis">2,242.8</text>
+<line x1="640" y1="296.2" x2="1150" y2="296.2" class="grid"/>
+<text x="632" y="300.2" text-anchor="end" class="axis">1,928.0</text>
+<line x1="640" y1="360.0" x2="1150" y2="360.0" class="grid"/>
+<text x="632" y="364.0" text-anchor="end" class="axis">1,613.1</text>
+<polyline points="640.0,342.4 665.5,333.8 691.0,325.0 716.5,315.9 742.0,306.7 767.5,297.2 793.0,287.4 818.5,277.5 844.0,267.2 869.5,256.7 895.0,246.0 920.5,235.0 946.0,223.7 971.5,212.1 997.0,200.3 1022.5,188.1 1048.0,175.6 1073.5,162.9 1099.0,149.8 1124.5,136.3 1150.0,122.6" class="base"/>
+<polyline points="640.0,342.4 665.5,334.3 691.0,326.4 716.5,318.8 742.0,311.6 767.5,304.7 793.0,297.8 818.5,290.7 844.0,283.6 869.5,276.4 895.0,269.0 920.5,261.6 946.0,254.1 971.5,246.5 997.0,238.8 1022.5,231.0 1048.0,223.1 1073.5,215.1 1099.0,207.0 1124.5,198.9 1150.0,190.6" class="lvc"/>
+<text x="640" y="380" class="axis">Year 0</text>
+<text x="1150" y="380" text-anchor="end" class="axis">Year 20</text>
+<text x="55" y="432" class="pt">Annual new homes</text>
+<line x1="55" y1="450.0" x2="565" y2="450.0" class="grid"/>
+<text x="47" y="454.0" text-anchor="end" class="axis">193,500.0</text>
+<line x1="55" y1="513.8" x2="565" y2="513.8" class="grid"/>
+<text x="47" y="517.8" text-anchor="end" class="axis">189,875.0</text>
+<line x1="55" y1="577.5" x2="565" y2="577.5" class="grid"/>
+<text x="47" y="581.5" text-anchor="end" class="axis">186,250.0</text>
+<line x1="55" y1="641.2" x2="565" y2="641.2" class="grid"/>
+<text x="47" y="645.2" text-anchor="end" class="axis">182,625.0</text>
+<line x1="55" y1="705.0" x2="565" y2="705.0" class="grid"/>
+<text x="47" y="709.0" text-anchor="end" class="axis">179,000.0</text>
+<polyline points="55.0,687.4 80.5,687.4 106.0,687.4 131.5,687.4 157.0,687.4 182.5,687.4 208.0,687.4 233.5,687.4 259.0,687.4 284.5,687.4 310.0,687.4 335.5,687.4 361.0,687.4 386.5,687.4 412.0,687.4 437.5,687.4 463.0,687.4 488.5,687.4 514.0,687.4 539.5,687.4 565.0,687.4" class="base"/>
+<polyline points="55.0,687.4 80.5,643.4 106.0,599.5 131.5,555.5 157.0,511.6 182.5,467.6 208.0,467.6 233.5,467.6 259.0,467.6 284.5,467.6 310.0,467.6 335.5,467.6 361.0,467.6 386.5,467.6 412.0,467.6 437.5,467.6 463.0,467.6 488.5,467.6 514.0,467.6 539.5,467.6 565.0,467.6" class="lvc"/>
+<text x="55" y="725" class="axis">Year 0</text>
+<text x="565" y="725" text-anchor="end" class="axis">Year 20</text>
+<text x="640" y="432" class="pt">Inflation (%)</text>
+<line x1="640" y1="450.0" x2="1150" y2="450.0" class="grid"/>
+<text x="632" y="454.0" text-anchor="end" class="axis">2.0</text>
+<line x1="640" y1="513.8" x2="1150" y2="513.8" class="grid"/>
+<text x="632" y="517.8" text-anchor="end" class="axis">2.0</text>
+<line x1="640" y1="577.5" x2="1150" y2="577.5" class="grid"/>
+<text x="632" y="581.5" text-anchor="end" class="axis">1.9</text>
+<line x1="640" y1="641.2" x2="1150" y2="641.2" class="grid"/>
+<text x="632" y="645.2" text-anchor="end" class="axis">1.9</text>
+<line x1="640" y1="705.0" x2="1150" y2="705.0" class="grid"/>
+<text x="632" y="709.0" text-anchor="end" class="axis">1.8</text>
+<polyline points="640.0,467.6 665.5,467.6 691.0,467.6 716.5,467.6 742.0,467.6 767.5,467.6 793.0,467.6 818.5,467.6 844.0,467.6 869.5,467.6 895.0,467.6 920.5,467.6 946.0,467.6 971.5,467.6 997.0,467.6 1022.5,467.6 1048.0,467.6 1073.5,467.6 1099.0,467.6 1124.5,467.6 1150.0,467.6" class="base"/>
+<polyline points="640.0,467.6 665.5,511.6 691.0,555.5 716.5,599.5 742.0,643.4 767.5,687.4 793.0,687.4 818.5,687.4 844.0,687.4 869.5,687.4 895.0,687.4 920.5,687.4 946.0,687.4 971.5,687.4 997.0,687.4 1022.5,687.4 1048.0,687.4 1073.5,687.4 1099.0,687.4 1124.5,687.4 1150.0,687.4" class="lvc"/>
+<text x="640" y="725" class="axis">Year 0</text>
+<text x="1150" y="725" text-anchor="end" class="axis">Year 20</text>
+<text x="55" y="777" class="pt">Additional productive capital (£bn)</text>
+<line x1="55" y1="795.0" x2="565" y2="795.0" class="grid"/>
+<text x="47" y="799.0" text-anchor="end" class="axis">86.6</text>
+<line x1="55" y1="858.8" x2="565" y2="858.8" class="grid"/>
+<text x="47" y="862.8" text-anchor="end" class="axis">63.4</text>
+<line x1="55" y1="922.5" x2="565" y2="922.5" class="grid"/>
+<text x="47" y="926.5" text-anchor="end" class="axis">40.1</text>
+<line x1="55" y1="986.2" x2="565" y2="986.2" class="grid"/>
+<text x="47" y="990.2" text-anchor="end" class="axis">16.8</text>
+<line x1="55" y1="1050.0" x2="565" y2="1050.0" class="grid"/>
+<text x="47" y="1054.0" text-anchor="end" class="axis">-6.4</text>
+<polyline points="55.0,1032.4 80.5,1032.4 106.0,1032.4 131.5,1032.4 157.0,1032.4 182.5,1032.4 208.0,1032.4 233.5,1032.4 259.0,1032.4 284.5,1032.4 310.0,1032.4 335.5,1032.4 361.0,1032.4 386.5,1032.4 412.0,1032.4 437.5,1032.4 463.0,1032.4 488.5,1032.4 514.0,1032.4 539.5,1032.4 565.0,1032.4" class="base"/>
+<polyline points="55.0,1032.4 80.5,1032.4 106.0,1032.4 131.5,1030.3 157.0,1025.8 182.5,1019.0 208.0,1009.7 233.5,997.8 259.0,985.6 284.5,973.2 310.0,960.4 335.5,947.3 361.0,933.9 386.5,920.1 412.0,906.0 437.5,891.5 463.0,876.6 488.5,861.3 514.0,845.5 539.5,829.3 565.0,812.6" class="lvc"/>
+<text x="55" y="1070" class="axis">Year 0</text>
+<text x="565" y="1070" text-anchor="end" class="axis">Year 20</text>
+<text x="640" y="777" class="pt">Annual covenant receipts (£bn)</text>
+<line x1="640" y1="795.0" x2="1150" y2="795.0" class="grid"/>
+<text x="632" y="799.0" text-anchor="end" class="axis">10.1</text>
+<line x1="640" y1="858.8" x2="1150" y2="858.8" class="grid"/>
+<text x="632" y="862.8" text-anchor="end" class="axis">7.4</text>
+<line x1="640" y1="922.5" x2="1150" y2="922.5" class="grid"/>
+<text x="632" y="926.5" text-anchor="end" class="axis">4.7</text>
+<line x1="640" y1="986.2" x2="1150" y2="986.2" class="grid"/>
+<text x="632" y="990.2" text-anchor="end" class="axis">2.0</text>
+<line x1="640" y1="1050.0" x2="1150" y2="1050.0" class="grid"/>
+<text x="632" y="1054.0" text-anchor="end" class="axis">-0.7</text>
+<polyline points="640.0,1032.4 665.5,1032.4 691.0,1032.4 716.5,1032.4 742.0,1032.4 767.5,1032.4 793.0,1032.4 818.5,1032.4 844.0,1032.4 869.5,1032.4 895.0,1032.4 920.5,1032.4 946.0,1032.4 971.5,1032.4 997.0,1032.4 1022.5,1032.4 1048.0,1032.4 1073.5,1032.4 1099.0,1032.4 1124.5,1032.4 1150.0,1032.4" class="base"/>
+<polyline points="640.0,1032.4 665.5,1030.9 691.0,1027.8 716.5,1022.9 742.0,1016.0 767.5,1007.1 793.0,997.8 818.5,988.0 844.0,977.9 869.5,967.3 895.0,956.3 920.5,944.7 946.0,932.6 971.5,920.0 997.0,906.7 1022.5,892.9 1048.0,878.3 1073.5,863.1 1099.0,847.0 1124.5,830.2 1150.0,812.6" class="lvc"/>
+<text x="640" y="1070" class="axis">Year 0</text>
+<text x="1150" y="1070" text-anchor="end" class="axis">Year 20</text>
+</svg>

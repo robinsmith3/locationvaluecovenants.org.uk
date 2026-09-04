@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">The LVC tax and productivity feedback loop</title>
+  <desc id="desc">Covenant receipts replace taxes on production. Marginal activity becomes viable, raising employment and output. This reduces compensatory welfare expenditure and raises location rental values. Both effects strengthen the public finances and allow further tax substitution.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#167044"/>
+    </marker>
+    <style>
+      .bg{fill:#f7faf7}.box{fill:#fff;stroke:#167044;stroke-width:3}.strong{fill:#e5f4e9;stroke:#167044;stroke-width:4}.title{font:700 30px Arial,sans-serif;fill:#173b2a}.sub{font:16px Arial,sans-serif;fill:#52665b}.head{font:700 20px Arial,sans-serif;fill:#173b2a}.body{font:15px Arial,sans-serif;fill:#394d43}.arrow{fill:none;stroke:#167044;stroke-width:4;marker-end:url(#arrow)}.loop{fill:none;stroke:#6a8f7b;stroke-width:3;stroke-dasharray:8 7;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="720"/>
+  <text x="60" y="52" class="title">The tax and productivity feedback loop</text>
+  <text x="60" y="80" class="sub">A stronger economy can enlarge the source of the next round of reform.</text>
+
+  <rect x="70" y="125" width="300" height="112" rx="16" class="strong"/>
+  <text x="220" y="163" text-anchor="middle" class="head">LVC receipts</text>
+  <text x="220" y="191" text-anchor="middle" class="body">Revenue follows location value</text>
+  <text x="220" y="214" text-anchor="middle" class="body">rather than taxing production</text>
+
+  <rect x="450" y="125" width="300" height="112" rx="16" class="box"/>
+  <text x="600" y="163" text-anchor="middle" class="head">Lower productive taxes</text>
+  <text x="600" y="191" text-anchor="middle" class="body">Less tax on work, profits,</text>
+  <text x="600" y="214" text-anchor="middle" class="body">investment and machinery</text>
+
+  <rect x="830" y="125" width="300" height="112" rx="16" class="box"/>
+  <text x="980" y="163" text-anchor="middle" class="head">Marginal activity revives</text>
+  <text x="980" y="191" text-anchor="middle" class="body">More locations, firms and jobs</text>
+  <text x="980" y="214" text-anchor="middle" class="body">become economically viable</text>
+
+  <rect x="830" y="335" width="300" height="112" rx="16" class="strong"/>
+  <text x="980" y="373" text-anchor="middle" class="head">More output and income</text>
+  <text x="980" y="401" text-anchor="middle" class="body">Productive capacity, employment</text>
+  <text x="980" y="424" text-anchor="middle" class="body">and earned incomes rise</text>
+
+  <rect x="450" y="525" width="300" height="112" rx="16" class="box"/>
+  <text x="600" y="563" text-anchor="middle" class="head">Lower support requirement</text>
+  <text x="600" y="591" text-anchor="middle" class="body">Less compensatory expenditure</text>
+  <text x="600" y="614" text-anchor="middle" class="body">as employment and incomes recover</text>
+
+  <rect x="830" y="525" width="300" height="112" rx="16" class="box"/>
+  <text x="980" y="563" text-anchor="middle" class="head">Higher location values</text>
+  <text x="980" y="591" text-anchor="middle" class="body">Greater local productivity raises</text>
+  <text x="980" y="614" text-anchor="middle" class="body">rental values and LVC receipts</text>
+
+  <path d="M370 181 H442" class="arrow"/>
+  <path d="M750 181 H822" class="arrow"/>
+  <path d="M980 237 V327" class="arrow"/>
+  <path d="M930 447 C850 480 760 518 750 552" class="arrow"/>
+  <path d="M1030 447 C1050 475 1035 505 1015 518" class="arrow"/>
+  <path d="M450 581 C260 581 145 500 145 245" class="loop"/>
+  <path d="M830 581 C650 690 300 690 220 245" class="loop"/>
+  <text x="190" y="675" class="sub">Savings and rising receipts can finance another round of productive tax substitution.</text>
+</svg>

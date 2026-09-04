@@ -74,14 +74,113 @@ function bodyFor(page, apps) {
 }
 
 function header(route) {
-  const active = route === "/" ? "home" : route.startsWith("/briefing") ? "briefing" : route.startsWith("/applications") ? "applications" : "";
-  return `<a class="skip" href="#main">Skip to content</a><header class="head"><div class="wrap nav"><a class="brand" href="/"><span class="mark">LVC</span><span>${NAME}</span></a><nav class="links"><a ${active === "home" ? 'aria-current="page"' : ""} href="/">Home</a><a ${active === "briefing" ? 'aria-current="page"' : ""} href="/briefing/">Policy briefing</a><a ${active === "applications" ? 'aria-current="page"' : ""} href="/applications/">Applications</a></nav></div></header>`;
+  const active =
+    route === "/"
+      ? "home"
+      : route.startsWith("/briefing")
+        ? "briefing"
+        : route.startsWith("/applications")
+          ? "applications"
+          : route.startsWith("/model")
+            ? "model"
+            : "";
+
+  return `
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="head">
+      <div class="wrap nav">
+        <a class="brand" href="/">
+          <span class="mark">LVC</span>
+          <span>${NAME}</span>
+        </a>
+
+        <nav class="links" aria-label="Main navigation">
+          <a
+            ${active === "home" ? 'aria-current="page"' : ""}
+            href="/"
+          >Home</a>
+
+          <a
+            ${active === "briefing" ? 'aria-current="page"' : ""}
+            href="/briefing/"
+          >Policy briefing</a>
+
+          <a
+            ${active === "applications" ? 'aria-current="page"' : ""}
+            href="/applications/"
+          >Applications</a>
+
+          <a
+            ${active === "model" ? 'aria-current="page"' : ""}
+            href="/model/"
+          >National model</a>
+        </nav>
+      </div>
+    </header>
+  `;
 }
 
 function shell(page, apps, css) {
-  const footer = `<footer class="foot"><div class="wrap footgrid"><div><b>${NAME}</b><p>A voluntary policy proposal for housing finance and public revenue reform.</p><p>Contact: <a href="mailto:locationvaluecovenants@gmail.com">locationvaluecovenants@gmail.com</a></p></div><nav><a href="/briefing/">Policy briefing</a><a href="/applications/">Applications</a><a href="/privacy/">Privacy</a><a href="/website-terms/">Terms</a></nav></div><div class="wrap fine">Policy material from the Systemic Fiscal Reform Group · © ${new Date().getUTCFullYear()}</div></footer>`;
+  const footer = `
+    <footer class="foot">
+      <div class="wrap footgrid">
+        <div>
+          <b>${NAME}</b>
+          <p>
+            A voluntary policy proposal for housing finance and
+            public revenue reform.
+          </p>
+          <p>
+            Contact:
+            <a href="mailto:locationvaluecovenants@gmail.com">
+              locationvaluecovenants@gmail.com
+            </a>
+          </p>
+        </div>
 
-  return `<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escapeHtml(page.meta.title)} — ${NAME}</title><meta name="description" content="${escapeHtml(page.meta.description)}"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml" sizes="any"><style>${css}</style></head><body>${header(page.meta.route)}<main id="main">${bodyFor(page, apps)}</main>${footer}</body></html>`;
+        <nav aria-label="Footer navigation">
+          <a href="/briefing/">Policy briefing</a>
+          <a href="/applications/">Applications</a>
+          <a href="/model/">National model</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/website-terms/">Terms</a>
+        </nav>
+      </div>
+
+      <div class="wrap fine">
+        Policy material from the Systemic Fiscal Reform Group ·
+        © ${new Date().getUTCFullYear()}
+      </div>
+    </footer>
+  `;
+
+  return `<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>${escapeHtml(page.meta.title)} — ${NAME}</title>
+  <meta
+    name="description"
+    content="${escapeHtml(page.meta.description)}"
+  >
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link
+    rel="icon"
+    href="/favicon.svg?v=2"
+    type="image/svg+xml"
+    sizes="any"
+  >
+  <style>${css}</style>
+</head>
+<body>
+  ${header(page.meta.route)}
+  <main id="main">
+    ${bodyFor(page, apps)}
+  </main>
+  ${footer}
+</body>
+</html>`;
 }
 
 async function filesUnder(directory) {
@@ -141,6 +240,25 @@ await copyFile(
   new URL("../assets/favicon.ico", import.meta.url),
   new URL("favicon.ico", PUBLIC)
 );
+
+await mkdir(new URL("assets/model/", PUBLIC), { recursive: true });
+
+for (const filename of [
+  "conservative.svg",
+  "average.svg",
+  "best-case.svg",
+  "feedback-loop.svg",
+  "conservative.csv",
+  "average.csv",
+  "best-case.csv",
+  "lvc_national_model.py"
+]) {
+  await copyFile(
+    new URL(`../assets/model/${filename}`, import.meta.url),
+    new URL(`assets/model/${filename}`, PUBLIC)
+  );
+}
+
 for (const page of pages) { const relative = page.meta.route === "/" ? "index.html" : `${page.meta.route.slice(1)}index.html`; const destination = new URL(relative, PUBLIC); await mkdir(new URL("./", destination), { recursive: true }); await writeFile(destination, shell(page, apps, css)); }
 const notFound = { meta: { route: "/404/", title: "Page not found", description: "The requested page could not be found.", heading: "Page not found", intro: "The page may have moved as part of the new policy-site structure.", eyebrow: "404", layout: "standard" }, body: "[Return to the home page](/)" };
 await writeFile(new URL("404.html", PUBLIC), shell(notFound, apps, css));

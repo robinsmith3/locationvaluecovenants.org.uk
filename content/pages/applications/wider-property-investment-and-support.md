@@ -29,7 +29,7 @@ This framework could encompass new housing, property improvement, conservation, 
 
 These are policy proposals, not currently available UK financial products or alternatives to regulated advice.
 
-## How the common mechanism works {#common-mechanism}
+## How the common mechanism works {#how-it-works}
 
 The precise wider public value differs between applications, but the financial sequence is broadly the same:
 
@@ -50,6 +50,8 @@ The covenant should remain distinct from an ordinary loan. It has no conventiona
 ### LVC-funded new homes {#new-homes}
 
 The strongest wider application may be financing part of the price of newly constructed homes.
+
+#### Worked example 
 
 Suppose a builder completes a home for which the agreed market price without a covenant is £300,000. A public LVC fund contributes £120,000 and the purchaser supplies the remaining £180,000.
 
@@ -154,13 +156,11 @@ An LVC contribution could provide part of the required capital. The departing pa
 
 In exchange, the property carries a continuing covenant and has a lower future sale price. This is essentially a specialised Location Value Mortgage and should be compared with sale, private refinancing and other family-law arrangements.
 
-### Agricultural and business succession {#succession}
+### Farming and agricultural succession
 
-A family farm or property-dependent business can be economically viable but unable to fund inheritance, retirement or partner-buyout liabilities without selling productive land.
+Agricultural succession and farm investment require specialised treatment because agricultural location value must be separated from buildings, machinery, livestock, crops, drainage, soil improvements and the farming business.
 
-An LVC could settle an agreed capital liability while allowing the enterprise to continue. The payment would attach to the property and pass to a future owner.
-
-Agricultural and commercial location values behave differently from residential values. The index, affordability tests and treatment of buildings, equipment, crops and business goodwill would therefore require a specialised design.
+The [Family Farm Covenant](/applications/family-farm-covenant/) considers two dedicated routes: settling an inheritance-tax or family-succession liability without breaking up a viable farm, and supplying long-term capital for productive agricultural investment.
 
 ## Business, infrastructure and regeneration {#business-infrastructure}
 
@@ -189,7 +189,7 @@ This differs from imposing a general land-value tax after public investment has 
 
 Area-wide infrastructure would also gove wider public value to non-participating properties. Government would need to decide how general taxation, developer contributions and voluntary covenants should share costs without giving free riders an unfair advantage. But this added public vlaue will be reflected in higher land value indexes anyway so the more widey LVC's get adotped the less this is an issue.
 
-## What is in it for each participant? {#participant-wider public values}
+## What is in it for each participant? {#beneficiaries}
 
 * **Property owner or purchaser — why would I do this?** I receive a home, improvement, service, liability settlement or other substantial wider public value without finding the entire cost immediately or taking an equivalent conventional loan. I accept a continuing payment and a corresponding effect on the property’s future selling price.
 * **Future purchaser:** I pay a price that reflects the covenant and receive the improved property or the wider public value. I assume the continuing payment and pass it to the next owner when I sell.

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">How the Family Farm Covenant works</title>
+  <desc id="desc">A farm can use a succession covenant to settle inheritance tax or an investment covenant to obtain productive capital. Both routes attach a continuing payment to agricultural location value, keep the farm working and exclude buildings and improvements from the assessment.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#167044"/></marker>
+    <style>.bg{fill:#f7faf7}.box{fill:#fff;stroke:#167044;stroke-width:3}.strong{fill:#e5f4e9;stroke:#167044;stroke-width:4}.guard{fill:#fff8df;stroke:#9a6a08;stroke-width:3}.title{font:700 30px Arial,sans-serif;fill:#173b2a}.sub{font:16px Arial,sans-serif;fill:#52665b}.head{font:700 20px Arial,sans-serif;fill:#173b2a}.body{font:15px Arial,sans-serif;fill:#394d43}.small{font:14px Arial,sans-serif;fill:#52665b}.arrow{fill:none;stroke:#167044;stroke-width:4;marker-end:url(#arrow)}</style>
+  </defs>
+  <rect class="bg" width="1200" height="760"/>
+  <text x="60" y="52" class="title">The Family Farm Covenant</text>
+  <text x="60" y="80" class="sub">Two routes keep productive land and capital working.</text>
+
+  <rect x="70" y="125" width="310" height="125" rx="16" class="box"/>
+  <text x="225" y="163" text-anchor="middle" class="head">Succession route</text>
+  <text x="225" y="192" text-anchor="middle" class="body">Government settles eligible IHT</text>
+  <text x="225" y="216" text-anchor="middle" class="body">or a family-succession liability</text>
+
+  <rect x="70" y="325" width="310" height="125" rx="16" class="box"/>
+  <text x="225" y="363" text-anchor="middle" class="head">Investment route</text>
+  <text x="225" y="392" text-anchor="middle" class="body">The fund supplies approved capital,</text>
+  <text x="225" y="416" text-anchor="middle" class="body">works, services or refinancing</text>
+
+  <rect x="455" y="225" width="310" height="150" rx="16" class="strong"/>
+  <text x="610" y="265" text-anchor="middle" class="head">Covenant attached to land</text>
+  <text x="610" y="296" text-anchor="middle" class="body">Continuing payment follows</text>
+  <text x="610" y="320" text-anchor="middle" class="body">agricultural location value</text>
+  <text x="610" y="344" text-anchor="middle" class="body">and passes to future owners</text>
+
+  <rect x="840" y="225" width="290" height="150" rx="16" class="strong"/>
+  <text x="985" y="265" text-anchor="middle" class="head">Farm remains productive</text>
+  <text x="985" y="296" text-anchor="middle" class="body">No forced break-up merely</text>
+  <text x="985" y="320" text-anchor="middle" class="body">to create immediate cash</text>
+  <text x="985" y="344" text-anchor="middle" class="body">More capital remains at work</text>
+
+  <path d="M380 188 C420 188 420 265 447 275" class="arrow"/>
+  <path d="M380 388 C420 388 420 335 447 325" class="arrow"/>
+  <path d="M765 300 H832" class="arrow"/>
+
+  <rect x="170" y="535" width="860" height="135" rx="16" class="guard"/>
+  <text x="600" y="576" text-anchor="middle" class="head">The essential protection</text>
+  <text x="600" y="608" text-anchor="middle" class="body">The assessment follows underlying agricultural location value—not value created by the farmer.</text>
+  <text x="600" y="634" text-anchor="middle" class="body">Buildings · machinery · livestock · crops · drainage · soil improvements · business goodwill</text>
+  <text x="600" y="704" text-anchor="middle" class="small">Keep the farm working · attach the settlement to the land · never tax the farmer's improvements through the covenant</text>
+</svg>

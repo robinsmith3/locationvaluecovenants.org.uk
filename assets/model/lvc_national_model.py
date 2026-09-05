@@ -16,7 +16,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-VERSION = "1.2.0"
+VERSION = "1.3.0"
 
 
 @dataclass(frozen=True)
@@ -60,6 +60,7 @@ DEFAULTS = {
     "gdp": 2_700.0,
     "gdp_growth": 1.5,
     "mortgage_debt": 1_700.0,
+    "land_mortgage_share": 60.0,
     "mortgage_growth": 2.5,
     "mortgage_rate": 4.5,
     "funding_rate": 3.5,
@@ -77,6 +78,13 @@ DEFAULTS = {
     "welfare_reduction_rate": 30.0,
     "location_value_capture_rate": 30.0,
     "rental_value_growth": 1.0,
+    "economic_rent": 300.0,
+    "productive_tax_share": 30.0,
+    "marginal_gdp_share": 20.0,
+    "intermediate_gdp_share": 35.0,
+    "marginal_response": 1.8,
+    "intermediate_response": 1.1,
+    "central_response": 0.6,
     "covenant_reinvestment_share": 10.0,
     "inflation": 2.0,
     "baseline_homes": 180_000,
@@ -133,6 +141,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--gdp", type=float, default=DEFAULTS["gdp"], help="starting real GDP at today's prices, £bn")
     p.add_argument("--gdp-growth", type=float, default=DEFAULTS["gdp_growth"], help="baseline real GDP growth percent")
     p.add_argument("--mortgage-debt", type=float, default=DEFAULTS["mortgage_debt"], help="starting mortgage debt, £bn")
+    p.add_argument("--land-mortgage-share", type=float, default=DEFAULTS["land_mortgage_share"], help="percent of mortgage debt attributable to land value")
     p.add_argument("--mortgage-growth", type=float, default=DEFAULTS["mortgage_growth"], help="baseline mortgage-credit growth percent")
     p.add_argument("--mortgage-rate", type=float, default=DEFAULTS["mortgage_rate"], help="average mortgage interest rate percent")
     p.add_argument("--funding-rate", type=float, default=DEFAULTS["funding_rate"], help="public LVC funding cost percent")
@@ -150,6 +159,13 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--welfare-reduction-rate", type=float, default=DEFAULTS["welfare_reduction_rate"], help="reduction in compensatory welfare per £1 of relevant additional output, percent")
     p.add_argument("--location-value-capture-rate", type=float, default=DEFAULTS["location_value_capture_rate"], help="percent of structural productivity growth reflected in location rental values")
     p.add_argument("--rental-value-growth", type=float, default=DEFAULTS["rental_value_growth"], help="underlying annual real location-rental-value growth percent")
+    p.add_argument("--economic-rent", type=float, default=DEFAULTS["economic_rent"], help="starting annual location economic rent, £bn")
+    p.add_argument("--productive-tax-share", type=float, default=DEFAULTS["productive_tax_share"], help="starting taxes on productive activity as percent of GDP")
+    p.add_argument("--marginal-gdp-share", type=float, default=DEFAULTS["marginal_gdp_share"], help="starting GDP share in marginal locations, percent")
+    p.add_argument("--intermediate-gdp-share", type=float, default=DEFAULTS["intermediate_gdp_share"], help="starting GDP share in intermediate locations, percent")
+    p.add_argument("--marginal-response", type=float, default=DEFAULTS["marginal_response"], help="relative response of marginal locations to structural reform")
+    p.add_argument("--intermediate-response", type=float, default=DEFAULTS["intermediate_response"], help="relative response of intermediate locations")
+    p.add_argument("--central-response", type=float, default=DEFAULTS["central_response"], help="relative response of high-value centres")
     p.add_argument("--covenant-reinvestment-share", type=float, default=DEFAULTS["covenant_reinvestment_share"], help="percent of covenant receipts and prior welfare savings reinvested productively")
     p.add_argument("--inflation", type=float, default=DEFAULTS["inflation"], help="baseline inflation percent")
     p.add_argument("--baseline-homes", type=int, default=DEFAULTS["baseline_homes"], help="annual baseline new homes")
@@ -179,6 +195,7 @@ def collect_inputs(args: argparse.Namespace) -> argparse.Namespace:
     args.gdp = prompt_float("Starting real GDP at today's prices (£bn)", args.gdp, 0)
     args.gdp_growth = prompt_float("Baseline real GDP growth (%)", args.gdp_growth)
     args.mortgage_debt = prompt_float("Starting mortgage debt (£bn)", args.mortgage_debt, 0)
+    args.land_mortgage_share = prompt_float("Mortgage debt attributable to land value (%)", args.land_mortgage_share, 0)
     args.mortgage_growth = prompt_float("Baseline mortgage-credit growth (%)", args.mortgage_growth)
     args.mortgage_rate = prompt_float("Average mortgage interest rate (%)", args.mortgage_rate, 0)
     args.funding_rate = prompt_float("Public LVC funding cost (%)", args.funding_rate, 0)
@@ -196,6 +213,13 @@ def collect_inputs(args: argparse.Namespace) -> argparse.Namespace:
     args.welfare_reduction_rate = prompt_float("Compensatory welfare reduction per £1 of relevant output (%)", args.welfare_reduction_rate, 0)
     args.location_value_capture_rate = prompt_float("Productivity growth reflected in location rental values (%)", args.location_value_capture_rate, 0)
     args.rental_value_growth = prompt_float("Underlying real location-rental-value growth (%)", args.rental_value_growth)
+    args.economic_rent = prompt_float("Starting annual location economic rent (£bn)", args.economic_rent, 0)
+    args.productive_tax_share = prompt_float("Starting productive taxes as share of GDP (%)", args.productive_tax_share, 0)
+    args.marginal_gdp_share = prompt_float("GDP initially in marginal locations (%)", args.marginal_gdp_share, 0)
+    args.intermediate_gdp_share = prompt_float("GDP initially in intermediate locations (%)", args.intermediate_gdp_share, 0)
+    args.marginal_response = prompt_float("Relative response in marginal locations", args.marginal_response, 0)
+    args.intermediate_response = prompt_float("Relative response in intermediate locations", args.intermediate_response, 0)
+    args.central_response = prompt_float("Relative response in high-value centres", args.central_response, 0)
     args.covenant_reinvestment_share = prompt_float("Receipts and welfare savings reinvested productively (%)", args.covenant_reinvestment_share, 0)
     args.inflation = prompt_float("Baseline inflation (%)", args.inflation)
     args.baseline_homes = int(prompt_float("Annual baseline new homes", args.baseline_homes, 0))
@@ -213,7 +237,7 @@ def validate(args: argparse.Namespace) -> list[int]:
         raise ValueError("Take-up must be between 0 and 100 percent.")
     if not 1 <= args.ramp_years <= 100:
         raise ValueError("Ramp years must be between 1 and 100.")
-    for name in ("annual_lvc_funding", "gdp", "mortgage_debt", "mortgage_rate", "funding_rate", "baseline_homes", "discount_rate", "administration_rate"):
+    for name in ("annual_lvc_funding", "gdp", "mortgage_debt", "economic_rent", "mortgage_rate", "funding_rate", "baseline_homes", "discount_rate", "administration_rate"):
         if getattr(args, name) < 0:
             raise ValueError(f"{name.replace('_', ' ')} cannot be negative.")
     for name in ("mortgage_runoff", "mpc", "displacement_rate", "productive_investment_share",
@@ -222,6 +246,13 @@ def validate(args: argparse.Namespace) -> list[int]:
                  "location_value_capture_rate", "covenant_reinvestment_share"):
         if not 0 <= getattr(args, name) <= 100:
             raise ValueError(f"{name.replace('_', ' ')} must be between 0 and 100 percent.")
+    for name in ("land_mortgage_share", "productive_tax_share", "marginal_gdp_share", "intermediate_gdp_share"):
+        if not 0 <= getattr(args, name) <= 100:
+            raise ValueError(f"{name.replace('_', ' ')} must be between 0 and 100 percent.")
+    if args.marginal_gdp_share + args.intermediate_gdp_share > 100:
+        raise ValueError("Marginal and intermediate GDP shares cannot total more than 100 percent.")
+    if args.marginal_response + args.intermediate_response + args.central_response <= 0:
+        raise ValueError("At least one location response must be greater than zero.")
     if not 0 <= args.productivity_lag <= 50:
         raise ValueError("productivity lag must be between 0 and 50 years.")
     if args.rental_value_growth <= -100:
@@ -255,9 +286,30 @@ def simulate(args: argparse.Namespace, selected: list[int]) -> list[dict[str, fl
     location_value_capture_rate = args.location_value_capture_rate / 100.0
     rental_value_growth = args.rental_value_growth / 100.0
     covenant_reinvestment_share = args.covenant_reinvestment_share / 100.0
+    land_mortgage_share = args.land_mortgage_share / 100.0
+    productive_tax_share = args.productive_tax_share / 100.0
+
+    marginal_share = args.marginal_gdp_share / 100.0
+    intermediate_share = args.intermediate_gdp_share / 100.0
+    central_share = 1.0 - marginal_share - intermediate_share
+    location_shares = {
+        "marginal": marginal_share,
+        "intermediate": intermediate_share,
+        "central": central_share,
+    }
+    response_scores = {
+        "marginal": marginal_share * args.marginal_response,
+        "intermediate": intermediate_share * args.intermediate_response,
+        "central": central_share * args.central_response,
+    }
+    response_total = sum(response_scores.values())
+    response_weights = {name: score / response_total for name, score in response_scores.items()}
 
     baseline_gdp = policy_gdp = args.gdp
+    baseline_land_mortgage = policy_land_mortgage = args.mortgage_debt * land_mortgage_share
+    baseline_building_mortgage = policy_building_mortgage = args.mortgage_debt * (1.0 - land_mortgage_share)
     baseline_mortgage = policy_mortgage = args.mortgage_debt
+    baseline_economic_rent = policy_economic_rent = args.economic_rent
     outstanding_lvc = outstanding_replaced = 0.0
     cumulative_lvc = cumulative_receipts = cumulative_homes_delta = 0.0
     cumulative_net_household_cashflow = cumulative_public_cashflow = 0.0
@@ -280,15 +332,21 @@ def simulate(args: argparse.Namespace, selected: list[int]) -> list[dict[str, fl
             policy_inflation = baseline_inflation = args.inflation
         else:
             baseline_gdp *= 1.0 + gdp_growth
-            baseline_mortgage *= 1.0 + mortgage_growth
+            baseline_land_mortgage *= 1.0 + mortgage_growth
+            baseline_building_mortgage *= 1.0 + mortgage_growth
+            baseline_mortgage = baseline_land_mortgage + baseline_building_mortgage
+            policy_land_mortgage *= 1.0 + mortgage_growth
+            policy_building_mortgage *= 1.0 + mortgage_growth
+            baseline_economic_rent *= 1.0 + rental_value_growth
             adoption = take_up_target * min(1.0, year / args.ramp_years)
             capacity = args.annual_lvc_funding * ((1.0 + funding_growth) ** (year - 1))
             annual_lvc = capacity * adoption
-            annual_replacement = annual_lvc * sum(a.mortgage_replacement * weight for a in apps)
+            requested_replacement = annual_lvc * sum(a.mortgage_replacement * weight for a in apps)
+            annual_replacement = min(policy_land_mortgage, requested_replacement)
             outstanding_lvc = outstanding_lvc * (1.0 - runoff_rate) + annual_lvc
             outstanding_replaced = outstanding_replaced * (1.0 - runoff_rate) + annual_replacement
             annual_receipts = (outstanding_lvc * sum(a.covenant_yield * weight for a in apps)
-                               * location_value_index)
+                               * (policy_economic_rent / max(baseline_economic_rent, 1e-9)))
             gross_interest_avoided = outstanding_replaced * mortgage_rate
             net_household_cashflow = gross_interest_avoided - annual_receipts
             consumption_effect = net_household_cashflow * mpc
@@ -326,7 +384,30 @@ def simulate(args: argparse.Namespace, selected: list[int]) -> list[dict[str, fl
             baseline_inflation = args.inflation
             policy_inflation = max(-1.0, baseline_inflation - inflation_cut)
             policy_gdp *= 1.0 + gdp_growth + growth_impulse
-            policy_mortgage = max(0.0, policy_mortgage * (1.0 + mortgage_growth) - annual_replacement)
+            policy_land_mortgage = max(0.0, policy_land_mortgage - annual_replacement)
+            policy_mortgage = policy_land_mortgage + policy_building_mortgage
+
+            # Allocate the national GDP difference from the bottom up. Higher response weights
+            # place the first opportunities in marginal locations without changing national GDP.
+            gdp_delta = policy_gdp - baseline_gdp
+            baseline_location_gdp = {name: baseline_gdp * share for name, share in location_shares.items()}
+            policy_location_gdp = {
+                name: baseline_location_gdp[name] + gdp_delta * response_weights[name]
+                for name in location_shares
+            }
+            rent_shares = {"marginal": 0.10, "intermediate": 0.30, "central": 0.60}
+            baseline_location_rent = {
+                name: baseline_economic_rent * share for name, share in rent_shares.items()
+            }
+            policy_location_rent = {
+                name: baseline_location_rent[name] * (
+                    1.0 + location_value_capture_rate
+                    * max(0.0, policy_location_gdp[name] / max(baseline_location_gdp[name], 1e-9) - 1.0)
+                )
+                for name in location_shares
+            }
+            policy_economic_rent = sum(policy_location_rent.values())
+            location_value_index = policy_economic_rent / max(args.economic_rent, 1e-9)
             cumulative_lvc += annual_lvc
             cumulative_receipts += annual_receipts
             cumulative_net_household_cashflow += net_household_cashflow
@@ -338,6 +419,18 @@ def simulate(args: argparse.Namespace, selected: list[int]) -> list[dict[str, fl
             previous_welfare_saving = welfare_saving
 
         pv_factor = (1.0 + discount_rate) ** year
+        if year == 0:
+            baseline_location_gdp = {name: baseline_gdp * share for name, share in location_shares.items()}
+            policy_location_gdp = dict(baseline_location_gdp)
+            baseline_location_rent = {
+                "marginal": baseline_economic_rent * 0.10,
+                "intermediate": baseline_economic_rent * 0.30,
+                "central": baseline_economic_rent * 0.60,
+            }
+            policy_location_rent = dict(baseline_location_rent)
+        baseline_productive_tax = baseline_gdp * productive_tax_share
+        policy_productive_tax = max(0.0, policy_gdp * productive_tax_share - taxes_substituted)
+        policy_productive_tax_rate = policy_productive_tax / max(policy_gdp, 1e-9) * 100.0
         rows.append({
             "year": year,
             "adoption_percent": adoption * 100.0 if year else 0.0,
@@ -347,6 +440,10 @@ def simulate(args: argparse.Namespace, selected: list[int]) -> list[dict[str, fl
             "baseline_mortgage_debt_gbp_bn": baseline_mortgage,
             "lvc_mortgage_debt_gbp_bn": policy_mortgage,
             "mortgage_debt_delta_gbp_bn": policy_mortgage - baseline_mortgage,
+            "baseline_land_related_mortgage_debt_gbp_bn": baseline_land_mortgage,
+            "lvc_land_related_mortgage_debt_gbp_bn": policy_land_mortgage,
+            "land_related_mortgage_debt_delta_gbp_bn": policy_land_mortgage - baseline_land_mortgage,
+            "lvc_building_and_improvement_mortgage_debt_gbp_bn": policy_building_mortgage,
             "annual_lvc_funding_gbp_bn": annual_lvc,
             "cumulative_lvc_funding_gbp_bn": cumulative_lvc,
             "annual_mortgage_credit_replaced_gbp_bn": annual_replacement,
@@ -373,6 +470,19 @@ def simulate(args: argparse.Namespace, selected: list[int]) -> list[dict[str, fl
             "compensatory_welfare_reduction_gbp_bn": welfare_saving,
             "cumulative_compensatory_welfare_reduction_gbp_bn": cumulative_welfare_saving,
             "location_value_index": location_value_index,
+            "baseline_annual_economic_rent_gbp_bn": baseline_economic_rent,
+            "lvc_annual_economic_rent_gbp_bn": policy_economic_rent,
+            "economic_rent_delta_gbp_bn": policy_economic_rent - baseline_economic_rent,
+            "baseline_productive_tax_burden_gbp_bn": baseline_productive_tax,
+            "lvc_productive_tax_burden_gbp_bn": policy_productive_tax,
+            "baseline_productive_tax_rate_percent": productive_tax_share * 100.0,
+            "lvc_productive_tax_rate_percent": policy_productive_tax_rate,
+            "marginal_location_real_gdp_gbp_bn": policy_location_gdp["marginal"],
+            "intermediate_location_real_gdp_gbp_bn": policy_location_gdp["intermediate"],
+            "central_location_real_gdp_gbp_bn": policy_location_gdp["central"],
+            "marginal_location_economic_rent_gbp_bn": policy_location_rent["marginal"],
+            "intermediate_location_economic_rent_gbp_bn": policy_location_rent["intermediate"],
+            "central_location_economic_rent_gbp_bn": policy_location_rent["central"],
             "underlying_rental_value_growth_percent": rental_value_growth * 100.0,
             "productivity_related_rental_growth_percent": endogenous_rental_growth * 100.0,
             "effective_rental_value_growth_percent": effective_rental_growth * 100.0,
@@ -404,14 +514,16 @@ def svg_escape(text: str) -> str:
 
 
 def write_svg(path: Path, rows: list[dict[str, float | int]], selected: list[int]) -> None:
-    width, height = 1200, 1160
+    width, height = 1200, 1500
     panels = [
         ("Real GDP (£bn)", "baseline_real_gdp_gbp_bn", "lvc_real_gdp_gbp_bn"),
-        ("Mortgage debt (£bn)", "baseline_mortgage_debt_gbp_bn", "lvc_mortgage_debt_gbp_bn"),
-        ("Annual new homes", "baseline_new_homes", "lvc_new_homes"),
-        ("Inflation (%)", "baseline_inflation_percent", "lvc_inflation_percent"),
+        ("Annual economic rent (£bn)", "baseline_annual_economic_rent_gbp_bn", "lvc_annual_economic_rent_gbp_bn"),
+        ("Land-related mortgage debt (£bn)", "baseline_land_related_mortgage_debt_gbp_bn", "lvc_land_related_mortgage_debt_gbp_bn"),
+        ("Productive tax rate (% of GDP)", "baseline_productive_tax_rate_percent", "lvc_productive_tax_rate_percent"),
         ("Additional productive capital (£bn)", "baseline_model_attributed_productive_capital_gbp_bn", "productive_capital_stock_gbp_bn"),
         ("Annual covenant receipts (£bn)", "baseline_model_attributed_productive_capital_gbp_bn", "annual_covenant_receipts_gbp_bn"),
+        ("Annual new homes", "baseline_new_homes", "lvc_new_homes"),
+        ("Inflation (%)", "baseline_inflation_percent", "lvc_inflation_percent"),
     ]
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
            '<rect width="100%" height="100%" fill="#f7faf7"/>',
@@ -463,6 +575,7 @@ def write_assumptions(path: Path, args: argparse.Namespace, selected: list[int])
         f"Annual LVC funding at full take-up: £{args.annual_lvc_funding:g}bn",
         f"Starting real GDP at today's prices: £{args.gdp:g}bn; baseline real growth: {args.gdp_growth:g}%",
         f"Starting mortgage debt: £{args.mortgage_debt:g}bn; baseline growth: {args.mortgage_growth:g}%",
+        f"Mortgage debt attributable to land value: {args.land_mortgage_share:g}%",
         f"Average mortgage interest rate: {args.mortgage_rate:g}%",
         f"Public LVC funding cost: {args.funding_rate:g}%",
         f"Annual repayment or exit from funded stock: {args.mortgage_runoff:g}%",
@@ -479,6 +592,10 @@ def write_assumptions(path: Path, args: argparse.Namespace, selected: list[int])
         f"Compensatory welfare reduction per £1 of relevant output: {args.welfare_reduction_rate:g}%",
         f"Structural productivity growth reflected in rental values: {args.location_value_capture_rate:g}%",
         f"Underlying real location-rental-value growth: {args.rental_value_growth:g}%",
+        f"Starting annual location economic rent: £{args.economic_rent:g}bn",
+        f"Starting productive taxes as share of GDP: {args.productive_tax_share:g}%",
+        f"Starting GDP shares — marginal: {args.marginal_gdp_share:g}%; intermediate: {args.intermediate_gdp_share:g}%; high-value centres: {100-args.marginal_gdp_share-args.intermediate_gdp_share:g}%",
+        f"Location response weights — marginal: {args.marginal_response:g}; intermediate: {args.intermediate_response:g}; high-value centres: {args.central_response:g}",
         f"Receipts and prior welfare savings reinvested productively: {args.covenant_reinvestment_share:g}%",
         f"Baseline inflation: {args.inflation:g}%",
         f"Baseline annual new homes: {args.baseline_homes:,}",
@@ -493,10 +610,18 @@ def write_assumptions(path: Path, args: argparse.Namespace, selected: list[int])
         "from avoided mortgage interest less covenant payments, then deduct the selected displacement.",
         "Funding cost, administration and portfolio run-off are included. Defaults, detailed regional",
         "valuation changes and a full monetary-policy response are not. Inflation effects are indicative.",
-        "The structural module redirects a selected share of displaced mortgage credit into productive",
+        "The mortgage module separates land-related debt, which LVCs can replace, from finance for",
+        "buildings and improvements, which the model does not target for elimination. The structural",
+        "module redirects a selected share of displaced land mortgage credit into productive",
         "capital after a lag. Covenant receipts and prior welfare savings can replace taxes on production",
         "or finance more productive investment. Resulting structural output reduces only the selected",
-        "economy-related share of welfare and raises rental values by the selected capture rate.",
+        "economy-related share of welfare and raises economic rents by the selected capture rate.",
+        "National structural gains are allocated across marginal, intermediate and central locations",
+        "using editable response weights. The defaults deliberately give marginal locations the strongest",
+        "response, representing activity that becomes viable when productive taxation is removed.",
+        "The model keeps buildings and improvements outside economic rent: it does not treat their value",
+        "as a source of LVC receipts. Productive tax and land-mortgage rates have zero lower bounds, while",
+        "productive capital, economic rent and covenant receipts have no arbitrary upper plateau.",
         "Applications may overlap; selecting several can double-count eligible households or funding unless",
         "the user adjusts funding and coefficients accordingly.",
     ]
@@ -509,6 +634,9 @@ def print_summary(rows: list[dict[str, float | int]], selected: list[int], outpu
     print(f"Applications: {', '.join(f'{n:02d}' for n in selected)}")
     print(f"Final-year GDP difference: £{float(final['gdp_delta_gbp_bn']):,.2f}bn")
     print(f"Final-year mortgage-debt difference: £{float(final['mortgage_debt_delta_gbp_bn']):,.2f}bn")
+    print(f"Final-year land-related mortgage debt: £{float(final['lvc_land_related_mortgage_debt_gbp_bn']):,.2f}bn")
+    print(f"Final-year annual economic rent: £{float(final['lvc_annual_economic_rent_gbp_bn']):,.2f}bn")
+    print(f"Final-year productive tax rate: {float(final['lvc_productive_tax_rate_percent']):,.3f}% of GDP")
     print(f"Cumulative additional homes: {float(final['cumulative_additional_homes']):,.0f}")
     print(f"Final-year inflation difference: {float(final['inflation_delta_percentage_points']):,.2f} percentage points")
     print(f"Final-year productive capital created: £{float(final['productive_capital_stock_gbp_bn']):,.2f}bn")

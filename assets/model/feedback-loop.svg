@@ -1,54 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
-  <title id="title">The LVC tax and productivity feedback loop</title>
-  <desc id="desc">Covenant receipts replace taxes on production. Marginal activity becomes viable, raising employment and output. This reduces compensatory welfare expenditure and raises location rental values. Both effects strengthen the public finances and allow further tax substitution.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">The LVC mortgage, tax and productivity feedback loop</title>
+  <desc id="desc">LVC receipts replace productive taxes and LVC funding replaces land-related mortgage debt. Marginal locations become viable first, productive investment rises, pressure on valuable centres eases, and higher productivity raises economic rents and future LVC receipts without taxing buildings or improvements.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M 0 0 L 10 5 L 0 10 z" fill="#167044"/>
-    </marker>
-    <style>
-      .bg{fill:#f7faf7}.box{fill:#fff;stroke:#167044;stroke-width:3}.strong{fill:#e5f4e9;stroke:#167044;stroke-width:4}.title{font:700 30px Arial,sans-serif;fill:#173b2a}.sub{font:16px Arial,sans-serif;fill:#52665b}.head{font:700 20px Arial,sans-serif;fill:#173b2a}.body{font:15px Arial,sans-serif;fill:#394d43}.arrow{fill:none;stroke:#167044;stroke-width:4;marker-end:url(#arrow)}.loop{fill:none;stroke:#6a8f7b;stroke-width:3;stroke-dasharray:8 7;marker-end:url(#arrow)}
-    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#167044"/></marker>
+    <style>.bg{fill:#f7faf7}.box{fill:#fff;stroke:#167044;stroke-width:3}.strong{fill:#e5f4e9;stroke:#167044;stroke-width:4}.title{font:700 30px Arial,sans-serif;fill:#173b2a}.sub{font:16px Arial,sans-serif;fill:#52665b}.head{font:700 19px Arial,sans-serif;fill:#173b2a}.body{font:15px Arial,sans-serif;fill:#394d43}.arrow{fill:none;stroke:#167044;stroke-width:4;marker-end:url(#arrow)}.loop{fill:none;stroke:#6a8f7b;stroke-width:3;stroke-dasharray:8 7;marker-end:url(#arrow)}</style>
   </defs>
-  <rect class="bg" width="1200" height="720"/>
-  <text x="60" y="52" class="title">The tax and productivity feedback loop</text>
-  <text x="60" y="80" class="sub">A stronger economy can enlarge the source of the next round of reform.</text>
-
-  <rect x="70" y="125" width="300" height="112" rx="16" class="strong"/>
-  <text x="220" y="163" text-anchor="middle" class="head">LVC receipts</text>
-  <text x="220" y="191" text-anchor="middle" class="body">Revenue follows location value</text>
-  <text x="220" y="214" text-anchor="middle" class="body">rather than taxing production</text>
-
-  <rect x="450" y="125" width="300" height="112" rx="16" class="box"/>
-  <text x="600" y="163" text-anchor="middle" class="head">Lower productive taxes</text>
-  <text x="600" y="191" text-anchor="middle" class="body">Less tax on work, profits,</text>
-  <text x="600" y="214" text-anchor="middle" class="body">investment and machinery</text>
-
-  <rect x="830" y="125" width="300" height="112" rx="16" class="box"/>
-  <text x="980" y="163" text-anchor="middle" class="head">Marginal activity revives</text>
-  <text x="980" y="191" text-anchor="middle" class="body">More locations, firms and jobs</text>
-  <text x="980" y="214" text-anchor="middle" class="body">become economically viable</text>
-
-  <rect x="830" y="335" width="300" height="112" rx="16" class="strong"/>
-  <text x="980" y="373" text-anchor="middle" class="head">More output and income</text>
-  <text x="980" y="401" text-anchor="middle" class="body">Productive capacity, employment</text>
-  <text x="980" y="424" text-anchor="middle" class="body">and earned incomes rise</text>
-
-  <rect x="450" y="525" width="300" height="112" rx="16" class="box"/>
-  <text x="600" y="563" text-anchor="middle" class="head">Lower support requirement</text>
-  <text x="600" y="591" text-anchor="middle" class="body">Less compensatory expenditure</text>
-  <text x="600" y="614" text-anchor="middle" class="body">as employment and incomes recover</text>
-
-  <rect x="830" y="525" width="300" height="112" rx="16" class="box"/>
-  <text x="980" y="563" text-anchor="middle" class="head">Higher location values</text>
-  <text x="980" y="591" text-anchor="middle" class="body">Greater local productivity raises</text>
-  <text x="980" y="614" text-anchor="middle" class="body">rental values and LVC receipts</text>
-
-  <path d="M370 181 H442" class="arrow"/>
-  <path d="M750 181 H822" class="arrow"/>
-  <path d="M980 237 V327" class="arrow"/>
-  <path d="M930 447 C850 480 760 518 750 552" class="arrow"/>
-  <path d="M1030 447 C1050 475 1035 505 1015 518" class="arrow"/>
-  <path d="M450 581 C260 581 145 500 145 245" class="loop"/>
-  <path d="M830 581 C650 690 300 690 220 245" class="loop"/>
-  <text x="190" y="675" class="sub">Savings and rising receipts can finance another round of productive tax substitution.</text>
+  <rect class="bg" width="1200" height="820"/>
+  <text x="60" y="52" class="title">The mortgage, tax and productivity feedback loop</text>
+  <text x="60" y="80" class="sub">Reform starts at the economic margin and can finance each succeeding round.</text>
+  <rect x="70" y="125" width="300" height="120" rx="16" class="strong"/>
+  <text x="220" y="163" text-anchor="middle" class="head">LVC funding and receipts</text><text x="220" y="192" text-anchor="middle" class="body">Location rent funds the covenant</text><text x="220" y="216" text-anchor="middle" class="body">Buildings and improvements excluded</text>
+  <rect x="450" y="110" width="300" height="120" rx="16" class="box"/>
+  <text x="600" y="148" text-anchor="middle" class="head">Lower productive taxation</text><text x="600" y="177" text-anchor="middle" class="body">Less tax on work, profits,</text><text x="600" y="201" text-anchor="middle" class="body">machinery and investment</text>
+  <rect x="450" y="265" width="300" height="120" rx="16" class="box"/>
+  <text x="600" y="303" text-anchor="middle" class="head">Less land mortgage debt</text><text x="600" y="332" text-anchor="middle" class="body">Less capital bids for existing land</text><text x="600" y="356" text-anchor="middle" class="body">More can finance productive assets</text>
+  <rect x="830" y="190" width="300" height="130" rx="16" class="strong"/>
+  <text x="980" y="228" text-anchor="middle" class="head">Marginal locations revive first</text><text x="980" y="257" text-anchor="middle" class="body">More firms, jobs and places</text><text x="980" y="281" text-anchor="middle" class="body">become viable from the bottom up</text>
+  <rect x="830" y="410" width="300" height="130" rx="16" class="box"/>
+  <text x="980" y="448" text-anchor="middle" class="head">Productivity and income rise</text><text x="980" y="477" text-anchor="middle" class="body">Better capital expands quantity,</text><text x="980" y="501" text-anchor="middle" class="body">quality and productive capacity</text>
+  <rect x="450" y="605" width="300" height="120" rx="16" class="box"/>
+  <text x="600" y="643" text-anchor="middle" class="head">Pressure on centres eases</text><text x="600" y="672" text-anchor="middle" class="body">Activity has more viable locations</text><text x="600" y="696" text-anchor="middle" class="body">and scarce centres specialise</text>
+  <rect x="830" y="605" width="300" height="120" rx="16" class="strong"/>
+  <text x="980" y="643" text-anchor="middle" class="head">Economic rents can rise</text><text x="980" y="672" text-anchor="middle" class="body">Higher productivity increases rent</text><text x="980" y="696" text-anchor="middle" class="body">and therefore future LVC receipts</text>
+  <path d="M370 170 H442" class="arrow"/><path d="M370 215 C405 215 412 325 442 325" class="arrow"/><path d="M750 170 C790 170 790 235 822 235" class="arrow"/><path d="M750 325 C790 325 790 275 822 275" class="arrow"/><path d="M980 320 V402" class="arrow"/><path d="M930 540 C850 570 770 620 750 650" class="arrow"/><path d="M1015 540 V597" class="arrow"/><path d="M830 665 C620 790 275 780 220 253" class="loop"/>
+  <text x="60" y="792" class="sub">Rising receipts support further tax substitution and productive investment; productive tax and land-debt burdens have zero lower bounds.</text>
 </svg>

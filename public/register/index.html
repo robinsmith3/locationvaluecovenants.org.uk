@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>National Location Value Register — Location Value Covenants</title>
+  <meta
+    name="description"
+    content="A proposed annual postcode index of location rental values for reassessing Location Value Covenant payments without using property selling prices."
+  >
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link
+    rel="icon"
+    href="/favicon.svg?v=2"
+    type="image/svg+xml"
+    sizes="any"
+  >
+  <style>:root{--ink:#162b31;--muted:#53676c;--paper:#f7f4ec;--navy:#103943;--deep:#092a32;--teal:#08706d;--mint:#acd3c2;--gold:#d0a34b;--line:#cdd5d1;--serif:Georgia,'Times New Roman',serif;--sans:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.68 var(--sans)}
+a{color:inherit}
+.wrap{width:min(calc(100% - 40px),1180px);margin:auto}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;background:white;padding:10px;z-index:99}
+.head{position:sticky;top:0;z-index:10;background:rgba(247,244,236,.96);border-bottom:1px solid #d2d5cf}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800}
+.mark{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--navy);color:white;font-size:11px;letter-spacing:.1em}
+.links{display:flex;gap:30px}
+.links a{text-decoration:none;font-size:14px;font-weight:700;padding:25px 0 21px;border-bottom:3px solid transparent}
+.links a[aria-current]{border-color:var(--gold)}
+h1,h2{font-family:var(--serif);font-weight:500;letter-spacing:-.035em;line-height:1.08}
+h1{font-size:clamp(3rem,7vw,6rem)}
+h2{font-size:clamp(2rem,4vw,3.2rem)}
+h3{line-height:1.28}
+small,article em{display:block;color:var(--teal);font-style:normal;font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+.homehero{display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center;padding:88px 0 100px}
+.homehero h1{margin:14px 0 25px}
+.lead{font-size:21px;color:#40575d}
+.button{display:inline-block;background:var(--teal);color:#fff;padding:13px 20px;margin:16px 10px 0 0;text-decoration:none;font-size:14px;font-weight:800}
+.button.ghost{background:transparent;color:var(--ink);border:1px solid #8b9999}
+.homehero aside{background:var(--navy);color:white;padding:34px;box-shadow:14px 14px #d8d0bf}
+.homehero aside small{color:var(--mint)}
+.homehero ol{list-style:none;padding:0;margin:20px 0 0}
+.homehero li{display:flex;flex-direction:column;padding:17px 0;border-top:1px solid #ffffff33}
+.homehero li span{color:#c6d5d7;font-size:14px}
+.band{background:#e3ece6;padding:85px 0}
+.intro{display:grid;grid-template-columns:1fr 3fr;gap:55px}
+.intro p{font-size:19px;color:#3d5358}
+.section{padding:95px 0}
+.section>h2{max-width:800px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.features div{padding:32px;border-right:1px solid var(--line)}
+.features div:last-child{border:0}
+.features h3{font:500 25px var(--serif)}
+.features p,.cards p{color:var(--muted);font-size:15px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.cards>a{min-height:315px;padding:25px 22px;display:flex;flex-direction:column;text-decoration:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.15s}
+.cards>a:hover{background:#fff;transform:translateY(-3px)}
+.cards h3{font:500 24px var(--serif);margin-top:35px}
+.cards b{margin-top:auto;color:var(--teal);font-size:13px}
+.closing{background:var(--deep);color:white;text-align:center;padding:95px 0}
+.closing small{color:var(--mint)}
+.closing p{max-width:700px;margin:auto;color:#c7d5d7}
+.button.light{background:white;color:var(--deep)}
+.pagehero{background:var(--deep);color:white;padding:80px 0}
+.pagehero small{color:var(--mint)}
+.pagehero h1{margin:10px 0 18px}
+.pagehero p{font-size:21px;max-width:730px;color:#d0dcde}
+.layout{display:grid;grid-template-columns:220px minmax(0,770px);gap:75px;align-items:start;padding:78px 0 110px}
+.toc{position:sticky;top:108px;border-top:3px solid var(--gold);padding-top:16px}
+.toc b{font-size:13px}
+.toc a{display:block;text-decoration:none;color:var(--muted);font-size:14px;padding:6px 0}
+.layout article section{margin-bottom:72px}
+.layout article h2[id],.layout article h3[id],.layout article h4[id]{scroll-margin-top:105px}
+.layout article h2{margin-bottom:23px}
+.layout article p,.layout article li{color:#3a5156}
+.definitions{display:grid;grid-template-columns:1fr 1fr;border-left:1px solid var(--line);border-top:1px solid var(--line)}
+.definitions div{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.definitions p{font-size:15px;margin:0}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+.compare div{background:#e2ebe5;padding:27px}
+.app-list{list-style:none;padding:0;border-top:1px solid var(--line)}
+.app-list li{display:grid;grid-template-columns:45px 1fr;gap:12px;padding:21px 0;border-bottom:1px solid var(--line)}
+.app-list span{font-size:12px;color:var(--teal)}
+.app-list a{font:600 22px var(--serif)}
+.app-list p{font-size:14px;margin:4px 0}
+.apphero{background:#e2ebe5;padding:52px 0 65px}
+.apphero>a{color:var(--teal)}
+.apphero small{margin-top:45px}
+.apphero h1{margin:10px 0 20px}
+.apphero>div>p{font:500 25px/1.45 var(--serif);max-width:800px}
+.apphero i{color:#66787b;font-size:13px}
+.table{overflow:auto;margin:28px 0 40px}
+.table:focus{outline:3px solid var(--gold)}
+table{border-collapse:collapse;width:100%;min-width:620px;background:#fff;font-size:14px}
+th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #d5dcda;vertical-align:top}
+thead th{background:var(--navy);color:white}
+tbody tr:nth-child(even){background:#f0f3ef}
+.notice{background:#ebe5d8;border-left:4px solid var(--gold);padding:23px 26px;margin-top:45px}
+.notice p{margin:5px 0;color:var(--muted);font-size:14px}
+.article-nav{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:22px;margin-top:45px}
+.article-nav a{color:var(--teal);font-weight:800;font-size:14px}
+.foot{background:#081f25;color:#d5dede;padding:55px 0 20px}
+.footgrid{display:flex;justify-content:space-between;gap:50px}
+.foot p{color:#91a5aa;font-size:13px}
+.foot nav{display:flex;gap:20px}
+.fine{border-top:1px solid #ffffff22;margin-top:35px;padding-top:18px;color:#819499;font-size:12px}
+@media(max-width:950px){.homehero{grid-template-columns:1fr}
+.intro{grid-template-columns:1fr}
+.cards{grid-template-columns:repeat(2,1fr)}
+.layout{grid-template-columns:180px 1fr;gap:40px}
+}
+@media(max-width:650px){body{font-size:16px}
+.wrap{width:min(calc(100% - 28px),1180px)}
+.brand>span:last-child{display:none}
+.links{gap:15px}
+.links a{font-size:12px}
+.homehero{padding:55px 0 70px}
+.homehero aside{box-shadow:8px 8px #d8d0bf}
+.features,.cards,.definitions,.compare{grid-template-columns:1fr}
+.features div{border-right:0;border-bottom:1px solid var(--line)}
+.cards>a{min-height:245px}
+.layout{display:block;padding:55px 0 75px}
+.toc{position:static;margin-bottom: 50px}
+.toc b{display:block;margin-bottom; 8px}
+.toc a{display:block;margin-right: 0}
+.apphero{padding:45px 0 55px}
+.footgrid,.article-nav{flex-direction:column}
+.table{margin-inline:-14px;padding-inline:14px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
+.cards>a{transition:none}
+}
+.policy-content {
+  padding-top: 35px;
+  padding-bottom: 80px;
+}
+
+.policy-content > h2 {
+  margin-top: 65px;
+}
+
+.policy-content > h3 {
+  margin-top: 38px;
+  font: 500 25px var(--serif);
+}
+
+.policy-content > p,
+.policy-content > ul,
+.policy-content > ol {
+  max-width: 770px;
+}
+
+.policy-content code {
+  font-size: .9em;
+  background: #ebe5d8;
+  padding: .1em .35em;
+}
+
+.policy-content a {
+  color: var(--teal);
+}
+
+.layout article img {
+  display: block;
+  width: 100%;
+  max-width: 770px;
+  height: auto;
+  margin: 32px auto 48px;
+}</style>
+</head>
+<body>
+  
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="head">
+      <div class="wrap nav">
+        <a class="brand" href="/">
+          <span class="mark">LVC</span>
+          <span>Location Value Covenants</span>
+        </a>
+
+        <nav class="links" aria-label="Main navigation">
+          <a
+            
+            href="/"
+          >Home</a>
+
+          <a
+            
+            href="/briefing/"
+          >Policy briefing</a>
+
+          <a
+            
+            href="/applications/"
+          >Applications</a>
+
+          <a
+            
+            href="/model/"
+          >National model</a>
+          <a 
+            aria-current="page" 
+            href="/register/"
+          >The Register</a>
+        </nav>
+      </div>
+    </header>
+  
+  <main id="main">
+    <header class="pagehero"><div class="wrap"><small>Enabling infrastructure</small><h1>National Location Value Register</h1><p>A proposed annual postcode index for adjusting Location Value Covenant payments as local rental values change.</p></div></header><div class="wrap layout"><aside class="toc"><b>On this page</b><a href="#purpose">What the register is for</a><a href="#comparison">How locations would be compared</a><a href="#floor-and-ceiling">Floor, ceiling and base location</a><a href="#limited-evidence">Completing postcodes with limited evidence</a><a href="#annual-process">Annual assessment process</a><a href="#separate-schedules">Residential, commercial and rural schedules</a><a href="#demonstration">Synthetic national demonstration</a><a href="#implementation">What a national implementation would need</a><a href="#relationship">Relationship to LVC applications</a></aside><article class="policy-content"><h2 id="purpose">What the register is for</h2>
+<p>The National Location Value Register would provide the consistent annual index needed to reassess existing Location Value Covenant payments.</p>
+<p>It would not set the original covenant payment, value an individual plot before a covenant is created or use property selling prices. The original payment would be agreed through the transaction or policy that creates the covenant. The register would then measure how the rental value of comparable locations changes.</p>
+<p>For a covenant in postcode <strong>p</strong>, comparison class <strong>k</strong> and year <strong>t</strong>:</p>
+<p><strong>Reassessed payment = original payment × current index ÷ original index</strong></p>
+<p>This keeps the reassessment connected to current location rental value without reopening the original agreement.</p>
+<h2 id="comparison">How locations would be compared</h2>
+<p>The minimum published location would be the full unit postcode. Values would be expressed as annual rent per square metre so that properties of different sizes can be compared consistently.</p>
+<p>A deliberately small number of residential comparison classes would be used:</p>
+<div class="table" tabindex="0" role="region" aria-label="Data table"><table><thead><tr><th>Characteristic</th><th>Classes</th></tr></thead><tbody><tr><th>Property type</th><td>Flat, terraced, semi-detached, detached</td></tr><tr><th>Bedrooms</th><td>1, 2, 3, 4 or more</td></tr><tr><th>Common measure</th><td>Annual rent per square metre</td></tr><tr><th>Minimum geography</th><td>Unit postcode</td></tr></tbody></table></div>
+<p>The model compares the same kind of property in one postcode with the same kind in another. Bedrooms and property type control for the building being occupied. The remaining systematic difference in rent per square metre provides the location comparison.</p>
+<p>This is an index of comparative location rental value. It is not a claim that every address inside a postcode is identical.</p>
+<h2 id="floor-and-ceiling">Floor, ceiling and base location</h2>
+<p>For each comparison class, the proposed default method uses:</p>
+<ul><li>the 10th percentile of estimated UK rental values as the floor;</li><li>the 90th percentile as the ceiling;</li><li>index 100 for the floor location; and</li><li>every other postcode expressed relative to that floor.</li></ul>
+<p>A postcode's annual location-rental excess is its bounded rent per square metre minus the floor rent for the same comparison class.</p>
+<p>This prevents a handful of unusually low or high observations from controlling the national scale. The precise percentile rules would ultimately need to be fixed in the legislation or covenant standard.</p>
+<h2 id="limited-evidence">Completing postcodes with limited evidence</h2>
+<p>It is neither necessary nor realistic to demand perfect direct evidence for every postcode before producing a national register. The proposed system assigns one of four confidence grades:</p>
+<div class="table" tabindex="0" role="region" aria-label="Data table"><table><thead><tr><th>Grade</th><th>Description</th></tr></thead><tbody><tr><th>A — direct</th><td>Adequate recent observations for the postcode and comparison class</td></tr><tr><th>B — modelled local</th><td>Some direct evidence, supported by neighbouring and regional evidence</td></tr><tr><th>C — spatial</th><td>No direct observation; estimated from comparable nearby postcodes</td></tr><tr><th>D — even spread</th><td>A provisional model value where usable local evidence is not presently available</td></tr></tbody></table></div>
+<p>Spatial estimates use several nearby postcodes rather than copying a single neighbour. Every record identifies its evidence count, estimation method and donor postcodes.</p>
+<p>The even-spread assumption completes the present demonstration but would remain visibly provisional. Filling a CSV cell does not turn weak evidence into a statutory fact.</p>
+<h2 id="annual-process">Annual assessment process</h2>
+<p>A national determination would follow a fixed annual timetable:</p>
+<ol><li>Freeze the comparison basket and the postcode geography.</li><li>Combine the latest lawful rental and property-characteristic records.</li><li>Remove duplicates, bundled service charges, non-market arrangements and clear unit errors.</li><li>Estimate like-for-like rent per square metre for the fixed property basket.</li><li>Complete sparse postcodes using neighbouring and higher-level evidence.</li><li>Apply the published floor and ceiling.</li><li>Run GIS and statistical anomaly checks.</li><li>Submit flagged locations for council-officer review.</li><li>Publish the register, confidence grades, revisions and model version.</li><li>Apply the annual index movement to existing LVC payments.</li></ol>
+<p>AI and GIS would help officers find sharp boundary discontinuities, improbable annual movements, unusual property mixes, new development and local amenities or nuisances. AI would prioritise review; it would not become the legal reason for a valuation.</p>
+<h2 id="separate-schedules">Residential, commercial and rural schedules</h2>
+<p>Commercial property requires a separate schedule because lease length, rent-free periods, repairing obligations, permitted use, access and frontage can materially affect rent.</p>
+<p>Agriculture and forestry also require their own treatment. Their rents reflect productive capacity, soil or land grade, water, access, tenancy terms, buildings, environmental obligations and—in forestry—species and rotation age. A farm or forest can cross several postcodes.</p>
+<p>Agricultural and forestry evidence can still be converted to annual pounds per square metre, but mapped land parcels should sit beneath the postcode publication layer. Nearby residential rent must not be used as a substitute for farm or woodland evidence.</p>
+<h2 id="demonstration">Synthetic national demonstration</h2>
+<p>The demonstration below runs the complete method across an illustrative UK postcode dataset. It produces 361 postcode and comparison-class records covering residential, commercial, agricultural and forestry schedules.</p>
+<p><img src="/assets/register/map-2026.svg" alt="Illustrative UK postcode location index map" loading="lazy"></p>
+<p>The points are postcode centroids. Green represents a lower index, amber a middle index and red a higher index. The graphic demonstrates the proposed output rather than actual location values.</p>
+<p><img src="/assets/register/distribution-2026.svg" alt="Distribution of the illustrative residential location index" loading="lazy"></p>
+<p>The demonstration publishes the evidence method and confidence grade alongside every estimate. This is essential: users and appeals officers must be able to distinguish observed evidence from spatial or provisional completion.</p>
+<ul><li><a href="/assets/register/register-2026.csv">Download the synthetic register CSV</a></li><li><a href="/assets/register/summary-2026.csv">Download the summary and confidence counts</a></li><li><a href="/assets/register/methodology.md">Read the detailed methodology</a></li><li><a href="/assets/register/lvc-register.py">Download the Python model</a></li></ul>
+<h2 id="implementation">What a national implementation would need</h2>
+<p>The register could draw on achieved-rent records used for official private-rent statistics, EPC floor area, postcode and address geography, commercial rating evidence, tenancy and lease records, agricultural rent surveys and mapped land classifications.</p>
+<p>A future national service should synchronise these sources through a persistent property or land-parcel identifier beneath the postcode layer. Standardised machine-readable rent returns, quarterly postcode updates and a common annual snapshot date would progressively replace provisional estimates.</p>
+<p>Each release should be reproducible, versioned and independently validated. Property owners should be able to correct factual errors and appeal the application of the published method without converting the process into a sale-price valuation of their plot.</p>
+<h2 id="relationship">Relationship to LVC applications</h2>
+<p>The register is shared infrastructure rather than another application of the covenant. The same annual index could support Location Value Mortgages, mortgage rescue, homeowner pensions, inheritance-tax settlement, farming arrangements, new homes and other applications while preserving the terms of each individual covenant.</p>
+<p>The covenant creates the payment. The register provides the consistent annual measure by which that payment changes.</p><div class="notice"><b>Demonstration status</b><p>The published figures are synthetic. They demonstrate the proposed register and must not be treated as actual postcode valuations or financial advice.</p></div><nav class="article-nav"><a href="/briefing/">Policy briefing</a><a href="/applications/">Applications</a></nav></article></div>
+  </main>
+  
+    <footer class="foot">
+      <div class="wrap footgrid">
+        <div>
+          <b>Location Value Covenants</b>
+          <p>
+            A voluntary policy proposal for housing finance and
+            public revenue reform.
+          </p>
+          <p>
+            Contact:
+            <a href="mailto:locationvaluecovenants@gmail.com">
+              locationvaluecovenants@gmail.com
+            </a>
+          </p>
+        </div>
+
+        <nav aria-label="Footer navigation">
+          <a href="/briefing/">Policy briefing</a>
+          <a href="/applications/">Applications</a>
+          <a href="/register/">The Register</a><a href="/model/">National model</a>
+          <a href="/privacy/">Privacy</a>
+          <a href="/website-terms/">Terms</a>
+        </nav>
+      </div>
+
+      <div class="wrap fine">
+        Policy material from the Systemic Fiscal Reform Group ·
+        © 2026
+      </div>
+    </footer>
+  
+</body>
+</html>

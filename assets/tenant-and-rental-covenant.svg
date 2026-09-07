@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Tenant and Rental Covenant voluntary exchange</title>
+  <desc id="desc">A public LVC fund supplies capital, refinancing, works or services to a willing property owner. The owner grants a Location Value Covenant to the public fund and better tenancy terms to residential or commercial tenants. The covenant follows location rent and excludes buildings, improvements and tenant-created value.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#24624a"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#183c30" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .bg{fill:#f5f7f2}.panel{fill:#fff;stroke:#c9d8cf;stroke-width:2;filter:url(#shadow)}
+      .public{fill:#e6f2ec}.owner{fill:#f5edda}.tenant{fill:#e8eef5}.guard{fill:#edf4ed;stroke:#9fbaa8;stroke-width:2}
+      .line{fill:none;stroke:#24624a;stroke-width:4;marker-end:url(#arrow)}
+      .dash{fill:none;stroke:#667a70;stroke-width:3;stroke-dasharray:9 8;marker-end:url(#arrow)}
+      .title{font:700 34px Arial,sans-serif;fill:#173e30}.head{font:700 24px Arial,sans-serif;fill:#173e30}
+      .body{font:18px Arial,sans-serif;fill:#263c33}.label{font:700 17px Arial,sans-serif;fill:#24624a}
+      .small{font:16px Arial,sans-serif;fill:#40584d}.centre{text-anchor:middle}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="720" rx="24"/>
+  <text class="title centre" x="600" y="58">Tenant and Rental Covenant</text>
+  <text class="body centre" x="600" y="89">A voluntary three-party exchange</text>
+
+  <rect class="panel public" x="70" y="170" width="300" height="170" rx="18"/>
+  <text class="head centre" x="220" y="214">Public LVC fund</text>
+  <text class="body centre" x="220" y="250">Capital · refinancing</text>
+  <text class="body centre" x="220" y="279">Works · services</text>
+  <text class="small centre" x="220" y="315">Receives a continuing asset</text>
+
+  <rect class="panel owner" x="450" y="170" width="300" height="170" rx="18"/>
+  <text class="head centre" x="600" y="214">Property owner</text>
+  <text class="body centre" x="600" y="250">Chooses whether to accept</text>
+  <text class="body centre" x="600" y="279">the complete agreement</text>
+  <text class="small centre" x="600" y="315">Grants the property covenant</text>
+
+  <rect class="panel tenant" x="830" y="170" width="300" height="170" rx="18"/>
+  <text class="head centre" x="980" y="214">Tenant</text>
+  <text class="body centre" x="980" y="250">Lower or steadier rent</text>
+  <text class="body centre" x="980" y="279">Security · better premises</text>
+  <text class="small centre" x="980" y="315">Home or business tenancy</text>
+
+  <path class="line" d="M370 218 C400 198 420 198 450 218"/>
+  <text class="label centre" x="410" y="181">Support supplied</text>
+  <path class="line" d="M750 257 C780 237 800 237 830 257"/>
+  <text class="label centre" x="790" y="220">Better terms</text>
+  <path class="dash" d="M450 306 C420 326 400 326 370 306"/>
+  <text class="label centre" x="410" y="363">LVC granted</text>
+
+  <rect class="guard" x="160" y="440" width="880" height="194" rx="18"/>
+  <text class="head centre" x="600" y="482">The valuation boundary</text>
+  <text class="body centre" x="600" y="520">No prior valuation of the land is required.</text>
+  <text class="body centre" x="600" y="551">The opening payment is agreed as part of the exchange, then follows local location rent.</text>
+  <text class="body centre" x="600" y="582">Buildings, services, improvements, fit-out, business goodwill and productive activity are excluded.</text>
+  <text class="label centre" x="600" y="615">The LVC falls on the owner's interest—not on top of the market rent</text>
+
+  <text class="small centre" x="600" y="685">The LVC remains with the owner's property interest when the property is sold.</text>
+</svg>

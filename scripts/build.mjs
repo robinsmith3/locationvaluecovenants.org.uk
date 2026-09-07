@@ -100,6 +100,10 @@ function bodyFor(page, apps) {
   const content = markdown(page.body);
   if (page.meta.layout === "home") return `<section class="wrap homehero"><div><small>${escapeHtml(page.meta.eyebrow)}</small><h1>${escapeHtml(page.meta.heading)}</h1><p class="lead">${escapeHtml(page.meta.intro)}</p><p><a class="button" href="/briefing/">Read the policy briefing</a><a class="button ghost" href="/applications/">Explore eight applications</a></p></div><aside><small>The proposition</small><ol><li><b>Voluntary</b><span>Property owners choose whether to participate.</span></li><li><b>Lower risk</b><span>Payments track local rental value rather than interest rates.</span></li><li><b>Public benefit</b><span>Revenue flows to public purposes rather than mortgage interest.</span></li></ol></aside></section><div class="wrap policy-content">${content}<h2>Explore ways the covenant can be used</h2>${cards(apps)}</div>`;
   if (page.meta.layout === "applications") return `${hero(page)}<section class="wrap section">${content}${cards(apps)}<div class="notice"><b>A note on the examples</b><p>Monetary figures and tax references illustrate the mechanism at the time of writing; they are not current quotations, calculations or personal advice.</p></div></section>`;
+  if (page.meta.layout === "register") {
+    const toc = tableOfContents(page.body);
+    return `${hero(page)}<div class="wrap layout">${toc}<article class="policy-content">${content}<div class="notice"><b>Demonstration status</b><p>The published figures are synthetic. They demonstrate the proposed register and must not be treated as actual postcode valuations or financial advice.</p></div><nav class="article-nav"><a href="/briefing/">Policy briefing</a><a href="/applications/">Applications</a></nav></article></div>`;
+  }
   if (page.meta.layout === "application") {
     const toc = applicationTableOfContents(page.body);
     return `<header class="apphero"><div class="wrap"><a href="/applications/">← All applications</a><small>Application ${page.meta.number}</small><h1>${escapeHtml(page.meta.heading)}</h1><p>${escapeHtml(page.meta.intro)}</p><i>${escapeHtml(page.meta.credit)}</i></div></header><div class="wrap layout">${toc}<article>${content}<div class="notice"><b>Illustrative figures</b><p>Financial values, rates and tax references restyle the original policy example. They explain the proposed mechanism and are not current financial, tax or legal advice.</p></div><nav class="article-nav"><a href="/applications/">All applications</a><a href="/briefing/">Policy briefing</a></nav></article></div>`;
@@ -119,7 +123,9 @@ function header(route) {
           ? "applications"
           : route.startsWith("/model")
             ? "model"
-            : "";
+            : route.startsWith("/register") 
+              ? "register" 
+                : "";
 
   return `
     <a class="skip" href="#main">Skip to content</a>
@@ -150,6 +156,10 @@ function header(route) {
             ${active === "model" ? 'aria-current="page"' : ""}
             href="/model/"
           >National model</a>
+          <a 
+            ${active === "register" ? 'aria-current="page"' : ""} 
+            href="/register/"
+          >The Register</a>
         </nav>
       </div>
     </header>
@@ -177,7 +187,7 @@ function shell(page, apps, css) {
         <nav aria-label="Footer navigation">
           <a href="/briefing/">Policy briefing</a>
           <a href="/applications/">Applications</a>
-          <a href="/model/">National model</a>
+          <a href="/register/">The Register</a><a href="/model/">National model</a>
           <a href="/privacy/">Privacy</a>
           <a href="/website-terms/">Terms</a>
         </nav>
@@ -277,6 +287,21 @@ await copyFile(
   new URL("favicon.ico", PUBLIC)
 );
 
+await mkdir(new URL("assets/register/", PUBLIC), { recursive: true });
+for (const name of [
+  "map-2026.svg",
+  "distribution-2026.svg",
+  "register-2026.csv",
+  "summary-2026.csv",
+  "methodology.md",
+  "lvc-register.py"
+]) {
+  await copyFile(
+    new URL("../assets/register/" + name, import.meta.url),
+    new URL("assets/register/" + name, PUBLIC)
+  );
+}
+
 await mkdir(new URL("assets/model/", PUBLIC), { recursive: true });
 
 for (const filename of [
@@ -299,6 +324,12 @@ await copyFile(
   new URL("../assets/family-farm-covenant.svg", import.meta.url),
   new URL("assets/family-farm-covenant.svg", PUBLIC)
 );
+
+await copyFile(
+  new URL("../assets/tenant-and-rental-covenant.svg", import.meta.url),
+  new URL("assets/tenant-and-rental-covenant.svg", PUBLIC)
+);
+
 for (const page of pages) { const relative = page.meta.route === "/" ? "index.html" : `${page.meta.route.slice(1)}index.html`; const destination = new URL(relative, PUBLIC); await mkdir(new URL("./", destination), { recursive: true }); await writeFile(destination, shell(page, apps, css)); }
 const notFound = { meta: { route: "/404/", title: "Page not found", description: "The requested page could not be found.", heading: "Page not found", intro: "The page may have moved as part of the new policy-site structure.", eyebrow: "404", layout: "standard" }, body: "[Return to the home page](/)" };
 await writeFile(new URL("404.html", PUBLIC), shell(notFound, apps, css));

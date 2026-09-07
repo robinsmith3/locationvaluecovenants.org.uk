@@ -82,6 +82,8 @@ The tenant would obtain a more affordable route into ownership. The public secto
 
 To avoid depleting social housing, receipts and public contributions could be reserved for replacement homes. Alternatively, the programme could be limited to new supply or properties that the landlord had already decided to sell.
 
+The purchase route addresses tenants who can and wish to become owners when a property is made available for sale. The separate [Tenant and Rental Covenant](/applications/tenant-and-rental-covenant/) considers how a voluntary agreement with the landlord could provide lower or more predictable rent, better premises or greater security for residential and commercial occupiers who remain tenants.
+
 ### Preserving affordable housing {#affordable-housing}
 
 LVC funding could reduce the initial price of designated affordable homes while keeping the public contribution attached to the property across successive sales.

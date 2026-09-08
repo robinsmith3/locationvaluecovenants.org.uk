@@ -296,6 +296,8 @@ for (const name of [
   "summary-2026.csv",
   "methodology.md",
   "lvc-register.py",
+  "postcodes-2026.csv",
+  "evidence-2026.csv",
   "make-register-map.py",
   "README.md"
 ]) {

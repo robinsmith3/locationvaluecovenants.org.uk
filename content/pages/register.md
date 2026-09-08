@@ -91,7 +91,9 @@ Agricultural and forestry evidence can still be converted to annual pounds per s
 
 ## Synthetic national demonstration {#demonstration}
 
-The demonstration below runs the complete method across an illustrative UK postcode dataset. It produces 361 postcode and comparison-class records covering residential, commercial, agricultural and forestry schedules.
+The demonstration below runs the complete method across 240 genuine live UK postcodes and their published coordinates for the three-bedroom semi-detached comparison class. The postcodes come from the May 2026 ONS Postcode Directory. The demonstration then applies 1,152 synthetic rental observations: 192 postcode estimates have direct synthetic evidence and 48 are spatial estimates using nearby real postcodes.
+
+**The postcode names and coordinates are real. The rental evidence, rental values and resulting indices are synthetic. No value shown here is an assessment of the named postcode.**
 
 ![Synthetic three-bedroom semi-detached location index plotted on an official UK boundary](/assets/register/map-2026.svg)
 
@@ -99,7 +101,7 @@ The demonstration below runs the complete method across an illustrative UK postc
 
 The postcode centroids and the boundary use the same geographic projection. The land outline contains England, Wales, Scotland and Northern Ireland and is derived from the Office for National Statistics [Countries (December 2024) Boundaries UK BGC](https://geoportal.statistics.gov.uk/datasets/ons::countries-december-2024-boundaries-uk-bgc-2/about), generalised and clipped to the coastline.
 
-The postcode values and their geographical pattern remain synthetic. This demonstrates how register results could be presented; it is not an actual assessment of any postcode.
+The postcode values and their geographical pattern remain synthetic. The index runs from 100 to 265.02, with 37 postcodes deliberately reaching the red band of 225 or above. This tests the full display scale; it is not an actual assessment of any postcode.
 
 ![Distribution of the illustrative residential location index](/assets/register/distribution-2026.svg)
 
@@ -107,6 +109,8 @@ The demonstration publishes the evidence method and confidence grade alongside e
 
 - [Download the synthetic register CSV](/assets/register/register-2026.csv)
 - [Download the summary and confidence counts](/assets/register/summary-2026.csv)
+- [Download the real-postcode demonstration spine](/assets/register/postcodes-2026.csv)
+- [Download the synthetic rental evidence](/assets/register/evidence-2026.csv)
 - [Read the detailed methodology](/assets/register/methodology.md)
 - [Download the Python model](/assets/register/lvc-register.py)
 - [Download the UK map-generation script](/assets/register/make-register-map.py)

@@ -288,13 +288,16 @@ await copyFile(
 );
 
 await mkdir(new URL("assets/register/", PUBLIC), { recursive: true });
+
 for (const name of [
   "map-2026.svg",
   "distribution-2026.svg",
   "register-2026.csv",
   "summary-2026.csv",
   "methodology.md",
-  "lvc-register.py"
+  "lvc-register.py",
+  "make-register-map.py",
+  "README.md"
 ]) {
   await copyFile(
     new URL("../assets/register/" + name, import.meta.url),

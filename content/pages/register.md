@@ -93,9 +93,13 @@ Agricultural and forestry evidence can still be converted to annual pounds per s
 
 The demonstration below runs the complete method across an illustrative UK postcode dataset. It produces 361 postcode and comparison-class records covering residential, commercial, agricultural and forestry schedules.
 
-![Illustrative UK postcode location index map](/assets/register/map-2026.svg)
+![Synthetic three-bedroom semi-detached location index plotted on an official UK boundary](/assets/register/map-2026.svg)
 
-The points are postcode centroids. Green represents a lower index, amber a middle index and red a higher index. The graphic demonstrates the proposed output rather than actual location values.
+**What this map shows:** Each point represents the synthetic location-rental index for a three-bedroom semi-detached property at an illustrative postcode. Green represents an index below 150, amber represents 150 to 224 and red represents 225 or above. The floor location is index 100.
+
+The postcode centroids and the boundary use the same geographic projection. The land outline contains England, Wales, Scotland and Northern Ireland and is derived from the Office for National Statistics [Countries (December 2024) Boundaries UK BGC](https://geoportal.statistics.gov.uk/datasets/ons::countries-december-2024-boundaries-uk-bgc-2/about), generalised and clipped to the coastline.
+
+The postcode values and their geographical pattern remain synthetic. This demonstrates how register results could be presented; it is not an actual assessment of any postcode.
 
 ![Distribution of the illustrative residential location index](/assets/register/distribution-2026.svg)
 
@@ -105,6 +109,10 @@ The demonstration publishes the evidence method and confidence grade alongside e
 - [Download the summary and confidence counts](/assets/register/summary-2026.csv)
 - [Read the detailed methodology](/assets/register/methodology.md)
 - [Download the Python model](/assets/register/lvc-register.py)
+- [Download the UK map-generation script](/assets/register/make-register-map.py)
+- [Read the model and map user guide](/assets/register/README.md)
+
+The user guide explains the required CSV columns, how to build a new annual register, how to apply the previous year's index, and how to regenerate the map for a chosen property class and colour scale.
 
 ## What a national implementation would need {#implementation}
 
@@ -119,4 +127,3 @@ Each release should be reproducible, versioned and independently validated. Prop
 The register is shared infrastructure rather than another application of the covenant. The same annual index could support Location Value Mortgages, mortgage rescue, homeowner pensions, inheritance-tax settlement, farming arrangements, new homes and other applications while preserving the terms of each individual covenant.
 
 The covenant creates the payment. The register provides the consistent annual measure by which that payment changes.
-

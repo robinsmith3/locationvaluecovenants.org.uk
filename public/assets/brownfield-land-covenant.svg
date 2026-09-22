@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Brownfield Land Covenant process</title>
+  <desc id="desc">A voluntary agreement supplies remediation, infrastructure or patient capital to an obstructed brownfield site. Construction follows, the covenant begins after productive use starts, and its payment tracks the location while excluding remediation, buildings, improvements and business activity.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#27634b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#173c2e" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .bg{fill:#f4f6f1}.box{fill:#fff;stroke:#c5d5cb;stroke-width:2;filter:url(#shadow)}
+      .old{fill:#efe7de}.public{fill:#e4f1ea}.new{fill:#e8eef4}.return{fill:#f3ecd9}
+      .guard{fill:#edf4ed;stroke:#9db8a6;stroke-width:2}.line{fill:none;stroke:#27634b;stroke-width:4;marker-end:url(#arrow)}
+      .title{font:700 34px Arial,sans-serif;fill:#173e30}.head{font:700 22px Arial,sans-serif;fill:#173e30}
+      .body{font:17px Arial,sans-serif;fill:#293e35}.small{font:15px Arial,sans-serif;fill:#42594f}
+      .label{font:700 16px Arial,sans-serif;fill:#27634b}.centre{text-anchor:middle}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="760" rx="24"/>
+  <text class="title centre" x="600" y="54">Brownfield Land Covenant</text>
+  <text class="body centre" x="600" y="84">Move the abnormal cost away from the point when the site produces no income</text>
+
+  <rect class="box old" x="50" y="155" width="240" height="178" rx="18"/>
+  <text class="head centre" x="170" y="197">Obstructed site</text>
+  <text class="body centre" x="170" y="232">Contamination · demolition</text>
+  <text class="body centre" x="170" y="260">Ground risk · missing access</text>
+  <text class="small centre" x="170" y="297">Little or no current income</text>
+
+  <rect class="box public" x="350" y="155" width="240" height="178" rx="18"/>
+  <text class="head centre" x="470" y="197">Public support</text>
+  <text class="body centre" x="470" y="232">Remediation · infrastructure</text>
+  <text class="body centre" x="470" y="260">Services · patient capital</text>
+  <text class="small centre" x="470" y="297">Released against milestones</text>
+
+  <rect class="box new" x="650" y="155" width="240" height="178" rx="18"/>
+  <text class="head centre" x="770" y="197">Productive use</text>
+  <text class="body centre" x="770" y="232">Homes · workshops · shops</text>
+  <text class="body centre" x="770" y="260">Employment · services</text>
+  <text class="small centre" x="770" y="297">Privately created value retained</text>
+
+  <rect class="box return" x="950" y="155" width="200" height="178" rx="18"/>
+  <text class="head centre" x="1050" y="197">LVC begins</text>
+  <text class="body centre" x="1050" y="232">After completion</text>
+  <text class="body centre" x="1050" y="260">or occupation</text>
+  <text class="small centre" x="1050" y="297">Continuing public asset</text>
+
+  <path class="line" d="M290 244H350"/>
+  <path class="line" d="M590 244H650"/>
+  <path class="line" d="M890 244H950"/>
+
+  <text class="label centre" x="320" y="222">Agreement</text>
+  <text class="label centre" x="620" y="222">Build</text>
+  <text class="label centre" x="920" y="222">Commence</text>
+
+  <rect class="guard" x="125" y="420" width="950" height="225" rx="18"/>
+  <text class="head centre" x="600" y="464">The valuation boundary</text>
+  <text class="body centre" x="600" y="504">No prior valuation of the bare land is required.</text>
+  <text class="body centre" x="600" y="539">The opening payment is agreed for the support supplied, then follows local location rent.</text>
+  <text class="body centre" x="600" y="574">Remediation, infrastructure, buildings, equipment, fit-out and business goodwill are excluded.</text>
+  <text class="label centre" x="600" y="616">The covenant follows the renewed location—not the improvement</text>
+
+  <text class="small centre" x="600" y="704">If the site is subdivided, the registered payment is apportioned transparently rather than erased or multiplied.</text>
+</svg>

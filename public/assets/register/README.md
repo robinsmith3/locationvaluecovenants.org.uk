@@ -1,11 +1,13 @@
 # Using the LVC register model and UK map scripts
 
-These two Python scripts let you build an illustrative annual postcode register
-from your own rental evidence and plot one comparison class on an official UK
-boundary:
+These scripts let you build an illustrative annual postcode register from your
+own rental evidence, reproduce the published-rent prototype, and plot one
+comparison class on an official UK boundary:
 
 - `lvc-register.py` builds the register and CSV outputs.
 - `make-register-map.py` turns a register CSV into an SVG map.
+- `make-published-rents-demo.py` converts the supplied ONS rent snapshot into
+  visibly estimated postcode inputs and calls the model.
 
 They use only the Python standard library. Python 3.10 or later is recommended.
 Neither script uses property selling prices.
@@ -75,7 +77,55 @@ Allowed property types:
 Agricultural or forestry evidence stated per hectare must be converted to an
 annual total rent and an area in square metres. One hectare is 10,000 m².
 
-## 4. Test the model with its synthetic demonstration
+## 4. Reproduce the published-rent prototype
+
+Keep these supplied files together:
+
+```text
+make-published-rents-demo.py
+lvc-register.py
+postcodes-2026.csv
+ons-private-rents-source-2026-08.csv
+```
+
+Then run:
+
+```bash
+python make-published-rents-demo.py --output-dir published-output
+```
+
+The source snapshot contains published ONS monthly rent levels for all
+properties, three-bedroom properties and semi-detached properties. ONS does
+not publish the exact three-bedroom/semi-detached cross-tab at unit-postcode
+level. The script therefore estimates it as:
+
+```text
+three-bedroom rent × semi-detached rent ÷ all-property rent
+```
+
+It assigns each postcode its published local-authority figure in England and
+Wales, its Scottish rental-market-area figure in Scotland, and the latest
+published country figure in Northern Ireland. It assumes a representative 90
+m² floor area by default. Every result is consequently marked `estimated=yes`;
+the real published inputs remain visible in separate columns.
+
+Change the floor-area assumption and percentile parameters at the command line:
+
+```bash
+python make-published-rents-demo.py \
+  --floor-area-sqm 95 \
+  --floor-quantile 0.10 \
+  --ceiling-quantile 0.90 \
+  --output-dir published-output
+```
+
+Use `--postcodes` and `--rent-source` to point to updated files with the same
+schemas. Run `python make-published-rents-demo.py --help` for all options.
+
+The source release is ONS, *Price Index of Private Rents, UK: monthly price
+statistics*, 19 August 2026. The postcode spine is from ONSPD May 2026.
+
+## 5. Test the generic model with its synthetic demonstration
 
 ```bash
 python lvc-register.py demo --year 2026 --output-dir demo-output
@@ -84,7 +134,7 @@ python lvc-register.py demo --year 2026 --output-dir demo-output
 This creates example input files, the register, summary, manifest and two basic
 SVG visualisations. Everything produced by `demo` is synthetic.
 
-## 5. Build a register from your own data
+## 6. Build a register from your own record-level data
 
 ```bash
 python lvc-register.py build \
@@ -123,7 +173,7 @@ python lvc-register.py build \
 
 Run `python lvc-register.py build --help` for the complete CLI reference.
 
-## 6. Calculate annual LVC reassessment factors
+## 7. Calculate annual LVC reassessment factors
 
 Supply the previous annual register:
 
@@ -146,7 +196,7 @@ new LVC payment = existing LVC payment × reassessment_factor
 Check postcode changes and class definitions before using a factor. A missing
 factor means the script did not find an exact prior-year match.
 
-## 7. Generate an accurate UK map
+## 8. Generate an accurate UK map
 
 Map the default residential three-bedroom semi-detached class:
 
@@ -192,11 +242,13 @@ python make-register-map.py \
 degrees. A smaller number preserves more coastline detail and creates a larger
 SVG. Run `python make-register-map.py --help` for every option.
 
-## 8. Interpret and check the outputs
+## 9. Interpret and check the outputs
 
 The register CSV reports annual rent per m², floor, ceiling, bounded rent,
 location excess over the floor, index level, evidence count, confidence grade,
-estimation method and donor postcodes.
+estimation method and donor postcodes. When optional provenance columns are
+present in the evidence, it also carries through source, release, period,
+geography, published components, floor-area status and the `estimated` flag.
 
 Before publication:
 

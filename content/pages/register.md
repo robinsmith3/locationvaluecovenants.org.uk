@@ -89,30 +89,34 @@ Agriculture and forestry also require their own treatment. Their rents reflect p
 
 Agricultural and forestry evidence can still be converted to annual pounds per square metre, but mapped land parcels should sit beneath the postcode publication layer. Nearby residential rent must not be used as a substitute for farm or woodland evidence.
 
-## Synthetic national demonstration {#demonstration}
+## Published-rent prototype {#demonstration}
 
-The demonstration below runs the complete method across 240 genuine live UK postcodes and their published coordinates for the three-bedroom semi-detached comparison class. The postcodes come from the May 2026 ONS Postcode Directory. The demonstration then applies 1,152 synthetic rental observations: 192 postcode estimates have direct synthetic evidence and 48 are spatial estimates using nearby real postcodes.
+This prototype applies the method to 240 genuine live UK postcodes from the May 2026 ONS Postcode Directory. Its starting rent figures are real published ONS private-rent statistics, not invented rents.
 
-**The postcode names and coordinates are real. The rental evidence, rental values and resulting indices are synthetic. No value shown here is an assessment of the named postcode.**
+There is an important limit. ONS publishes average rents by area, bedroom count and property type, but it does not publish an exact rent for a three-bedroom semi-detached home in every unit postcode. The prototype therefore estimates that missing cross-tab as **published three-bedroom rent × published semi-detached rent ÷ published all-property rent**, then assigns the applicable published area value to each sample postcode. A user-adjustable 90 m² floor-area assumption converts the result to annual rent per m².
 
-![Synthetic three-bedroom semi-detached location index plotted on an official UK boundary](/assets/register/map-2026.svg)
+**Every postcode result is marked estimated. The CSV keeps the three published rent inputs, source month, source geography, formula and floor-area assumption in separate columns so the estimate cannot be mistaken for an observed postcode rent.**
 
-**What this map shows:** Each point represents the synthetic location-rental index for a three-bedroom semi-detached property at an illustrative postcode. Green represents an index below 150, amber represents 150 to 224 and red represents 225 or above. The floor location is index 100.
+![Published-rent prototype for a three-bedroom semi-detached comparison class](/assets/register/map-2026.svg)
+
+**What this map shows:** Each point is an estimated postcode index derived from the applicable published area rent. Green represents an index below 150, amber represents 150 to 224 and red represents 225 or above. The floor location is index 100. Postcodes sharing the same source area can have the same value; the prototype does not invent variation within that area.
 
 The postcode centroids and the boundary use the same geographic projection. The land outline contains England, Wales, Scotland and Northern Ireland and is derived from the Office for National Statistics [Countries (December 2024) Boundaries UK BGC](https://geoportal.statistics.gov.uk/datasets/ons::countries-december-2024-boundaries-uk-bgc-2/about), generalised and clipped to the coastline.
 
-The postcode values and their geographical pattern remain synthetic. The index runs from 100 to 265.02, with 37 postcodes deliberately reaching the red band of 225 or above. This tests the full display scale; it is not an actual assessment of any postcode.
+The rent inputs are from ONS, [Price Index of Private Rents, UK: monthly price statistics](https://www.ons.gov.uk/economy/inflationandpriceindices/datasets/priceindexofprivaterentsukmonthlypricestatistics), released 19 August 2026. Great Britain figures use July 2026 data. Northern Ireland uses May 2026 because its later values were not available in that release. The prototype is evidence-led, but it remains a demonstration rather than an official assessment.
 
 ![Distribution of the illustrative residential location index](/assets/register/distribution-2026.svg)
 
-The demonstration publishes the evidence method and confidence grade alongside every estimate. This is essential: users and appeals officers must be able to distinguish observed evidence from spatial or provisional completion.
+The demonstration uses confidence grade **P — published-area modelled postcode** for all 240 rows. This means the source aggregate is published but the property-class combination, floor-area conversion and postcode assignment are modelled.
 
-- [Download the synthetic register CSV](/assets/register/register-2026.csv)
+- [Download the published-rent prototype register CSV](/assets/register/register-2026.csv)
 - [Download the summary and confidence counts](/assets/register/summary-2026.csv)
-- [Download the real-postcode demonstration spine](/assets/register/postcodes-2026.csv)
-- [Download the synthetic rental evidence](/assets/register/evidence-2026.csv)
+- [Download the ONSPD postcode spine](/assets/register/postcodes-2026.csv)
+- [Download the postcode evidence and provenance CSV](/assets/register/evidence-2026.csv)
+- [Download the compact ONS published-rent source snapshot](/assets/register/ons-private-rents-source-2026-08.csv)
 - [Read the detailed methodology](/assets/register/methodology.md)
 - [Download the Python model](/assets/register/lvc-register.py)
+- [Download the published-rent preparation script](/assets/register/make-published-rents-demo.py)
 - [Download the UK map-generation script](/assets/register/make-register-map.py)
 - [Read the model and map user guide](/assets/register/README.md)
 

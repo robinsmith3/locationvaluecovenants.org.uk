@@ -72,13 +72,15 @@ def svg_outputs(rows,outdir,year):
 def build(args):
     pcs=read_csv(args.postcodes); ev=read_csv(args.evidence)
     pcmap={normalise_postcode(r["postcode"]):r for r in pcs}
-    observations=defaultdict(list)
+    observations=defaultdict(list); provenance=defaultdict(list)
     for r in ev:
         p=normalise_postcode(r.get("postcode","")); area=fnum(r.get("floor_area_sqm")); rent=fnum(r.get("annual_rent_gbp")); yr=int(fnum(r.get("year")))
         if p not in pcmap or area<=0 or rent<=0 or yr<args.year-1 or yr>args.year: continue
         schedule,typ,bed=class_key(r)
         if schedule not in SCHEDULE_TYPES or typ not in SCHEDULE_TYPES[schedule]: continue
-        observations[(p,schedule,typ,bed)].append((rent/area,max(.05,fnum(r.get("quality_weight"),1))))
+        key=(p,schedule,typ,bed)
+        observations[key].append((rent/area,max(.05,fnum(r.get("quality_weight"),1))))
+        provenance[key].append(r)
     direct={k:weighted_median(v) for k,v in observations.items()}
     classes=sorted(set((s,t,b) for _,s,t,b in direct))
     if not classes: raise SystemExit("No valid evidence rows for the requested year/window")
@@ -86,12 +88,18 @@ def build(args):
     results=[]
     for s,t,b in classes:
         known={p:v for (p,ss,tt,bb),v in direct.items() if (ss,tt,bb)==(s,t,b)}
-        known_values=list(known.values()); lo=quantile(known_values,args.floor_quantile); hi=quantile(known_values,args.ceiling_quantile)
+        known_values=list(known.values())
+        lo=args.floor_value if args.floor_value is not None else quantile(known_values,args.floor_quantile)
+        hi=args.ceiling_value if args.ceiling_value is not None else quantile(known_values,args.ceiling_quantile)
+        if hi <= lo: raise SystemExit("Ceiling value must be greater than floor value")
         missing=sorted(set(pcmap)-set(known)); even={p: lo+(hi-lo)*(i+1)/(len(missing)+1) for i,p in enumerate(missing)}
         for p,meta in pcmap.items():
             n=len(observations.get((p,s,t,b),[])); donors=[]
             if p in known:
                 raw=known[p]; grade="A" if n>=args.min_direct else "B"; method="direct" if grade=="A" else "direct_sparse"
+                source_row=provenance[(p,s,t,b)][0]
+                grade=source_row.get("confidence_grade_override") or grade
+                method=source_row.get("method_override") or method
             else:
                 nearest=sorted(((distance_km(coords[p],coords[q]),q,v) for q,v in known.items() if q!=p),key=lambda x:x[0])[:args.neighbours]
                 nearest=[x for x in nearest if x[0]<=args.max_distance_km]
@@ -100,7 +108,8 @@ def build(args):
                     donors=[q for _,q,_ in nearest]; grade="C"; method="spatial"
                 else: raw=even[p]; grade="D"; method="even_spread"
             bounded=min(max(raw,lo),hi); idx=100*bounded/lo if lo else 100
-            results.append({"year":args.year,"postcode":p,"nation":meta.get("nation",""),"region":meta.get("region",""),"latitude":meta["latitude"],"longitude":meta["longitude"],"use_class":s,"property_type":t,"bedroom_band":b,"annual_rent_per_sqm":f"{raw:.4f}","floor_rent_per_sqm":f"{lo:.4f}","ceiling_rent_per_sqm":f"{hi:.4f}","bounded_rent_per_sqm":f"{bounded:.4f}","location_excess_over_floor_per_sqm":f"{bounded-lo:.4f}","index_level":f"{idx:.4f}","evidence_count":n,"confidence_grade":grade,"method":method,"donor_postcodes":"|".join(donors),"reassessment_factor":""})
+            source_row=provenance[(p,s,t,b)][0] if p in known else {}
+            results.append({"year":args.year,"postcode":p,"nation":meta.get("nation",""),"region":meta.get("region",""),"latitude":meta["latitude"],"longitude":meta["longitude"],"use_class":s,"property_type":t,"bedroom_band":b,"annual_rent_per_sqm":f"{raw:.4f}","floor_rent_per_sqm":f"{lo:.4f}","ceiling_rent_per_sqm":f"{hi:.4f}","bounded_rent_per_sqm":f"{bounded:.4f}","location_excess_over_floor_per_sqm":f"{bounded-lo:.4f}","index_level":f"{idx:.4f}","evidence_count":n,"confidence_grade":grade,"method":method,"estimated":source_row.get("estimated", "yes" if p not in known else "no"),"source":source_row.get("source",""),"source_release":source_row.get("source_release",""),"source_period":source_row.get("source_period",""),"source_url":source_row.get("source_url",""),"source_geography_code":source_row.get("source_geography_code",""),"source_geography_name":source_row.get("source_geography_name",""),"source_geography_level":source_row.get("source_geography_level",""),"published_monthly_all_rent_gbp":source_row.get("published_monthly_all_rent_gbp",""),"published_monthly_three_bed_rent_gbp":source_row.get("published_monthly_three_bed_rent_gbp",""),"published_monthly_semidetached_rent_gbp":source_row.get("published_monthly_semidetached_rent_gbp",""),"estimated_monthly_three_bed_semi_rent_gbp":source_row.get("estimated_monthly_three_bed_semi_rent_gbp",""),"floor_area_sqm":source_row.get("floor_area_sqm",""),"floor_area_status":source_row.get("floor_area_status",""),"combination_method":source_row.get("combination_method",""),"donor_postcodes":"|".join(donors),"reassessment_factor":""})
     if args.previous_register:
         prev={(normalise_postcode(r["postcode"]),r["use_class"],r["property_type"],r.get("bedroom_band","")):fnum(r["index_level"]) for r in read_csv(args.previous_register)}
         for r in results:
@@ -111,7 +120,7 @@ def build(args):
     summary=[]
     for key in classes:
         rr=[r for r in results if (r["use_class"],r["property_type"],r["bedroom_band"])==key]
-        summary.append({"year":args.year,"use_class":key[0],"property_type":key[1],"bedroom_band":key[2],"postcodes":len(rr),"direct_A":sum(r["confidence_grade"]=="A" for r in rr),"modelled_B":sum(r["confidence_grade"]=="B" for r in rr),"spatial_C":sum(r["confidence_grade"]=="C" for r in rr),"even_spread_D":sum(r["confidence_grade"]=="D" for r in rr),"floor":rr[0]["floor_rent_per_sqm"],"ceiling":rr[0]["ceiling_rent_per_sqm"]})
+        summary.append({"year":args.year,"use_class":key[0],"property_type":key[1],"bedroom_band":key[2],"postcodes":len(rr),"direct_A":sum(r["confidence_grade"]=="A" for r in rr),"modelled_B":sum(r["confidence_grade"]=="B" for r in rr),"spatial_C":sum(r["confidence_grade"]=="C" for r in rr),"even_spread_D":sum(r["confidence_grade"]=="D" for r in rr),"published_area_modelled_P":sum(r["confidence_grade"]=="P" for r in rr),"estimated_rows":sum(r["estimated"]=="yes" for r in rr),"floor":rr[0]["floor_rent_per_sqm"],"ceiling":rr[0]["ceiling_rent_per_sqm"]})
     write_csv(out/f"summary_{args.year}.csv",summary,list(summary[0])); svg_outputs(results,out,args.year)
     manifest={"register":f"register_{args.year}.csv","rows":len(results),"sha256":hashlib.sha256((out/f"register_{args.year}.csv").read_bytes()).hexdigest()}
     (out/f"manifest_{args.year}.txt").write_text("\n".join(f"{k}={v}" for k,v in manifest.items())+"\n",encoding="utf-8")
@@ -139,6 +148,8 @@ def parser():
     for name in ("build","demo"):
         q=sub.add_parser(name); q.add_argument("--year",type=int,default=2026); q.add_argument("--output-dir",default="output")
         q.add_argument("--floor-quantile",type=float,default=.10); q.add_argument("--ceiling-quantile",type=float,default=.90); q.add_argument("--min-direct",type=int,default=5); q.add_argument("--neighbours",type=int,default=6); q.add_argument("--max-distance-km",type=float,default=120); q.add_argument("--distance-power",type=float,default=1.5)
+        q.add_argument("--floor-value",type=float,help="Optional externally calculated annual rent-per-m2 floor")
+        q.add_argument("--ceiling-value",type=float,help="Optional externally calculated annual rent-per-m2 ceiling")
     b=sub.choices["build"]; b.add_argument("--postcodes",required=True); b.add_argument("--evidence",required=True); b.add_argument("--previous-register")
     d=sub.choices["demo"]; d.add_argument("--seed",type=int,default=42)
     return p

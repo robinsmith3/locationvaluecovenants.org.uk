@@ -97,6 +97,9 @@ estimator.
 
 Publish every live postcode/class combination, but distinguish:
 
+- `P — published-area modelled postcode`: real published area aggregates are
+  used, but the property cross-tab, floor-area conversion or postcode assignment
+  is estimated and fully identified;
 - `A — direct`: adequate recent observations in the postcode/class;
 - `B — modelled-local`: fewer direct observations, supported by adjacent
   postcodes and higher-level effects;
@@ -113,6 +116,12 @@ Record donor postcodes, distance, sample size and uncertainty.
 The requested even-spread assumption is suitable only for completing a model.
 It must carry grade D and cannot become an appeal-proof statutory value merely
 because the CSV has no blanks.
+
+The website prototype uses grade P throughout. Its ONS rent components are
+published figures; its three-bedroom/semi-detached combination is calculated as
+`three-bedroom rent × semi-detached rent ÷ all-property rent`, and 90 m² is an
+explicit user-adjustable floor-area assumption. It therefore makes no claim to
+contain observed unit-postcode rents.
 
 ## 7. Floor, ceiling and base location
 

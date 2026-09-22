@@ -287,6 +287,11 @@ await copyFile(
   new URL("favicon.ico", PUBLIC)
 );
 
+await copyFile(
+  new URL("../assets/brownfield-land-covenant.svg", import.meta.url),
+  new URL("assets/brownfield-land-covenant.svg", PUBLIC)
+);
+
 await mkdir(new URL("assets/register/", PUBLIC), { recursive: true });
 
 for (const name of [
@@ -299,6 +304,8 @@ for (const name of [
   "postcodes-2026.csv",
   "evidence-2026.csv",
   "make-register-map.py",
+  "make-published-rents-demo.py",
+  "ons-private-rents-source-2026-08.csv",
   "README.md"
 ]) {
   await copyFile(

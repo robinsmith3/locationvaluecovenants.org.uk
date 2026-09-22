@@ -1,2 +1,2 @@
-year,use_class,property_type,bedroom_band,postcodes,direct_A,modelled_B,spatial_C,even_spread_D,floor,ceiling
-2026,residential,semi,3,240,192,0,48,0,50.7608,134.5284
+year,use_class,property_type,bedroom_band,postcodes,direct_A,modelled_B,spatial_C,even_spread_D,published_area_modelled_P,estimated_rows,floor,ceiling
+2026,residential,semi,3,240,0,0,0,0,240,240,113.5898,302.3276

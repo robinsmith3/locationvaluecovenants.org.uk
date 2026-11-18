@@ -7,6 +7,10 @@ intro: A transparent comparison of three possible paths against what might happe
 eyebrow: National model
 layout: standard
 ---
+:::notice Only a model
+This is an illustrative and incomplete model, presented as a demonstration of the idea ahead of real-life adoption. It is not a forecast and does not capture every effect; actual results will depend on how Location Value Covenants are designed and introduced when they happen in practice.
+:::
+
 ## The question this model asks {#question}
 
 What might change if Location Value Covenants were adopted gradually across the country?

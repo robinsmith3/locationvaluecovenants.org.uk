@@ -13,10 +13,9 @@ Location Value Covenants are designed to give homeowners an alternative to a mor
 
 At scale, the remaining covenant revenue could be used to reduce other tax liabilities. If carefully funded, LVCs could also replace part of bank-created mortgage credit with existing long-term savings, moderating leverage and property-driven monetary expansion.
 
-<div class="notice">
-<b>Tax-replacement rule</b>
-<p>Every pound of dependable net covenant income is intended to remove a pound of tax on productive activity — income tax, National Insurance, VAT, business rates or transaction taxes — rather than become an additional layer of government revenue.</p>
-</div>
+:::notice Tax-replacement rule
+Every pound of dependable net covenant income is intended to remove a pound of tax on productive activity — income tax, National Insurance, VAT, business rates or transaction taxes — rather than become an additional layer of government revenue.
+:::
 
 ## Who is this for?
 

@@ -62,3 +62,11 @@ test("legacy Blogger pages redirect permanently", async () => {
   assert.equal(response.status, 301);
   assert.equal(response.headers.get("Location"), "https://example.com/applications/");
 });
+
+test("callout blocks render as styled notices, not escaped HTML", async () => {
+  for (const file of ["public/index.html", "public/briefing/index.html"]) {
+    const html = await readFile(path.resolve(file), "utf8");
+    assert.match(html, /<div class="notice"><b>Tax-replacement rule<\/b>/, file);
+    assert.doesNotMatch(html, /&lt;div|&lt;p&gt;|:::/, file);
+  }
+});

@@ -20,6 +20,13 @@ function markdown(source) {
   for (let i = 0; i < lines.length;) {
     const line = lines[i].trim();
     if (!line) { i++; continue; }
+    const notice = /^:::notice\s+(.+)$/.exec(line);
+    if (notice) {
+      const body = []; i++;
+      while (i < lines.length && lines[i].trim() !== ":::") body.push(lines[i++]);
+      i++;
+      html.push(`<div class="notice"><b>${inline(notice[1])}</b>${markdown(body.join("\n"))}</div>`); continue;
+    }
     const heading = /^(#{2,4})\s+(.+?)(?:\s+\{#([^}]+)\})?$/.exec(line);
     if (heading) { const level = heading[1].length; html.push(`<h${level} id="${heading[3] || slug(heading[2])}">${inline(heading[2])}</h${level}>`); i++; continue; }
     if (line.startsWith("|")) {
@@ -31,7 +38,7 @@ function markdown(source) {
     if (/^[-*]\s+/.test(line)) { const items = []; while (i < lines.length && /^[-*]\s+/.test(lines[i].trim())) items.push(lines[i++].trim().replace(/^[-*]\s+/, "")); html.push(`<ul>${items.map(x => `<li>${inline(x)}</li>`).join("")}</ul>`); continue; }
     if (/^\d+\.\s+/.test(line)) { const items = []; while (i < lines.length && /^\d+\.\s+/.test(lines[i].trim())) items.push(lines[i++].trim().replace(/^\d+\.\s+/, "")); html.push(`<ol>${items.map(x => `<li>${inline(x)}</li>`).join("")}</ol>`); continue; }
     const paragraph = [];
-    while (i < lines.length && lines[i].trim() && !/^(#{2,4})\s|^[-*]\s+|^\d+\.\s+|^\|/.test(lines[i].trim())) paragraph.push(lines[i++].trim());
+    while (i < lines.length && lines[i].trim() && !/^(#{2,4})\s|^[-*]\s+|^\d+\.\s+|^\||^:::/.test(lines[i].trim())) paragraph.push(lines[i++].trim());
     html.push(`<p>${inline(paragraph.join(" "))}</p>`);
   }
   return html.join("\n");
@@ -98,7 +105,7 @@ const hero = page => `<header class="pagehero"><div class="wrap"><small>${escape
 
 function bodyFor(page, apps) {
   const content = markdown(page.body);
-  if (page.meta.layout === "home") return `<section class="wrap homehero"><div><small>${escapeHtml(page.meta.eyebrow)}</small><h1>${escapeHtml(page.meta.heading)}</h1><p class="lead">${escapeHtml(page.meta.intro)}</p><p><a class="button" href="/briefing/">Read the policy briefing</a><a class="button ghost" href="/applications/">Explore eight applications</a></p></div><aside><small>The proposition</small><ol><li><b>Voluntary</b><span>Property owners choose whether to participate.</span></li><li><b>Lower risk</b><span>Payments track local rental value rather than interest rates.</span></li><li><b>Public benefit</b><span>Revenue flows to public purposes rather than mortgage interest.</span></li></ol></aside></section><div class="wrap policy-content">${content}<h2>Explore ways the covenant can be used</h2>${cards(apps)}</div>`;
+  if (page.meta.layout === "home") return `<section class="wrap homehero"><div><small>${escapeHtml(page.meta.eyebrow)}</small><h1>${escapeHtml(page.meta.heading)}</h1><p class="lead">${escapeHtml(page.meta.intro)}</p><p><a class="button" href="/briefing/">Read the policy briefing</a><a class="button ghost" href="/applications/">Explore ${apps.length} applications</a></p></div><aside><small>The proposition</small><ol><li><b>Voluntary</b><span>Property owners choose whether to participate.</span></li><li><b>Lower risk</b><span>Payments track local rental value rather than interest rates.</span></li><li><b>Public benefit</b><span>Revenue flows to public purposes rather than mortgage interest.</span></li></ol></aside></section><div class="wrap policy-content">${content}<h2>Explore ways the covenant can be used</h2>${cards(apps)}</div>`;
   if (page.meta.layout === "applications") return `${hero(page)}<section class="wrap section">${content}${cards(apps)}<div class="notice"><b>A note on the examples</b><p>Monetary figures and tax references illustrate the mechanism at the time of writing; they are not current quotations, calculations or personal advice.</p></div></section>`;
   if (page.meta.layout === "register") {
     const toc = tableOfContents(page.body);

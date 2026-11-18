@@ -8,7 +8,7 @@ eyebrow: Enabling infrastructure
 layout: register
 ---
 :::notice Demonstration only
-This register is a demonstration for illustration purposes only, using synthetic figures. The real National Location Value Register will not be limited to what this demo shows.
+This register is a demonstration for illustration purposes only, using synthetic figures. The real National Location Value Register will not be limited to what this demo shows. e.g. there may be more optimal ways to determine base land value and other important parameters.
 :::
 
 ## What the register is for {#purpose}

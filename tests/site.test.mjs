@@ -14,6 +14,7 @@ const routes = [
   ["public/applications/inheritance-tax/index.html", "Paying Inheritance Tax"],
   ["public/applications/property-tax/index.html", "Property Tax Substitution"],
   ["public/applications/monetary-stability/index.html", "Monetary Stability &amp; Inflation Control"],
+  ["public/applications/empty-homes-covenant/index.html", "Empty Homes Covenant"],
   ["public/privacy/index.html", "Privacy Policy"],
   ["public/website-terms/index.html", "Website Terms of Use"]
 ];
@@ -68,5 +69,13 @@ test("callout blocks render as styled notices, not escaped HTML", async () => {
     const html = await readFile(path.resolve(file), "utf8");
     assert.match(html, /<div class="notice"><b>Tax-replacement rule<\/b>/, file);
     assert.doesNotMatch(html, /&lt;div|&lt;p&gt;|:::/, file);
+  }
+});
+
+test("sitemap lists every built page", async () => {
+  const response = await worker.fetch(new Request("https://example.com/sitemap.xml"), { ENVIRONMENT: "production", ASSETS: { fetch: () => new Response("") } });
+  const xml = await response.text();
+  for (const route of ["/", "/register/", "/model/", "/applications/empty-homes-covenant/", "/applications/brownfield-land-covenant/"]) {
+    assert.ok(xml.includes(`<loc>https://example.com${route}</loc>`), `sitemap missing ${route}`);
   }
 });

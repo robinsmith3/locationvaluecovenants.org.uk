@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Empty Homes Covenant process</title>
+  <desc id="desc">After six months a council establishes why a home is empty and offers voluntary support. The owner may accept capital, repairs or practical resolution in exchange for a Location Value Covenant and a return-to-use deadline. The home is occupied while ownership and improvement value remain private, and government receives a continuing asset.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#27634b"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#173c2e" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .bg{fill:#f4f6f1}.box{fill:#fff;stroke:#c5d5cb;stroke-width:2;filter:url(#shadow)}
+      .empty{fill:#eee7de}.check{fill:#edf0e4}.offer{fill:#e4f1ea}.home{fill:#e8eef4}.asset{fill:#f3ecd9}
+      .guard{fill:#edf4ed;stroke:#9db8a6;stroke-width:2}.line{fill:none;stroke:#27634b;stroke-width:4;marker-end:url(#arrow)}
+      .title{font:700 34px Arial,sans-serif;fill:#173e30}.head{font:700 21px Arial,sans-serif;fill:#173e30}
+      .body{font:16px Arial,sans-serif;fill:#293e35}.small{font:15px Arial,sans-serif;fill:#42594f}
+      .label{font:700 15px Arial,sans-serif;fill:#27634b}.centre{text-anchor:middle}
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="800" rx="24"/>
+  <text class="title centre" x="600" y="54">Empty Homes Covenant</text>
+  <text class="body centre" x="600" y="84">Six months triggers diagnosis and a voluntary offer—not automatic control</text>
+
+  <rect class="box empty" x="30" y="150" width="200" height="180" rx="18"/>
+  <text class="head centre" x="130" y="191">Empty home</text>
+  <text class="body centre" x="130" y="227">Six months recorded</text>
+  <text class="body centre" x="130" y="255">Owner contacted</text>
+  <text class="small centre" x="130" y="294">Ownership protected</text>
+
+  <rect class="box check" x="265" y="150" width="200" height="180" rx="18"/>
+  <text class="head centre" x="365" y="191">Assess obstacle</text>
+  <text class="body centre" x="365" y="227">Ready · repairable</text>
+  <text class="body centre" x="365" y="255">Blocked · unsuitable</text>
+  <text class="small centre" x="365" y="294">Check real local demand</text>
+
+  <rect class="box offer" x="500" y="150" width="200" height="180" rx="18"/>
+  <text class="head centre" x="600" y="191">Voluntary offer</text>
+  <text class="body centre" x="600" y="227">Capital · repairs</text>
+  <text class="body centre" x="600" y="255">Refinancing · resolution</text>
+  <text class="small centre" x="600" y="294">Owner may accept or refuse</text>
+
+  <rect class="box home" x="735" y="150" width="200" height="180" rx="18"/>
+  <text class="head centre" x="835" y="191">Home occupied</text>
+  <text class="body centre" x="835" y="227">Occupy · sell · let</text>
+  <text class="body centre" x="835" y="255">British/local first window</text>
+  <text class="small centre" x="835" y="294">Building value stays private</text>
+
+  <rect class="box asset" x="970" y="150" width="200" height="180" rx="18"/>
+  <text class="head centre" x="1070" y="191">Public asset</text>
+  <text class="body centre" x="1070" y="227">LVC begins</text>
+  <text class="body centre" x="1070" y="255">Location-indexed receipts</text>
+  <text class="small centre" x="1070" y="294">Continues after sale</text>
+
+  <path class="line" d="M230 240H265"/><path class="line" d="M465 240H500"/>
+  <path class="line" d="M700 240H735"/><path class="line" d="M935 240H970"/>
+
+  <rect class="guard" x="110" y="425" width="980" height="245" rx="18"/>
+  <text class="head centre" x="600" y="470">Rules that keep the exchange coherent</text>
+  <text class="body centre" x="600" y="511">No prior valuation of the land beneath the home.</text>
+  <text class="body centre" x="600" y="546">The opening payment is agreed for the support supplied, then follows local location rent.</text>
+  <text class="body centre" x="600" y="581">The house, repairs, extensions, energy work and occupier-created value are excluded.</text>
+  <text class="body centre" x="600" y="616">The LVC falls on the owner's interest and cannot be added above the market rent.</text>
+  <text class="label centre" x="600" y="650">Diagnose · offer · agree · occupy · retain a public asset</text>
+
+  <text class="small centre" x="600" y="735">Danger, nuisance, fraud and unpaid debts remain subject to ordinary law; vacancy alone is not a forfeiture.</text>
+</svg>

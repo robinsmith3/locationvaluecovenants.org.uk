@@ -8,3 +8,10 @@ eyebrow: Worked briefings
 layout: applications
 ---
 The following briefings apply the same voluntary covenant mechanism to home purchase, mortgage distress, retirement income, inheritance tax, property-tax reform, wider property-related investment and new-home construction. The monetary-stability briefing sets out a potentially important national merit: replacing part of bank-created mortgage credit with long-term public funding drawn from existing savings.
+
+**Grouped for navigation**
+
+- **For existing homeowners**: Location Value Mortgage, Mortgage Rescue, Homeowner Pension & Equity Release, Empty Homes Covenant.
+- **For new homes and development**: New Home Covenant, Brownfield Land Covenant.
+- **For tax and revenue**: Paying Inheritance Tax, Property Tax Substitution, Family Farm Covenant.
+- **For wider uses**: Tenant and Rental Covenant, Wider Property Investment and Support, Monetary Stability & Inflation Control.

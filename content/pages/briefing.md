@@ -33,6 +33,12 @@ Payments fund public purposes instead of becoming commercial-bank interest.
 
 As adoption scales, revenue could support reductions in other tax liabilities.
 
+<div class="notice">
+<b>Tax-replacement rule</b>
+<p>The design intention is that dependable net covenant income is used to reduce taxes on work, earnings, enterprise, construction and exchange rather than to expand overall public revenue.</p>
+</div>
+
+
 ## Compared to alternatives {#Comparisons}
 
 ### Compared with mortgages 

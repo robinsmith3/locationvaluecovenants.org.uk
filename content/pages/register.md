@@ -7,6 +7,10 @@ intro: A proposed annual postcode index for adjusting Location Value Covenant pa
 eyebrow: Enabling infrastructure
 layout: register
 ---
+:::notice Demonstration only
+This register is a demonstration for illustration purposes only, using synthetic figures. The real National Location Value Register will not be limited to what this demo shows. For example, there may be more optimal ways to determine base land value and other important parameters.
+:::
+
 ## What the register is for {#purpose}
 
 The National Location Value Register would provide the consistent annual index needed to reassess existing Location Value Covenant payments.

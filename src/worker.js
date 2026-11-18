@@ -1,22 +1,11 @@
+import { SITEMAP_PATHS } from "./sitemap-paths.js";
+
 const LEGACY_REDIRECTS = new Map([
   ["/p/lvc-policy-briefings.html", "/applications/"],
   ["/2025/08/location-value-covenant-lvc-briefing.html", "/briefing/"],
   ["/2023/07/sfr-group-public-policy-links.html", "/briefing/"]
 ]);
 
-const SITEMAP_PATHS = [
-  "/",
-  "/briefing/",
-  "/applications/",
-  "/applications/location-value-mortgage/",
-  "/applications/mortgage-rescue/",
-  "/applications/homeowner-pension/",
-  "/applications/inheritance-tax/",
-  "/applications/property-tax/",
-  "/applications/monetary-stability/",
-  "/privacy/",
-  "/website-terms/"
-];
 
 const SECURITY_HEADERS = {
   "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests",

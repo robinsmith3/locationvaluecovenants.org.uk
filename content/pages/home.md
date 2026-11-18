@@ -17,6 +17,10 @@ At scale, the remaining covenant revenue could be used to reduce other tax liabi
 Every pound of dependable net covenant income is intended to remove a pound of tax on productive activity — income tax, National Insurance, VAT, business rates or transaction taxes — rather than become an additional layer of government revenue.
 :::
 
+:::notice Mortgage-replacement rule
+Every pound of new LVC funding is intended to replace at least a pound of conventional mortgage credit that a commercial bank would otherwise have created — financed from existing long-term savings rather than new bank lending, so household debt falls rather than adding another layer of borrowing.
+:::
+
 ## Who is this for?
 
 - **Homeowners** facing high interest rates, negative equity or the need to release equity.

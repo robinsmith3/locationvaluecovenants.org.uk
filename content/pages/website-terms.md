@@ -7,13 +7,13 @@ intro: The basis on which this policy material is published and may be used.
 eyebrow: Legal information
 layout: standard
 ---
-**Last updated: 20 August 2026**
+**Last updated: 20 November 2026**
 
 ## 1. About these terms
 
 These terms apply to your use of locationvaluecovenants.org.uk.
 
-The website is operated by the Systemic Fiscal Reform Group under the name Location Value Covenants. By using the website, you agree to these terms. If you do not agree with them, you should stop using the website.
+The website is operated by Robin Smith on behalf of the Systemic Fiscal Reform Group (an informal, unincorporated policy group) under the name Location Value Covenants. By using the website, you agree to these terms. If you do not agree with them, you should stop using the website.
 
 Questions concerning these terms may be sent to: **[locationvaluecovenants@gmail.com](mailto:locationvaluecovenants@gmail.com)**
 
